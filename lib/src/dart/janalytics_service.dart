@@ -3,6 +3,7 @@ import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:janalytics_fluttify/src/ios/ios.export.g.dart';
 
 class JAnalyticsService {
+  /// 初始化
   static Future<void> init({
     @required String iosKey,
     String channel = 'developer-default',
@@ -24,6 +25,19 @@ class JAnalyticsService {
         await JANALYTICSService.setupWithConfig(config);
 
         pool.add(config);
+      },
+    );
+  }
+
+  /// 是否打开debug日志
+  static Future<void> setDebugEnable(bool enable) async {
+    await platform(
+      android: (pool) async {
+        await cn_jiguang_analytics_android_api_JAnalyticsInterface
+            .setDebugMode(enable);
+      },
+      ios: (pool) async {
+        await JANALYTICSService.setDebug(enable);
       },
     );
   }
