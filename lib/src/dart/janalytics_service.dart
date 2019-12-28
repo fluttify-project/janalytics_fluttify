@@ -41,4 +41,18 @@ class JAnalyticsService {
       },
     );
   }
+
+  /// 打开奔溃日志上报
+  static Future<void> startCrashHandler() async {
+    await platform(
+      android: (pool) async {
+        final context = await android_app_Application.get();
+        await cn_jiguang_analytics_android_api_JAnalyticsInterface
+            .initCrashHandler(context);
+      },
+      ios: (pool) async {
+        await JANALYTICSService.crashLogON();
+      },
+    );
+  }
 }
