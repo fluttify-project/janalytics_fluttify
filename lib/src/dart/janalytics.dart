@@ -102,4 +102,24 @@ class JAnalytics {
       },
     );
   }
+
+  /// 设置统计上报的自动周期，未调用前默认即时上报
+  ///
+  /// [period] 周期，单位秒，最小10秒，最大1天，超出范围会打印调用失败日志。传0表示统计数据即时上报
+  static Future<void> setReportPeriod(int period) async {
+    assert(period == 0 || (period >= 10 && period <= 24 * 60 * 60));
+    await platform(
+      android: (pool) async {
+        final context = await android_app_Application.get();
+        await cn_jiguang_analytics_android_api_JAnalyticsInterface
+            .setAnalyticsReportPeriod__android_content_Context__int(
+          context,
+          period,
+        );
+      },
+      ios: (pool) async {
+        await JANALYTICSService.setFrequency(period);
+      },
+    );
+  }
 }
