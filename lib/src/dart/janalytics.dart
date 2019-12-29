@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:janalytics_fluttify/src/ios/ios.export.g.dart';
 
-class JAnalyticsService {
+class JAnalytics {
   /// 初始化
   static Future<void> init({
     @required String iosKey,
@@ -52,6 +52,36 @@ class JAnalyticsService {
       },
       ios: (pool) async {
         await JANALYTICSService.crashLogON();
+      },
+    );
+  }
+
+  /// 页面流统计 页面开始
+  static Future<void> onPageStart(String pageName) async {
+    assert(pageName != null);
+    await platform(
+      android: (pool) async {
+        final context = await android_app_Activity.get();
+        await cn_jiguang_analytics_android_api_JAnalyticsInterface.onPageStart(
+            context, pageName);
+      },
+      ios: (pool) async {
+        await JANALYTICSService.startLogPageView(pageName);
+      },
+    );
+  }
+
+  /// 页面流统计 页面结束
+  static Future<void> onPageEnd(String pageName) async {
+    assert(pageName != null);
+    await platform(
+      android: (pool) async {
+        final context = await android_app_Activity.get();
+        await cn_jiguang_analytics_android_api_JAnalyticsInterface.onPageEnd(
+            context, pageName);
+      },
+      ios: (pool) async {
+        await JANALYTICSService.stopLogPageView(pageName);
       },
     );
   }
