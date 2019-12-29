@@ -57,6 +57,28 @@ class cn_jiguang_analytics_android_api_Account extends java_lang_Object  {
     }
   }
   
+  Future<void> setExtraAttr(String var1, java_io_Serializable var2) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: cn.jiguang.analytics.android.api.Account@$refId::setExtraAttr([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Account::setExtraAttr', {"var1": var1, "var2": var2.refId, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
   Future<void> setCreationTime(int var1) async {
     // print log
     if (fluttifyLogEnabled) {

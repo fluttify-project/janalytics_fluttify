@@ -345,6 +345,22 @@ extern BOOL enableLog;
           methodResult(@(result));
       },
       
+      @"JANALYTICSEventObject::get_extra": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // print log
+          if (enableLog) {
+              NSLog(@"JANALYTICSEventObject::get_extra");
+          }
+      
+          // ref object
+          JANALYTICSEventObject* ref = (JANALYTICSEventObject*) HEAP[(NSNumber*) args[@"refId"]];
+      
+          // invoke native method
+          NSDictionary<NSString*,NSString*>* result = ref.extra;
+      
+          // 返回值: jsonable
+          methodResult(result);
+      },
+      
       @"JANALYTICSLoginEvent::get_method": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
@@ -858,6 +874,23 @@ extern BOOL enableLog;
           JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.isProduction = isProduction;
+          methodResult(@"success");
+      },
+      
+      @"JANALYTICSEventObject::set_extra": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // print log
+          if (enableLog) {
+              NSLog(@"JANALYTICSEventObject::set_extra");
+          }
+      
+          // args
+          // jsonable arg
+          NSDictionary<NSString*,NSString*>* extra = (NSDictionary<NSString*,NSString*>*) args[@"extra"];
+      
+          // ref
+          JANALYTICSEventObject* ref = (JANALYTICSEventObject*) HEAP[(NSNumber*) args[@"refId"]];
+      
+          ref.extra = extra;
           methodResult(@"success");
       },
       

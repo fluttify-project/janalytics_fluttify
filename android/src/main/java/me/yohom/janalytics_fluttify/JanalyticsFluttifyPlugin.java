@@ -4,9 +4,13 @@
 
 package me.yohom.janalytics_fluttify;
 
+import android.os.Bundle;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import androidx.annotation.NonNull;
@@ -15,6 +19,7 @@ import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
+import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -53,6 +58,210 @@ public class JanalyticsFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
             // result
             methodResult.success("success");
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.CountEvent::getEventId", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.CountEvent ref = (cn.jiguang.analytics.android.api.CountEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CountEvent@" + refId + "::getEventId(" + "" + ")");
+            }
+        
+            // invoke native method
+            String result;
+            try {
+                result = ref.getEventId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.CountEvent::setEventId", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.CountEvent ref = (cn.jiguang.analytics.android.api.CountEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CountEvent@" + refId + "::setEventId(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.CountEvent result;
+            try {
+                result = ref.setEventId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.RegisterEvent::getRegisterMthod", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.RegisterEvent ref = (cn.jiguang.analytics.android.api.RegisterEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.RegisterEvent@" + refId + "::getRegisterMthod(" + "" + ")");
+            }
+        
+            // invoke native method
+            String result;
+            try {
+                result = ref.getRegisterMthod();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.RegisterEvent::setRegisterMethod", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.RegisterEvent ref = (cn.jiguang.analytics.android.api.RegisterEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.RegisterEvent@" + refId + "::setRegisterMethod(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.RegisterEvent result;
+            try {
+                result = ref.setRegisterMethod(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.RegisterEvent::getRegisterSuccess", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.RegisterEvent ref = (cn.jiguang.analytics.android.api.RegisterEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.RegisterEvent@" + refId + "::getRegisterSuccess(" + "" + ")");
+            }
+        
+            // invoke native method
+            boolean result;
+            try {
+                result = ref.getRegisterSuccess();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.RegisterEvent::setRegisterSuccess", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            boolean var1 = (boolean) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.RegisterEvent ref = (cn.jiguang.analytics.android.api.RegisterEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.RegisterEvent@" + refId + "::setRegisterSuccess(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.RegisterEvent result;
+            try {
+                result = ref.setRegisterSuccess(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
         });
         // method
         put("cn.jiguang.analytics.android.api.agent.JMMIClick::clickOn", (args, methodResult) -> {
@@ -141,6 +350,38 @@ public class JanalyticsFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
             // result
             methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.Account::setExtraAttr", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // ref arg
+            java.io.Serializable var2 = (java.io.Serializable) getHEAP().get((int) args.get("var2"));
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.Account ref = (cn.jiguang.analytics.android.api.Account) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Account@" + refId + "::setExtraAttr(" + var1 + var2 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.setExtraAttr(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
         });
         // method
         put("cn.jiguang.analytics.android.api.Account::setCreationTime", (args, methodResult) -> {
@@ -588,6 +829,1065 @@ public class JanalyticsFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
             methodResult.success("success");
         });
         // method
+        put("cn.jiguang.analytics.android.api.Event::getExtMap", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + refId + "::getExtMap(" + "" + ")");
+            }
+        
+            // invoke native method
+            Map<String,String> result;
+            try {
+                result = ref.getExtMap();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.Event::getItime", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + refId + "::getItime(" + "" + ")");
+            }
+        
+            // invoke native method
+            long result;
+            try {
+                result = ref.getItime();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.Event::setItime", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            long var1 = (long) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + refId + "::setItime(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.Event result;
+            try {
+                result = ref.setItime(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.Event::addKeyValue", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + refId + "::addKeyValue(" + var1 + var2 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.Event result;
+            try {
+                result = ref.addKeyValue(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.Event::checkEvent", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + refId + "::checkEvent(" + "" + ")");
+            }
+        
+            // invoke native method
+            boolean result;
+            try {
+                result = ref.checkEvent();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsid", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::getPurchaseGoodsid(" + "" + ")");
+            }
+        
+            // invoke native method
+            String result;
+            try {
+                result = ref.getPurchaseGoodsid();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsid", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::setPurchaseGoodsid(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.PurchaseEvent result;
+            try {
+                result = ref.setPurchaseGoodsid(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsname", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::getPurchaseGoodsname(" + "" + ")");
+            }
+        
+            // invoke native method
+            String result;
+            try {
+                result = ref.getPurchaseGoodsname();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsname", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::setPurchaseGoodsname(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.PurchaseEvent result;
+            try {
+                result = ref.setPurchaseGoodsname(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchasePrice", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::getPurchasePrice(" + "" + ")");
+            }
+        
+            // invoke native method
+            double result;
+            try {
+                result = ref.getPurchasePrice();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchasePrice", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            double var1 = (double) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::setPurchasePrice(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.PurchaseEvent result;
+            try {
+                result = ref.setPurchasePrice(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseSuccess", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::getPurchaseSuccess(" + "" + ")");
+            }
+        
+            // invoke native method
+            boolean result;
+            try {
+                result = ref.getPurchaseSuccess();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseSuccess", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            boolean var1 = (boolean) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::setPurchaseSuccess(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.PurchaseEvent result;
+            try {
+                result = ref.setPurchaseSuccess(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseCurrency", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::getPurchaseCurrency(" + "" + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.Currency result;
+            try {
+                result = ref.getPurchaseCurrency();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseCurrency", (args, methodResult) -> {
+            // args
+            // enum arg
+            cn.jiguang.analytics.android.api.Currency var1 = cn.jiguang.analytics.android.api.Currency.values()[(int) args.get("var1")];
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::setPurchaseCurrency(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.PurchaseEvent result;
+            try {
+                result = ref.setPurchaseCurrency(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodstype", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::getPurchaseGoodstype(" + "" + ")");
+            }
+        
+            // invoke native method
+            String result;
+            try {
+                result = ref.getPurchaseGoodstype();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodstype", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::setPurchaseGoodstype(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.PurchaseEvent result;
+            try {
+                result = ref.setPurchaseGoodstype(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsCount", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::getPurchaseGoodsCount(" + "" + ")");
+            }
+        
+            // invoke native method
+            int result;
+            try {
+                result = ref.getPurchaseGoodsCount();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsCount", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            int var1 = (int) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + refId + "::setPurchaseGoodsCount(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.PurchaseEvent result;
+            try {
+                result = ref.setPurchaseGoodsCount(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.BrowseEvent::getBrowseId", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.BrowseEvent@" + refId + "::getBrowseId(" + "" + ")");
+            }
+        
+            // invoke native method
+            String result;
+            try {
+                result = ref.getBrowseId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.BrowseEvent::setBrowseId", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.BrowseEvent@" + refId + "::setBrowseId(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.BrowseEvent result;
+            try {
+                result = ref.setBrowseId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.BrowseEvent::getBrowseName", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.BrowseEvent@" + refId + "::getBrowseName(" + "" + ")");
+            }
+        
+            // invoke native method
+            String result;
+            try {
+                result = ref.getBrowseName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.BrowseEvent::setBrowseName", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.BrowseEvent@" + refId + "::setBrowseName(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.BrowseEvent result;
+            try {
+                result = ref.setBrowseName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.BrowseEvent::getBrowseType", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.BrowseEvent@" + refId + "::getBrowseType(" + "" + ")");
+            }
+        
+            // invoke native method
+            String result;
+            try {
+                result = ref.getBrowseType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.BrowseEvent::setBrowseType", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.BrowseEvent@" + refId + "::setBrowseType(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.BrowseEvent result;
+            try {
+                result = ref.setBrowseType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.BrowseEvent::getBrowseDuration", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.BrowseEvent@" + refId + "::getBrowseDuration(" + "" + ")");
+            }
+        
+            // invoke native method
+            float result;
+            try {
+                result = ref.getBrowseDuration();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.BrowseEvent::setBrowseDuration", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            Double var1 = (Double) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.BrowseEvent@" + refId + "::setBrowseDuration(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.BrowseEvent result;
+            try {
+                result = ref.setBrowseDuration(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.LoginEvent::getLoginMethod", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.LoginEvent ref = (cn.jiguang.analytics.android.api.LoginEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.LoginEvent@" + refId + "::getLoginMethod(" + "" + ")");
+            }
+        
+            // invoke native method
+            String result;
+            try {
+                result = ref.getLoginMethod();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.LoginEvent::setLoginMethod", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.LoginEvent ref = (cn.jiguang.analytics.android.api.LoginEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.LoginEvent@" + refId + "::setLoginMethod(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.LoginEvent result;
+            try {
+                result = ref.setLoginMethod(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.LoginEvent::getLoginSuccess", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.LoginEvent ref = (cn.jiguang.analytics.android.api.LoginEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.LoginEvent@" + refId + "::getLoginSuccess(" + "" + ")");
+            }
+        
+            // invoke native method
+            boolean result;
+            try {
+                result = ref.getLoginSuccess();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.LoginEvent::setLoginSuccess", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            boolean var1 = (boolean) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.LoginEvent ref = (cn.jiguang.analytics.android.api.LoginEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.LoginEvent@" + refId + "::setLoginSuccess(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.LoginEvent result;
+            try {
+                result = ref.setLoginSuccess(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
         put("cn.jiguang.analytics.android.api.JAnalyticsInterface::setDebugMode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -695,6 +1995,37 @@ public class JanalyticsFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
             // invoke native method
             try {
                 cn.jiguang.analytics.android.api.JAnalyticsInterface.onPageEnd(var0, var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.JAnalyticsInterface::onEvent", (args, methodResult) -> {
+            // args
+            // ref arg
+            android.content.Context var0 = (android.content.Context) getHEAP().get((int) args.get("var0"));
+            // ref arg
+            cn.jiguang.analytics.android.api.Event var1 = (cn.jiguang.analytics.android.api.Event) getHEAP().get((int) args.get("var1"));
+        
+            // ref
+        
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.JAnalyticsInterface::onEvent(" + var0 + var1 + ")");
+            }
+        
+            // invoke native method
+            try {
+                cn.jiguang.analytics.android.api.JAnalyticsInterface.onEvent(var0, var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
                 if (getEnableLog()) {
@@ -1008,6 +2339,180 @@ public class JanalyticsFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
             methodResult.success("success");
         });
         // method
+        put("cn.jiguang.analytics.android.api.CalculateEvent::getEventId", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.CalculateEvent ref = (cn.jiguang.analytics.android.api.CalculateEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + refId + "::getEventId(" + "" + ")");
+            }
+        
+            // invoke native method
+            String result;
+            try {
+                result = ref.getEventId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.CalculateEvent::setEventId", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.CalculateEvent ref = (cn.jiguang.analytics.android.api.CalculateEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + refId + "::setEventId(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.CalculateEvent result;
+            try {
+                result = ref.setEventId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.CalculateEvent::getEventValue", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.CalculateEvent ref = (cn.jiguang.analytics.android.api.CalculateEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + refId + "::getEventValue(" + "" + ")");
+            }
+        
+            // invoke native method
+            double result;
+            try {
+                result = ref.getEventValue();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.CalculateEvent::setEventValue", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            double var1 = (double) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.CalculateEvent ref = (cn.jiguang.analytics.android.api.CalculateEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + refId + "::setEventValue(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.CalculateEvent result;
+            try {
+                result = ref.setEventValue(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("cn.jiguang.analytics.android.api.CalculateEvent::addEventValue", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            double var1 = (double) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            cn.jiguang.analytics.android.api.CalculateEvent ref = (cn.jiguang.analytics.android.api.CalculateEvent) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + refId + "::addEventValue(" + var1 + ")");
+            }
+        
+            // invoke native method
+            cn.jiguang.analytics.android.api.CalculateEvent result;
+            try {
+                result = ref.addEventValue(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
         put("cn.jiguang.analytics.android.api.AccountCallback::callback", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1048,6 +2553,82 @@ public class JanalyticsFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
             // create target object
             cn.jiguang.analytics.android.view.BuryWebActivity obj = new cn.jiguang.analytics.android.view.BuryWebActivity();
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcn_jiguang_analytics_android_api_CountEvent__String", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_CountEvent__String");
+        
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // create target object
+            cn.jiguang.analytics.android.api.CountEvent obj = new cn.jiguang.analytics.android.api.CountEvent(var1);
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcn_jiguang_analytics_android_api_CountEvent__", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_CountEvent__");
+        
+            // args
+        
+        
+            // create target object
+            cn.jiguang.analytics.android.api.CountEvent obj = new cn.jiguang.analytics.android.api.CountEvent();
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcn_jiguang_analytics_android_api_RegisterEvent__String__boolean", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_RegisterEvent__String__boolean");
+        
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            boolean var2 = (boolean) args.get("var2");
+        
+            // create target object
+            cn.jiguang.analytics.android.api.RegisterEvent obj = new cn.jiguang.analytics.android.api.RegisterEvent(var1, var2);
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcn_jiguang_analytics_android_api_RegisterEvent__", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_RegisterEvent__");
+        
+            // args
+        
+        
+            // create target object
+            cn.jiguang.analytics.android.api.RegisterEvent obj = new cn.jiguang.analytics.android.api.RegisterEvent();
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
@@ -1149,6 +2730,145 @@ public class JanalyticsFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
             methodResult.success(obj.hashCode());
         });
         // factory
+        put("ObjectFactory::createcn_jiguang_analytics_android_api_PurchaseEvent__", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_PurchaseEvent__");
+        
+            // args
+        
+        
+            // create target object
+            cn.jiguang.analytics.android.api.PurchaseEvent obj = new cn.jiguang.analytics.android.api.PurchaseEvent();
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcn_jiguang_analytics_android_api_BrowseEvent__String__String__String__float", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_BrowseEvent__String__String__String__float");
+        
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+            // jsonable arg
+            String var3 = (String) args.get("var3");
+            // jsonable arg
+            Double var4 = (Double) args.get("var4");
+        
+            // create target object
+            cn.jiguang.analytics.android.api.BrowseEvent obj = new cn.jiguang.analytics.android.api.BrowseEvent(var1, var2, var3, new Double(var4).floatValue());
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcn_jiguang_analytics_android_api_BrowseEvent__", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_BrowseEvent__");
+        
+            // args
+        
+        
+            // create target object
+            cn.jiguang.analytics.android.api.BrowseEvent obj = new cn.jiguang.analytics.android.api.BrowseEvent();
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcn_jiguang_analytics_android_api_LoginEvent__String__boolean", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_LoginEvent__String__boolean");
+        
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            boolean var2 = (boolean) args.get("var2");
+        
+            // create target object
+            cn.jiguang.analytics.android.api.LoginEvent obj = new cn.jiguang.analytics.android.api.LoginEvent(var1, var2);
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcn_jiguang_analytics_android_api_LoginEvent__", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_LoginEvent__");
+        
+            // args
+        
+        
+            // create target object
+            cn.jiguang.analytics.android.api.LoginEvent obj = new cn.jiguang.analytics.android.api.LoginEvent();
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcn_jiguang_analytics_android_api_CalculateEvent__", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_CalculateEvent__");
+        
+            // args
+        
+        
+            // create target object
+            cn.jiguang.analytics.android.api.CalculateEvent obj = new cn.jiguang.analytics.android.api.CalculateEvent();
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcn_jiguang_analytics_android_api_CalculateEvent__String__double", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_CalculateEvent__String__double");
+        
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            double var2 = (double) args.get("var2");
+        
+            // create target object
+            cn.jiguang.analytics.android.api.CalculateEvent obj = new cn.jiguang.analytics.android.api.CalculateEvent(var1, var2);
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
         put("ObjectFactory::createcn_analytics_client_android_BuildConfig__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: cn_analytics_client_android_BuildConfig__");
         
@@ -1173,11 +2893,13 @@ public class JanalyticsFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         final MethodChannel channel = new MethodChannel(registrar.messenger(), "me.yohom/janalytics_fluttify");
 
         JanalyticsFluttifyPlugin plugin = new JanalyticsFluttifyPlugin();
-        plugin.messenger = registrar.messenger();
+        BinaryMessenger messenger = registrar.messenger();
+        plugin.messenger = messenger;
 
         channel.setMethodCallHandler(plugin);
 
         // register platform view
+        PlatformViewRegistry platformViewRegistry = registrar.platformViewRegistry();
         
     }
 
@@ -1190,7 +2912,9 @@ public class JanalyticsFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
 
         channel.setMethodCallHandler(this);
 
+
         // register platform view
+        PlatformViewRegistry platformViewRegistry = binding.getPlatformViewRegistry();
         
     }
 

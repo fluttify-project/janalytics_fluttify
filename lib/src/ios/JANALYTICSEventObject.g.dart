@@ -27,10 +27,20 @@ class JANALYTICSEventObject extends NSObject  {
   //endregion
 
   //region getters
+  Future<Map<String, String>> get_extra() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSEventObject::get_extra", {'refId': refId});
+  
+    return result;
+  }
   
   //endregion
 
   //region setters
+  Future<void> set_extra(Map<String, String> extra) async {
+    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSEventObject::set_extra', {'refId': refId, "extra": extra});
+  
+  
+  }
   
   //endregion
 

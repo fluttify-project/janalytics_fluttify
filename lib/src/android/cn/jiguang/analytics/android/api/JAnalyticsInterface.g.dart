@@ -116,6 +116,28 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   }
   
+  static Future<void> onEvent(android_content_Context var0, cn_jiguang_analytics_android_api_Event var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: cn.jiguang.analytics.android.api.JAnalyticsInterface::onEvent([])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onEvent', {"var0": var0.refId, "var1": var1.refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
   static Future<void> requestPermission(android_app_Activity var0) async {
     // print log
     if (fluttifyLogEnabled) {
