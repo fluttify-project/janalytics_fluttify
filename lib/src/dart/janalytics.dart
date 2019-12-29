@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:janalytics_fluttify/src/ios/ios.export.g.dart';
 
+import 'models.dart';
+
 class JAnalytics {
   /// 初始化
   static Future<void> init({
@@ -82,6 +84,21 @@ class JAnalytics {
       },
       ios: (pool) async {
         await JANALYTICSService.stopLogPageView(pageName);
+      },
+    );
+  }
+
+  /// 自定义事件
+  static Future<void> onEvent(Event event) async {
+    assert(event != null);
+    await platform(
+      android: (pool) async {
+        final context = await android_app_Activity.get();
+        await cn_jiguang_analytics_android_api_JAnalyticsInterface.onEvent(
+            context, await event.toAndroidModel());
+      },
+      ios: (pool) async {
+        await JANALYTICSService.eventRecord(await event.toIOSModel());
       },
     );
   }
