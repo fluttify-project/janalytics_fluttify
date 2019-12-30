@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:janalytics_fluttify/src/ios/ios.export.g.dart';
@@ -121,5 +123,52 @@ class JAnalytics {
         await JANALYTICSService.setFrequency(period);
       },
     );
+  }
+
+  /// 为用户增加账户信息
+  static Future<void> identifyAccount(Account account) async {
+    assert(account != null);
+    final completer = Completer();
+    platform(
+      android: (pool) async {
+        final context = await android_app_Application.get();
+        await cn_jiguang_analytics_android_api_JAnalyticsInterface
+            .identifyAccount__android_content_Context__cn_jiguang_analytics_android_api_Account__cn_jiguang_analytics_android_api_AccountCallback(
+          context,
+          await account.toAndroidModel(),
+          _IdentifyAccountCallback(completer),
+        );
+      },
+      ios: (pool) async {
+        await JANALYTICSService.identifyAccountWith(
+          await account.toIOSModel(),
+          (err, msg) {
+            if (err != 0) {
+              completer.completeError(msg);
+            } else {
+              completer.complete();
+            }
+          },
+        );
+      },
+    );
+    return completer.future;
+  }
+}
+
+class _IdentifyAccountCallback extends java_lang_Object
+    with cn_jiguang_analytics_android_api_AccountCallback {
+  final Completer completer;
+
+  _IdentifyAccountCallback(this.completer) : assert(completer != null);
+
+  @override
+  Future<void> callback(int var1, String var2) async {
+    super.callback(var1, var2);
+    if (var1 != 0) {
+      completer.completeError(var2);
+    } else {
+      completer.complete();
+    }
   }
 }

@@ -326,4 +326,134 @@ class PurchaseEvent extends Event {
   }
 }
 
+class Account {
+  /// 账号ID
+  final String accountID;
+
+  /// 账号创建时间
+  final DateTime creationTime;
+
+  /// 姓名
+  final String name;
+
+  /// 性别
+  final Gender sex;
+
+  /// 是否付费
+  final Paid paid;
+
+  /// 出生年月
+  final DateTime birthdate;
+
+  /// 手机号码
+  final String phone;
+
+  /// 电子邮件
+  final String email;
+
+  /// 新浪微博ID
+  final String weiboID;
+
+  /// 微信ID
+  final String wechatID;
+
+  /// QQ ID
+  final String qqID;
+
+  Account({
+    @required this.accountID,
+    this.creationTime,
+    this.name,
+    this.sex,
+    this.paid,
+    this.birthdate,
+    this.phone,
+    this.email,
+    this.weiboID,
+    this.wechatID,
+    this.qqID,
+  }) : assert(accountID != null, "账户id不能为空");
+
+  Future<cn_jiguang_analytics_android_api_Account> toAndroidModel() async {
+    final result = await cn_jiguang_analytics_android_api_Account
+        .create__String(accountID);
+    if (creationTime != null) {
+      await result.setCreationTime(creationTime.millisecondsSinceEpoch);
+    }
+    if (name != null) {
+      await result.setName(name);
+    }
+    if (sex != null) {
+      await result.setSex(sex.index);
+    }
+    if (paid != null) {
+      await result.setPaid(paid.index);
+    }
+    if (birthdate != null) {
+      await result.setBirthdate(birthdate.toString());
+    }
+    if (phone != null) {
+      await result.setPhone(phone);
+    }
+    if (email != null) {
+      await result.setEmail(email);
+    }
+    if (weiboID != null) {
+      await result.setWeiboId(weiboID);
+    }
+    if (wechatID != null) {
+      await result.setWechatId(wechatID);
+    }
+    if (qqID != null) {
+      await result.setQqId(qqID);
+    }
+    return result;
+  }
+
+  Future<JANALYTICSUserInfo> toIOSModel() async {
+    final result = await JANALYTICSUserInfo.create__();
+    if (creationTime != null) {
+      await result
+          .set_creationTime(creationTime.millisecondsSinceEpoch.toDouble());
+    }
+    if (name != null) {
+      await result.set_name(name);
+    }
+    if (sex != null) {
+      await result.set_sex(JANALYTICSSex.values[sex.index]);
+    }
+    if (paid != null) {
+      await result.set_paid(JANALYTICSPaid.values[paid.index]);
+    }
+    if (birthdate != null) {
+      await result.set_birthdate(birthdate.toString());
+    }
+    if (phone != null) {
+      await result.set_phone(phone);
+    }
+    if (email != null) {
+      await result.set_email(email);
+    }
+    if (weiboID != null) {
+      await result.set_weiboID(weiboID);
+    }
+    if (wechatID != null) {
+      await result.set_wechatID(wechatID);
+    }
+    if (qqID != null) {
+      await result.set_qqID(qqID);
+    }
+    return result;
+  }
+
+  @override
+  String toString() {
+    return 'Account{accountID: $accountID, creationTime: $creationTime, name: $name, sex: $sex, paid: $paid, birthdate: $birthdate, phone: $phone, email: $email, weiboID: $weiboID, wechatID: $wechatID, qqID: $qqID}';
+  }
+}
+
 enum Currency { CNY, USD }
+
+enum Gender { Unknown, Male, Female }
+
+enum Paid { Unknown, Yes, No }
