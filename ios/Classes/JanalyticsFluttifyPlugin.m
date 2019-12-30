@@ -665,6 +665,22 @@ extern BOOL enableLog;
           methodResult(result);
       },
       
+      @"JANALYTICSUserInfo::get_creationTime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // print log
+          if (enableLog) {
+              NSLog(@"JANALYTICSUserInfo::get_creationTime");
+          }
+      
+          // ref object
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+      
+          // invoke native method
+          NSTimeInterval result = ref.creationTime;
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
       @"JANALYTICSUserInfo::get_sex": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
@@ -1214,6 +1230,23 @@ extern BOOL enableLog;
           JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.accountID = accountID;
+          methodResult(@"success");
+      },
+      
+      @"JANALYTICSUserInfo::set_creationTime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // print log
+          if (enableLog) {
+              NSLog(@"JANALYTICSUserInfo::set_creationTime");
+          }
+      
+          // args
+          // jsonable arg
+          NSTimeInterval creationTime = [args[@"creationTime"] doubleValue];
+      
+          // ref
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+      
+          ref.creationTime = creationTime;
           methodResult(@"success");
       },
       

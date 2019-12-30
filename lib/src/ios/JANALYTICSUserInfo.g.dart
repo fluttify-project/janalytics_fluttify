@@ -33,6 +33,12 @@ class JANALYTICSUserInfo extends NSObject  {
     return result;
   }
   
+  Future<double> get_creationTime() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_creationTime", {'refId': refId});
+  
+    return result;
+  }
+  
   Future<JANALYTICSSex> get_sex() async {
     final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_sex", {'refId': refId});
   
@@ -92,6 +98,12 @@ class JANALYTICSUserInfo extends NSObject  {
   //region setters
   Future<void> set_accountID(String accountID) async {
     await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSUserInfo::set_accountID', {'refId': refId, "accountID": accountID});
+  
+  
+  }
+  
+  Future<void> set_creationTime(double creationTime) async {
+    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSUserInfo::set_creationTime', {'refId': refId, "creationTime": creationTime});
   
   
   }
