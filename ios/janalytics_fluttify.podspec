@@ -19,7 +19,7 @@ A new flutter plugin project.
   # flutter plugin dependency
   s.dependency 'jcore_fluttify'
   # sdk dependency
-  s.dependency 'JAnalytics', '2.1'
+  s.dependency 'JAnalytics', '~> 2.1'
 
   s.ios.deployment_target = '8.0'
   # include project framework

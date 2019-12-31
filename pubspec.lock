@@ -87,7 +87,7 @@ packages:
       name: jcore_fluttify
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.4+4d92ce0"
+    version: "0.0.5+68b910c"
   matcher:
     dependency: transitive
     description:
