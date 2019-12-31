@@ -11,8 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  jcore_fluttify: ^0.0.4+4d92ce0
   
-  foundation_fluttify: ^0.4.2+1
 
 dev_dependencies:
   flutter_test:

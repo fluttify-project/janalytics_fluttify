@@ -17,7 +17,7 @@ A new flutter plugin project.
   s.dependency 'Flutter'
   s.dependency 'foundation_fluttify'
   # flutter plugin dependency
-  
+  s.dependency 'jcore_fluttify'
   # sdk dependency
   s.dependency 'JAnalytics', '2.1'
 
