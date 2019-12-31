@@ -11,7 +11,7 @@ import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:janalytics_fluttify/src/ios/ios.export.g.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-extension TypeOpAndroid on Ref {
+extension TypeOpJanalyticsFluttifyAndroid on Ref {
   Future<bool> iscn_jiguang_analytics_android_view_BuryWebActivity() async {
     final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_view_BuryWebActivity', {'refId': refId});
     return result;

@@ -49,5 +49,5 @@ dependencies {
     // flutter plugin dependency
     
     // sdk dependency
-    implementation 'cn.jiguang.sdk:janalytics:2.1.0'
+    api 'cn.jiguang.sdk:janalytics:2.1.0'
 }

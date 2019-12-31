@@ -11,7 +11,7 @@ import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:janalytics_fluttify/src/ios/ios.export.g.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-extension TypeOpIOS on Ref {
+extension TypeOpJanalyticsFluttifyIOS on Ref {
   Future<bool> isJANALYTICSLaunchConfig() async {
     final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::isKindOfJANALYTICSLaunchConfig', {'refId': refId});
     return result;
