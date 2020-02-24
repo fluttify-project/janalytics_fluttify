@@ -29,35 +29,50 @@ class HomeScreen extends StatelessWidget {
       ),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
         itemSpacing: kSpaceBig,
         children: [
           RaisedButton(
-            onPressed: () {},
+            onPressed: () async {
+              await JAnalytics.setDebugEnable(true);
+            },
             child: Text('是否打开日志'),
           ),
           RaisedButton(
-            onPressed: () {},
+            onPressed: () async {
+              await JAnalytics.startCrashHandler();
+            },
             child: Text('打开奔溃日志上报'),
           ),
           RaisedButton(
-            onPressed: () {},
+            onPressed: () async {
+              await JAnalytics.onPageStart('test page');
+            },
             child: Text('页面流统计 页面开始'),
           ),
           RaisedButton(
-            onPressed: () {},
+            onPressed: () async {
+              await JAnalytics.onPageEnd('test page');
+            },
             child: Text('页面流统计 页面结束'),
           ),
           RaisedButton(
-            onPressed: () {},
+            onPressed: () async {
+              await JAnalytics.onEvent(CountEvent(eventId: "test event"));
+            },
             child: Text('自定义事件'),
           ),
           RaisedButton(
-            onPressed: () {},
-            child: Text('设置统计上报的自动周期，未调用前默认即时上报'),
+            onPressed: () async {
+              await JAnalytics.setReportPeriod(60);
+            },
+            child: Text('设置统计上报的自动周期'),
           ),
           RaisedButton(
-            onPressed: () {},
+            onPressed: () async {
+//              await JAnalytics.identifyAccount(CountEvent(eventId: "test event"));
+            },
             child: Text('为用户增加账户信息'),
           ),
         ],
