@@ -16,5 +16,4 @@ export 'cn/jiguang/analytics/android/api/PurchaseEvent.g.dart';
 export 'cn/jiguang/analytics/android/api/Currency.g.dart';
 export 'cn/analytics/client/android/BuildConfig.g.dart';
 export 'type_op.g.dart';
-export 'package:foundation_fluttify/foundation_fluttify.dart';
 export 'package:jcore_fluttify/jcore_fluttify.dart';

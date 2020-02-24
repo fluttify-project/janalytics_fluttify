@@ -3,8 +3,9 @@
 //////////////////////////////////////////////////////////
 
 #import "JanalyticsFluttifyPlugin.h"
+#import <objc/runtime.h>
 
-typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSString *, NSObject *> *, FlutterResult);
+typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, id, FlutterResult);
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -24,7 +25,7 @@ extern BOOL enableLog;
     _registrar = registrar;
     // 处理方法们
     _handlerMap = @{
-      @"JANALYTICSService::setupWithConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSService::setupWithConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // ref arg
           JANALYTICSLaunchConfig* config = (JANALYTICSLaunchConfig*) HEAP[@([args[@"config"] integerValue])];
@@ -42,9 +43,11 @@ extern BOOL enableLog;
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"JANALYTICSService::startLogPageView": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSService::startLogPageView": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // jsonable arg
           NSString* pageName = (NSString*) args[@"pageName"];
@@ -62,9 +65,11 @@ extern BOOL enableLog;
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"JANALYTICSService::stopLogPageView": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSService::stopLogPageView": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // jsonable arg
           NSString* pageName = (NSString*) args[@"pageName"];
@@ -82,9 +87,11 @@ extern BOOL enableLog;
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"JANALYTICSService::setLatitudeLongitude": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSService::setLatitudeLongitude": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // jsonable arg
           double latitude = [args[@"latitude"] doubleValue];
@@ -104,9 +111,11 @@ extern BOOL enableLog;
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"JANALYTICSService::setLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSService::setLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // ref arg
           CLLocation* location = (CLLocation*) HEAP[@([args[@"location"] integerValue])];
@@ -124,9 +133,11 @@ extern BOOL enableLog;
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"JANALYTICSService::eventRecord": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSService::eventRecord": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // ref arg
           JANALYTICSEventObject* event = (JANALYTICSEventObject*) HEAP[@([args[@"event"] integerValue])];
@@ -144,9 +155,11 @@ extern BOOL enableLog;
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"JANALYTICSService::identifyAccountWith": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSService::identifyAccountWith": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // ref arg
           JANALYTICSUserInfo* userInfo = (JANALYTICSUserInfo*) HEAP[@([args[@"userInfo"] integerValue])];
@@ -183,9 +196,11 @@ extern BOOL enableLog;
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"JANALYTICSService::detachAccount": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSService::detachAccount": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
       
       
@@ -220,9 +235,11 @@ extern BOOL enableLog;
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"JANALYTICSService::setFrequency": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSService::setFrequency": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // jsonable arg
           NSUInteger frequency = [args[@"frequency"] unsignedIntegerValue];
@@ -240,9 +257,11 @@ extern BOOL enableLog;
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"JANALYTICSService::crashLogON": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSService::crashLogON": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
       
       
@@ -259,9 +278,11 @@ extern BOOL enableLog;
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"JANALYTICSService::setDebug": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSService::setDebug": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // args
           // jsonable arg
           BOOL enable = [args[@"enable"] boolValue];
@@ -279,553 +300,1495 @@ extern BOOL enableLog;
       
           // result
           // 无返回值
-          methodResult(@"success");
+          NSString* jsonableResult = @"success";
+      
+          methodResult(jsonableResult);
       },
-      @"JANALYTICSLaunchConfig::get_appKey": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSService::setupWithConfig_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // args
+              // ref arg
+              JANALYTICSLaunchConfig* config = (JANALYTICSLaunchConfig*) HEAP[@([args[@"config"] integerValue])];
+      
+              // ref
+        
+      
+              // invoke native method
+              [JANALYTICSService setupWithConfig: config];
+      
+              // result
+              // 无返回值
+              NSString* jsonableResult = @"success";
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      @"JANALYTICSService::startLogPageView_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // args
+              // jsonable arg
+              NSString* pageName = (NSString*) args[@"pageName"];
+      
+              // ref
+        
+      
+              // invoke native method
+              [JANALYTICSService startLogPageView: pageName];
+      
+              // result
+              // 无返回值
+              NSString* jsonableResult = @"success";
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      @"JANALYTICSService::stopLogPageView_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // args
+              // jsonable arg
+              NSString* pageName = (NSString*) args[@"pageName"];
+      
+              // ref
+        
+      
+              // invoke native method
+              [JANALYTICSService stopLogPageView: pageName];
+      
+              // result
+              // 无返回值
+              NSString* jsonableResult = @"success";
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      @"JANALYTICSService::setLatitudeLongitude_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // args
+              // jsonable arg
+              double latitude = [args[@"latitude"] doubleValue];
+              // jsonable arg
+              double longitude = [args[@"longitude"] doubleValue];
+      
+              // ref
+        
+      
+              // invoke native method
+              [JANALYTICSService setLatitude: latitude longitude: longitude];
+      
+              // result
+              // 无返回值
+              NSString* jsonableResult = @"success";
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      @"JANALYTICSService::setLocation_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // args
+              // ref arg
+              CLLocation* location = (CLLocation*) HEAP[@([args[@"location"] integerValue])];
+      
+              // ref
+        
+      
+              // invoke native method
+              [JANALYTICSService setLocation: location];
+      
+              // result
+              // 无返回值
+              NSString* jsonableResult = @"success";
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      @"JANALYTICSService::eventRecord_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // args
+              // ref arg
+              JANALYTICSEventObject* event = (JANALYTICSEventObject*) HEAP[@([args[@"event"] integerValue])];
+      
+              // ref
+        
+      
+              // invoke native method
+              [JANALYTICSService eventRecord: event];
+      
+              // result
+              // 无返回值
+              NSString* jsonableResult = @"success";
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      @"JANALYTICSService::setFrequency_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // args
+              // jsonable arg
+              NSUInteger frequency = [args[@"frequency"] unsignedIntegerValue];
+      
+              // ref
+        
+      
+              // invoke native method
+              [JANALYTICSService setFrequency: frequency];
+      
+              // result
+              // 无返回值
+              NSString* jsonableResult = @"success";
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      @"JANALYTICSService::crashLogON_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // args
+        
+      
+              // ref
+        
+      
+              // invoke native method
+              [JANALYTICSService crashLogON];
+      
+              // result
+              // 无返回值
+              NSString* jsonableResult = @"success";
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      @"JANALYTICSService::setDebug_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // args
+              // jsonable arg
+              BOOL enable = [args[@"enable"] boolValue];
+      
+              // ref
+        
+      
+              // invoke native method
+              [JANALYTICSService setDebug: enable];
+      
+              // result
+              // 无返回值
+              NSString* jsonableResult = @"success";
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      @"JANALYTICSLaunchConfig::get_appKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSLaunchConfig::get_appKey");
           }
       
           // ref object
-          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.appKey;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSLaunchConfig::get_channel": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSLaunchConfig::get_channel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSLaunchConfig::get_channel");
           }
       
           // ref object
-          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.channel;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSLaunchConfig::get_advertisingId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSLaunchConfig::get_advertisingId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSLaunchConfig::get_advertisingId");
           }
       
           // ref object
-          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.advertisingId;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSLaunchConfig::get_isProduction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSLaunchConfig::get_isProduction": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSLaunchConfig::get_isProduction");
           }
       
           // ref object
-          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           BOOL result = ref.isProduction;
       
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSEventObject::get_extra": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSEventObject::get_extra": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSEventObject::get_extra");
           }
       
           // ref object
-          JANALYTICSEventObject* ref = (JANALYTICSEventObject*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSEventObject* ref = (JANALYTICSEventObject*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSDictionary<NSString*,NSString*>* result = ref.extra;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSLoginEvent::get_method": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSLoginEvent::get_method": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSLoginEvent::get_method");
           }
       
           // ref object
-          JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.method;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSLoginEvent::get_success": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSLoginEvent::get_success": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSLoginEvent::get_success");
           }
       
           // ref object
-          JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           BOOL result = ref.success;
       
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSRegisterEvent::get_method": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSRegisterEvent::get_method": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSRegisterEvent::get_method");
           }
       
           // ref object
-          JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.method;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSRegisterEvent::get_success": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSRegisterEvent::get_success": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSRegisterEvent::get_success");
           }
       
           // ref object
-          JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           BOOL result = ref.success;
       
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSPurchaseEvent::get_price": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::get_price": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::get_price");
           }
       
           // ref object
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           CGFloat result = ref.price;
       
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSPurchaseEvent::get_success": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::get_success": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::get_success");
           }
       
           // ref object
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           BOOL result = ref.success;
       
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSPurchaseEvent::get_goodsID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::get_goodsID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::get_goodsID");
           }
       
           // ref object
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.goodsID;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSPurchaseEvent::get_goodsName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::get_goodsName": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::get_goodsName");
           }
       
           // ref object
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.goodsName;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSPurchaseEvent::get_goodsType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::get_goodsType": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::get_goodsType");
           }
       
           // ref object
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.goodsType;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSPurchaseEvent::get_currency": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::get_currency": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::get_currency");
           }
       
           // ref object
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           JANALYTICSPurchaseCurrency result = ref.currency;
       
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSPurchaseEvent::get_quantity": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::get_quantity": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::get_quantity");
           }
       
           // ref object
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSInteger result = ref.quantity;
       
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSBrowseEvent::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSBrowseEvent::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSBrowseEvent::get_name");
           }
       
           // ref object
-          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.name;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSBrowseEvent::get_contentID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSBrowseEvent::get_contentID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSBrowseEvent::get_contentID");
           }
       
           // ref object
-          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.contentID;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSBrowseEvent::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSBrowseEvent::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSBrowseEvent::get_type");
           }
       
           // ref object
-          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.type;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSBrowseEvent::get_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSBrowseEvent::get_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSBrowseEvent::get_duration");
           }
       
           // ref object
-          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           CGFloat result = ref.duration;
       
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSCountEvent::get_eventID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSCountEvent::get_eventID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSCountEvent::get_eventID");
           }
       
           // ref object
-          JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.eventID;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSCalculateEvent::get_eventID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSCalculateEvent::get_eventID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSCalculateEvent::get_eventID");
           }
       
           // ref object
-          JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.eventID;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSCalculateEvent::get_value": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSCalculateEvent::get_value": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSCalculateEvent::get_value");
           }
       
           // ref object
-          JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           CGFloat result = ref.value;
       
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSUserInfo::get_accountID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::get_accountID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::get_accountID");
           }
       
           // ref object
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.accountID;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSUserInfo::get_creationTime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::get_creationTime": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::get_creationTime");
           }
       
           // ref object
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSTimeInterval result = ref.creationTime;
       
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSUserInfo::get_sex": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::get_sex": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::get_sex");
           }
       
           // ref object
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           JANALYTICSSex result = ref.sex;
       
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSUserInfo::get_birthdate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::get_birthdate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::get_birthdate");
           }
       
           // ref object
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.birthdate;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSUserInfo::get_paid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::get_paid": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::get_paid");
           }
       
           // ref object
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           JANALYTICSPaid result = ref.paid;
       
           // 返回值: Value
-          methodResult(@(result));
+          id jsonableResult = @(result);
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSUserInfo::get_phone": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::get_phone": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::get_phone");
           }
       
           // ref object
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.phone;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSUserInfo::get_email": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::get_email": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::get_email");
           }
       
           // ref object
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.email;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSUserInfo::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::get_name");
           }
       
           // ref object
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.name;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSUserInfo::get_wechatID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::get_wechatID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::get_wechatID");
           }
       
           // ref object
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.wechatID;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSUserInfo::get_qqID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::get_qqID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::get_qqID");
           }
       
           // ref object
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.qqID;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSUserInfo::get_weiboID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::get_weiboID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::get_weiboID");
           }
       
           // ref object
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
-          // invoke native method
           NSString* result = ref.weiboID;
       
           // 返回值: jsonable
-          methodResult(result);
+          id jsonableResult = result;
+      
+          methodResult(jsonableResult);
       },
       
-      @"JANALYTICSLaunchConfig::set_appKey": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSLaunchConfig::get_appKey_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.appKey;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSLaunchConfig::get_channel_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.channel;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSLaunchConfig::get_advertisingId_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.advertisingId;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSLaunchConfig::get_isProduction_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              BOOL result = ref.isProduction;
+      
+              // 返回值: Value
+              id jsonableResult = @(result);
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSEventObject::get_extra_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSEventObject* ref = (JANALYTICSEventObject*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSDictionary<NSString*,NSString*>* result = ref.extra;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSLoginEvent::get_method_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.method;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSLoginEvent::get_success_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              BOOL result = ref.success;
+      
+              // 返回值: Value
+              id jsonableResult = @(result);
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSRegisterEvent::get_method_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.method;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSRegisterEvent::get_success_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              BOOL result = ref.success;
+      
+              // 返回值: Value
+              id jsonableResult = @(result);
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSPurchaseEvent::get_price_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              CGFloat result = ref.price;
+      
+              // 返回值: Value
+              id jsonableResult = @(result);
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSPurchaseEvent::get_success_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              BOOL result = ref.success;
+      
+              // 返回值: Value
+              id jsonableResult = @(result);
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSPurchaseEvent::get_goodsID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.goodsID;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSPurchaseEvent::get_goodsName_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.goodsName;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSPurchaseEvent::get_goodsType_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.goodsType;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSPurchaseEvent::get_currency_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              JANALYTICSPurchaseCurrency result = ref.currency;
+      
+              // 返回值: Value
+              id jsonableResult = @(result);
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSPurchaseEvent::get_quantity_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSInteger result = ref.quantity;
+      
+              // 返回值: Value
+              id jsonableResult = @(result);
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSBrowseEvent::get_name_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.name;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSBrowseEvent::get_contentID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.contentID;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSBrowseEvent::get_type_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.type;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSBrowseEvent::get_duration_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              CGFloat result = ref.duration;
+      
+              // 返回值: Value
+              id jsonableResult = @(result);
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSCountEvent::get_eventID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.eventID;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSCalculateEvent::get_eventID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.eventID;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSCalculateEvent::get_value_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              CGFloat result = ref.value;
+      
+              // 返回值: Value
+              id jsonableResult = @(result);
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSUserInfo::get_accountID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.accountID;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSUserInfo::get_creationTime_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSTimeInterval result = ref.creationTime;
+      
+              // 返回值: Value
+              id jsonableResult = @(result);
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSUserInfo::get_sex_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              JANALYTICSSex result = ref.sex;
+      
+              // 返回值: Value
+              id jsonableResult = @(result);
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSUserInfo::get_birthdate_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.birthdate;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSUserInfo::get_paid_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              JANALYTICSPaid result = ref.paid;
+      
+              // 返回值: Value
+              id jsonableResult = @(result);
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSUserInfo::get_phone_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.phone;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSUserInfo::get_email_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.email;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSUserInfo::get_name_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.name;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSUserInfo::get_wechatID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.wechatID;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSUserInfo::get_qqID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.qqID;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSUserInfo::get_weiboID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
+              NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+      
+              // ref object
+              JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+      
+              NSString* result = ref.weiboID;
+      
+              // 返回值: jsonable
+              id jsonableResult = result;
+      
+              [resultList addObject:jsonableResult];
+          }
+      
+          methodResult(resultList);
+      },
+      
+      @"JANALYTICSLaunchConfig::set_appKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSLaunchConfig::set_appKey");
@@ -836,13 +1799,13 @@ extern BOOL enableLog;
           NSString* appKey = (NSString*) args[@"appKey"];
       
           // ref
-          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.appKey = appKey;
           methodResult(@"success");
       },
       
-      @"JANALYTICSLaunchConfig::set_channel": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSLaunchConfig::set_channel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSLaunchConfig::set_channel");
@@ -853,13 +1816,13 @@ extern BOOL enableLog;
           NSString* channel = (NSString*) args[@"channel"];
       
           // ref
-          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.channel = channel;
           methodResult(@"success");
       },
       
-      @"JANALYTICSLaunchConfig::set_advertisingId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSLaunchConfig::set_advertisingId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSLaunchConfig::set_advertisingId");
@@ -870,13 +1833,13 @@ extern BOOL enableLog;
           NSString* advertisingId = (NSString*) args[@"advertisingId"];
       
           // ref
-          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.advertisingId = advertisingId;
           methodResult(@"success");
       },
       
-      @"JANALYTICSLaunchConfig::set_isProduction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSLaunchConfig::set_isProduction": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSLaunchConfig::set_isProduction");
@@ -887,13 +1850,13 @@ extern BOOL enableLog;
           BOOL isProduction = [args[@"isProduction"] boolValue];
       
           // ref
-          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.isProduction = isProduction;
           methodResult(@"success");
       },
       
-      @"JANALYTICSEventObject::set_extra": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSEventObject::set_extra": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSEventObject::set_extra");
@@ -904,13 +1867,13 @@ extern BOOL enableLog;
           NSDictionary<NSString*,NSString*>* extra = (NSDictionary<NSString*,NSString*>*) args[@"extra"];
       
           // ref
-          JANALYTICSEventObject* ref = (JANALYTICSEventObject*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSEventObject* ref = (JANALYTICSEventObject*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.extra = extra;
           methodResult(@"success");
       },
       
-      @"JANALYTICSLoginEvent::set_method": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSLoginEvent::set_method": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSLoginEvent::set_method");
@@ -921,13 +1884,13 @@ extern BOOL enableLog;
           NSString* method = (NSString*) args[@"method"];
       
           // ref
-          JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.method = method;
           methodResult(@"success");
       },
       
-      @"JANALYTICSLoginEvent::set_success": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSLoginEvent::set_success": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSLoginEvent::set_success");
@@ -938,13 +1901,13 @@ extern BOOL enableLog;
           BOOL success = [args[@"success"] boolValue];
       
           // ref
-          JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.success = success;
           methodResult(@"success");
       },
       
-      @"JANALYTICSRegisterEvent::set_method": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSRegisterEvent::set_method": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSRegisterEvent::set_method");
@@ -955,13 +1918,13 @@ extern BOOL enableLog;
           NSString* method = (NSString*) args[@"method"];
       
           // ref
-          JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.method = method;
           methodResult(@"success");
       },
       
-      @"JANALYTICSRegisterEvent::set_success": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSRegisterEvent::set_success": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSRegisterEvent::set_success");
@@ -972,13 +1935,13 @@ extern BOOL enableLog;
           BOOL success = [args[@"success"] boolValue];
       
           // ref
-          JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.success = success;
           methodResult(@"success");
       },
       
-      @"JANALYTICSPurchaseEvent::set_price": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::set_price": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::set_price");
@@ -989,13 +1952,13 @@ extern BOOL enableLog;
           CGFloat price = [args[@"price"] floatValue];
       
           // ref
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.price = price;
           methodResult(@"success");
       },
       
-      @"JANALYTICSPurchaseEvent::set_success": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::set_success": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::set_success");
@@ -1006,13 +1969,13 @@ extern BOOL enableLog;
           BOOL success = [args[@"success"] boolValue];
       
           // ref
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.success = success;
           methodResult(@"success");
       },
       
-      @"JANALYTICSPurchaseEvent::set_goodsID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::set_goodsID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::set_goodsID");
@@ -1023,13 +1986,13 @@ extern BOOL enableLog;
           NSString* goodsID = (NSString*) args[@"goodsID"];
       
           // ref
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.goodsID = goodsID;
           methodResult(@"success");
       },
       
-      @"JANALYTICSPurchaseEvent::set_goodsName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::set_goodsName": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::set_goodsName");
@@ -1040,13 +2003,13 @@ extern BOOL enableLog;
           NSString* goodsName = (NSString*) args[@"goodsName"];
       
           // ref
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.goodsName = goodsName;
           methodResult(@"success");
       },
       
-      @"JANALYTICSPurchaseEvent::set_goodsType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::set_goodsType": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::set_goodsType");
@@ -1057,13 +2020,13 @@ extern BOOL enableLog;
           NSString* goodsType = (NSString*) args[@"goodsType"];
       
           // ref
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.goodsType = goodsType;
           methodResult(@"success");
       },
       
-      @"JANALYTICSPurchaseEvent::set_currency": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::set_currency": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::set_currency");
@@ -1074,13 +2037,13 @@ extern BOOL enableLog;
           JANALYTICSPurchaseCurrency currency = (JANALYTICSPurchaseCurrency) [args[@"currency"] integerValue];
       
           // ref
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.currency = currency;
           methodResult(@"success");
       },
       
-      @"JANALYTICSPurchaseEvent::set_quantity": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSPurchaseEvent::set_quantity": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSPurchaseEvent::set_quantity");
@@ -1091,13 +2054,13 @@ extern BOOL enableLog;
           NSInteger quantity = [args[@"quantity"] integerValue];
       
           // ref
-          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.quantity = quantity;
           methodResult(@"success");
       },
       
-      @"JANALYTICSBrowseEvent::set_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSBrowseEvent::set_name": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSBrowseEvent::set_name");
@@ -1108,13 +2071,13 @@ extern BOOL enableLog;
           NSString* name = (NSString*) args[@"name"];
       
           // ref
-          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.name = name;
           methodResult(@"success");
       },
       
-      @"JANALYTICSBrowseEvent::set_contentID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSBrowseEvent::set_contentID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSBrowseEvent::set_contentID");
@@ -1125,13 +2088,13 @@ extern BOOL enableLog;
           NSString* contentID = (NSString*) args[@"contentID"];
       
           // ref
-          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.contentID = contentID;
           methodResult(@"success");
       },
       
-      @"JANALYTICSBrowseEvent::set_type": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSBrowseEvent::set_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSBrowseEvent::set_type");
@@ -1142,13 +2105,13 @@ extern BOOL enableLog;
           NSString* type = (NSString*) args[@"type"];
       
           // ref
-          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.type = type;
           methodResult(@"success");
       },
       
-      @"JANALYTICSBrowseEvent::set_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSBrowseEvent::set_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSBrowseEvent::set_duration");
@@ -1159,13 +2122,13 @@ extern BOOL enableLog;
           CGFloat duration = [args[@"duration"] floatValue];
       
           // ref
-          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.duration = duration;
           methodResult(@"success");
       },
       
-      @"JANALYTICSCountEvent::set_eventID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSCountEvent::set_eventID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSCountEvent::set_eventID");
@@ -1176,13 +2139,13 @@ extern BOOL enableLog;
           NSString* eventID = (NSString*) args[@"eventID"];
       
           // ref
-          JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.eventID = eventID;
           methodResult(@"success");
       },
       
-      @"JANALYTICSCalculateEvent::set_eventID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSCalculateEvent::set_eventID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSCalculateEvent::set_eventID");
@@ -1193,13 +2156,13 @@ extern BOOL enableLog;
           NSString* eventID = (NSString*) args[@"eventID"];
       
           // ref
-          JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.eventID = eventID;
           methodResult(@"success");
       },
       
-      @"JANALYTICSCalculateEvent::set_value": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSCalculateEvent::set_value": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSCalculateEvent::set_value");
@@ -1210,13 +2173,13 @@ extern BOOL enableLog;
           CGFloat value = [args[@"value"] floatValue];
       
           // ref
-          JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.value = value;
           methodResult(@"success");
       },
       
-      @"JANALYTICSUserInfo::set_accountID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::set_accountID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::set_accountID");
@@ -1227,13 +2190,13 @@ extern BOOL enableLog;
           NSString* accountID = (NSString*) args[@"accountID"];
       
           // ref
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.accountID = accountID;
           methodResult(@"success");
       },
       
-      @"JANALYTICSUserInfo::set_creationTime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::set_creationTime": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::set_creationTime");
@@ -1244,13 +2207,13 @@ extern BOOL enableLog;
           NSTimeInterval creationTime = [args[@"creationTime"] doubleValue];
       
           // ref
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.creationTime = creationTime;
           methodResult(@"success");
       },
       
-      @"JANALYTICSUserInfo::set_sex": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::set_sex": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::set_sex");
@@ -1261,13 +2224,13 @@ extern BOOL enableLog;
           JANALYTICSSex sex = (JANALYTICSSex) [args[@"sex"] integerValue];
       
           // ref
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.sex = sex;
           methodResult(@"success");
       },
       
-      @"JANALYTICSUserInfo::set_birthdate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::set_birthdate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::set_birthdate");
@@ -1278,13 +2241,13 @@ extern BOOL enableLog;
           NSString* birthdate = (NSString*) args[@"birthdate"];
       
           // ref
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.birthdate = birthdate;
           methodResult(@"success");
       },
       
-      @"JANALYTICSUserInfo::set_paid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::set_paid": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::set_paid");
@@ -1295,13 +2258,13 @@ extern BOOL enableLog;
           JANALYTICSPaid paid = (JANALYTICSPaid) [args[@"paid"] integerValue];
       
           // ref
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.paid = paid;
           methodResult(@"success");
       },
       
-      @"JANALYTICSUserInfo::set_phone": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::set_phone": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::set_phone");
@@ -1312,13 +2275,13 @@ extern BOOL enableLog;
           NSString* phone = (NSString*) args[@"phone"];
       
           // ref
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.phone = phone;
           methodResult(@"success");
       },
       
-      @"JANALYTICSUserInfo::set_email": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::set_email": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::set_email");
@@ -1329,13 +2292,13 @@ extern BOOL enableLog;
           NSString* email = (NSString*) args[@"email"];
       
           // ref
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.email = email;
           methodResult(@"success");
       },
       
-      @"JANALYTICSUserInfo::set_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::set_name": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::set_name");
@@ -1346,13 +2309,13 @@ extern BOOL enableLog;
           NSString* name = (NSString*) args[@"name"];
       
           // ref
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.name = name;
           methodResult(@"success");
       },
       
-      @"JANALYTICSUserInfo::set_wechatID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::set_wechatID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::set_wechatID");
@@ -1363,13 +2326,13 @@ extern BOOL enableLog;
           NSString* wechatID = (NSString*) args[@"wechatID"];
       
           // ref
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.wechatID = wechatID;
           methodResult(@"success");
       },
       
-      @"JANALYTICSUserInfo::set_qqID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::set_qqID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::set_qqID");
@@ -1380,13 +2343,13 @@ extern BOOL enableLog;
           NSString* qqID = (NSString*) args[@"qqID"];
       
           // ref
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.qqID = qqID;
           methodResult(@"success");
       },
       
-      @"JANALYTICSUserInfo::set_weiboID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"JANALYTICSUserInfo::set_weiboID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"JANALYTICSUserInfo::set_weiboID");
@@ -1397,233 +2360,233 @@ extern BOOL enableLog;
           NSString* weiboID = (NSString*) args[@"weiboID"];
       
           // ref
-          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+          JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
       
           ref.weiboID = weiboID;
           methodResult(@"success");
       },
       
-      @"RefClass::isKindOfJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::isKindOfJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           BOOL isTargetType = [ref isKindOfClass:[JANALYTICSLaunchConfig class]];
           methodResult(@(isTargetType));
       },
       
-      @"RefClass::isKindOfJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::isKindOfJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           BOOL isTargetType = [ref isKindOfClass:[JANALYTICSService class]];
           methodResult(@(isTargetType));
       },
       
-      @"RefClass::isKindOfJANALYTICSEventObject": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::isKindOfJANALYTICSEventObject": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           BOOL isTargetType = [ref isKindOfClass:[JANALYTICSEventObject class]];
           methodResult(@(isTargetType));
       },
       
-      @"RefClass::isKindOfJANALYTICSLoginEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::isKindOfJANALYTICSLoginEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           BOOL isTargetType = [ref isKindOfClass:[JANALYTICSLoginEvent class]];
           methodResult(@(isTargetType));
       },
       
-      @"RefClass::isKindOfJANALYTICSRegisterEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::isKindOfJANALYTICSRegisterEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           BOOL isTargetType = [ref isKindOfClass:[JANALYTICSRegisterEvent class]];
           methodResult(@(isTargetType));
       },
       
-      @"RefClass::isKindOfJANALYTICSPurchaseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::isKindOfJANALYTICSPurchaseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           BOOL isTargetType = [ref isKindOfClass:[JANALYTICSPurchaseEvent class]];
           methodResult(@(isTargetType));
       },
       
-      @"RefClass::isKindOfJANALYTICSBrowseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::isKindOfJANALYTICSBrowseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           BOOL isTargetType = [ref isKindOfClass:[JANALYTICSBrowseEvent class]];
           methodResult(@(isTargetType));
       },
       
-      @"RefClass::isKindOfJANALYTICSCountEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::isKindOfJANALYTICSCountEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           BOOL isTargetType = [ref isKindOfClass:[JANALYTICSCountEvent class]];
           methodResult(@(isTargetType));
       },
       
-      @"RefClass::isKindOfJANALYTICSCalculateEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::isKindOfJANALYTICSCalculateEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           BOOL isTargetType = [ref isKindOfClass:[JANALYTICSCalculateEvent class]];
           methodResult(@(isTargetType));
       },
       
-      @"RefClass::isKindOfJANALYTICSUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::isKindOfJANALYTICSUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           BOOL isTargetType = [ref isKindOfClass:[JANALYTICSUserInfo class]];
           methodResult(@(isTargetType));
       },
       
-      @"RefClass::asJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::asJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           // 转型
           ref = (JANALYTICSLaunchConfig *) ref;
           // 放回HEAP
-          HEAP[@(refId)] = ref;
+          HEAP[refId] = ref;
       
-          methodResult(@(refId));
+          methodResult(refId);
       },
       
-      @"RefClass::asJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::asJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           // 转型
           ref = (JANALYTICSService *) ref;
           // 放回HEAP
-          HEAP[@(refId)] = ref;
+          HEAP[refId] = ref;
       
-          methodResult(@(refId));
+          methodResult(refId);
       },
       
-      @"RefClass::asJANALYTICSEventObject": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::asJANALYTICSEventObject": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           // 转型
           ref = (JANALYTICSEventObject *) ref;
           // 放回HEAP
-          HEAP[@(refId)] = ref;
+          HEAP[refId] = ref;
       
-          methodResult(@(refId));
+          methodResult(refId);
       },
       
-      @"RefClass::asJANALYTICSLoginEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::asJANALYTICSLoginEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           // 转型
           ref = (JANALYTICSLoginEvent *) ref;
           // 放回HEAP
-          HEAP[@(refId)] = ref;
+          HEAP[refId] = ref;
       
-          methodResult(@(refId));
+          methodResult(refId);
       },
       
-      @"RefClass::asJANALYTICSRegisterEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::asJANALYTICSRegisterEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           // 转型
           ref = (JANALYTICSRegisterEvent *) ref;
           // 放回HEAP
-          HEAP[@(refId)] = ref;
+          HEAP[refId] = ref;
       
-          methodResult(@(refId));
+          methodResult(refId);
       },
       
-      @"RefClass::asJANALYTICSPurchaseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::asJANALYTICSPurchaseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           // 转型
           ref = (JANALYTICSPurchaseEvent *) ref;
           // 放回HEAP
-          HEAP[@(refId)] = ref;
+          HEAP[refId] = ref;
       
-          methodResult(@(refId));
+          methodResult(refId);
       },
       
-      @"RefClass::asJANALYTICSBrowseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::asJANALYTICSBrowseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           // 转型
           ref = (JANALYTICSBrowseEvent *) ref;
           // 放回HEAP
-          HEAP[@(refId)] = ref;
+          HEAP[refId] = ref;
       
-          methodResult(@(refId));
+          methodResult(refId);
       },
       
-      @"RefClass::asJANALYTICSCountEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::asJANALYTICSCountEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           // 转型
           ref = (JANALYTICSCountEvent *) ref;
           // 放回HEAP
-          HEAP[@(refId)] = ref;
+          HEAP[refId] = ref;
       
-          methodResult(@(refId));
+          methodResult(refId);
       },
       
-      @"RefClass::asJANALYTICSCalculateEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::asJANALYTICSCalculateEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           // 转型
           ref = (JANALYTICSCalculateEvent *) ref;
           // 放回HEAP
-          HEAP[@(refId)] = ref;
+          HEAP[refId] = ref;
       
-          methodResult(@(refId));
+          methodResult(refId);
       },
       
-      @"RefClass::asJANALYTICSUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"RefClass::asJANALYTICSUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP[@(refId)];
+          NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+          id ref = HEAP[refId];
       
           // 转型
           ref = (JANALYTICSUserInfo *) ref;
           // 放回HEAP
-          HEAP[@(refId)] = ref;
+          HEAP[refId] = ref;
       
-          methodResult(@(refId));
+          methodResult(refId);
       },
       
-      @"ObjectFactory::createJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"ObjectFactory::createJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"ObjectFactory::createJANALYTICSLaunchConfig");
@@ -1637,7 +2600,7 @@ extern BOOL enableLog;
           if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
-      @"ObjectFactory::createJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"ObjectFactory::createJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"ObjectFactory::createJANALYTICSService");
@@ -1651,7 +2614,7 @@ extern BOOL enableLog;
           if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
-      @"ObjectFactory::createJANALYTICSEventObject": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"ObjectFactory::createJANALYTICSEventObject": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"ObjectFactory::createJANALYTICSEventObject");
@@ -1665,7 +2628,7 @@ extern BOOL enableLog;
           if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
-      @"ObjectFactory::createJANALYTICSLoginEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"ObjectFactory::createJANALYTICSLoginEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"ObjectFactory::createJANALYTICSLoginEvent");
@@ -1679,7 +2642,7 @@ extern BOOL enableLog;
           if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
-      @"ObjectFactory::createJANALYTICSRegisterEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"ObjectFactory::createJANALYTICSRegisterEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"ObjectFactory::createJANALYTICSRegisterEvent");
@@ -1693,7 +2656,7 @@ extern BOOL enableLog;
           if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
-      @"ObjectFactory::createJANALYTICSPurchaseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"ObjectFactory::createJANALYTICSPurchaseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"ObjectFactory::createJANALYTICSPurchaseEvent");
@@ -1707,7 +2670,7 @@ extern BOOL enableLog;
           if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
-      @"ObjectFactory::createJANALYTICSBrowseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"ObjectFactory::createJANALYTICSBrowseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"ObjectFactory::createJANALYTICSBrowseEvent");
@@ -1721,7 +2684,7 @@ extern BOOL enableLog;
           if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
-      @"ObjectFactory::createJANALYTICSCountEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"ObjectFactory::createJANALYTICSCountEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"ObjectFactory::createJANALYTICSCountEvent");
@@ -1735,7 +2698,7 @@ extern BOOL enableLog;
           if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
-      @"ObjectFactory::createJANALYTICSCalculateEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"ObjectFactory::createJANALYTICSCalculateEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"ObjectFactory::createJANALYTICSCalculateEvent");
@@ -1749,7 +2712,7 @@ extern BOOL enableLog;
           if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
-      @"ObjectFactory::createJANALYTICSUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+      @"ObjectFactory::createJANALYTICSUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
               NSLog(@"ObjectFactory::createJANALYTICSUserInfo");
@@ -1759,6 +2722,156 @@ extern BOOL enableLog;
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
+      
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
+      },
+      
+      @"ObjectFactory::create_batchJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+              JANALYTICSLaunchConfig* ref = [[JANALYTICSLaunchConfig alloc] init];
+              HEAP[@(ref.hash)] = ref;
+      
+              [resultList addObject:@(ref.hash)];
+          }
+      
+          methodResult(resultList);
+      
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
+      },
+      
+      @"ObjectFactory::create_batchJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+              JANALYTICSService* ref = [[JANALYTICSService alloc] init];
+              HEAP[@(ref.hash)] = ref;
+      
+              [resultList addObject:@(ref.hash)];
+          }
+      
+          methodResult(resultList);
+      
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
+      },
+      
+      @"ObjectFactory::create_batchJANALYTICSEventObject": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+              JANALYTICSEventObject* ref = [[JANALYTICSEventObject alloc] init];
+              HEAP[@(ref.hash)] = ref;
+      
+              [resultList addObject:@(ref.hash)];
+          }
+      
+          methodResult(resultList);
+      
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
+      },
+      
+      @"ObjectFactory::create_batchJANALYTICSLoginEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+              JANALYTICSLoginEvent* ref = [[JANALYTICSLoginEvent alloc] init];
+              HEAP[@(ref.hash)] = ref;
+      
+              [resultList addObject:@(ref.hash)];
+          }
+      
+          methodResult(resultList);
+      
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
+      },
+      
+      @"ObjectFactory::create_batchJANALYTICSRegisterEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+              JANALYTICSRegisterEvent* ref = [[JANALYTICSRegisterEvent alloc] init];
+              HEAP[@(ref.hash)] = ref;
+      
+              [resultList addObject:@(ref.hash)];
+          }
+      
+          methodResult(resultList);
+      
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
+      },
+      
+      @"ObjectFactory::create_batchJANALYTICSPurchaseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+              JANALYTICSPurchaseEvent* ref = [[JANALYTICSPurchaseEvent alloc] init];
+              HEAP[@(ref.hash)] = ref;
+      
+              [resultList addObject:@(ref.hash)];
+          }
+      
+          methodResult(resultList);
+      
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
+      },
+      
+      @"ObjectFactory::create_batchJANALYTICSBrowseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+              JANALYTICSBrowseEvent* ref = [[JANALYTICSBrowseEvent alloc] init];
+              HEAP[@(ref.hash)] = ref;
+      
+              [resultList addObject:@(ref.hash)];
+          }
+      
+          methodResult(resultList);
+      
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
+      },
+      
+      @"ObjectFactory::create_batchJANALYTICSCountEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+              JANALYTICSCountEvent* ref = [[JANALYTICSCountEvent alloc] init];
+              HEAP[@(ref.hash)] = ref;
+      
+              [resultList addObject:@(ref.hash)];
+          }
+      
+          methodResult(resultList);
+      
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
+      },
+      
+      @"ObjectFactory::create_batchJANALYTICSCalculateEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+              JANALYTICSCalculateEvent* ref = [[JANALYTICSCalculateEvent alloc] init];
+              HEAP[@(ref.hash)] = ref;
+      
+              [resultList addObject:@(ref.hash)];
+          }
+      
+          methodResult(resultList);
+      
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
+      },
+      
+      @"ObjectFactory::create_batchJANALYTICSUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+          NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+      
+          for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+              JANALYTICSUserInfo* ref = [[JANALYTICSUserInfo alloc] init];
+              HEAP[@(ref.hash)] = ref;
+      
+              [resultList addObject:@(ref.hash)];
+          }
+      
+          methodResult(resultList);
       
           if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
@@ -1783,10 +2896,8 @@ extern BOOL enableLog;
 
 // Method Handlers
 - (void)handleMethodCall:(FlutterMethodCall *)methodCall result:(FlutterResult)methodResult {
-  NSDictionary<NSString *, id> *args = (NSDictionary<NSString *, id> *) [methodCall arguments];
-
   if (_handlerMap[methodCall.method] != nil) {
-    _handlerMap[methodCall.method](_registrar, args, methodResult);
+    _handlerMap[methodCall.method](_registrar, [methodCall arguments], methodResult);
   } else {
     methodResult(FlutterMethodNotImplemented);
   }

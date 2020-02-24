@@ -13,5 +13,4 @@ export 'JANALYTICSPaid.g.dart';
 export 'JANALYTICSLaunchConfig.g.dart';
 export 'JANALYTICSPurchaseCurrency.g.dart';
 export 'JANALYTICSEventObject.g.dart';
-export 'package:foundation_fluttify/foundation_fluttify.dart';
 export 'package:jcore_fluttify/jcore_fluttify.dart';

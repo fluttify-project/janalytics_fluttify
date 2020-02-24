@@ -141,7 +141,7 @@ packages:
       name: foundation_fluttify
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.2+1"
+    version: "0.4.8"
   http:
     dependency: transitive
     description:
@@ -169,7 +169,7 @@ packages:
       name: intl
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.16.0"
+    version: "0.16.1"
   janalytics_fluttify:
     dependency: "direct dev"
     description:

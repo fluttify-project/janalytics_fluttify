@@ -10,6 +10,8 @@ import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class JANALYTICSBrowseEvent extends JANALYTICSEventObject  {
   //region constants
   
@@ -22,6 +24,17 @@ class JANALYTICSBrowseEvent extends JANALYTICSEventObject  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<JANALYTICSBrowseEvent>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSBrowseEvent', {'length': length});
+  
+    final List<JANALYTICSBrowseEvent> typedResult = resultBatch.map((result) => JANALYTICSBrowseEvent()..refId = result..tag = 'janalytics_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -76,6 +89,43 @@ class JANALYTICSBrowseEvent extends JANALYTICSEventObject  {
     await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSBrowseEvent::set_duration', {'refId': refId, "duration": duration});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension JANALYTICSBrowseEvent_Batch on List<JANALYTICSBrowseEvent> {
+  //region getters
+  Future<List<String>> get_name_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSBrowseEvent::get_name_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_contentID_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSBrowseEvent::get_contentID_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_type_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSBrowseEvent::get_type_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<double>> get_duration_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSBrowseEvent::get_duration_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
+import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:janalytics_fluttify/src/ios/ios.export.g.dart';
 

@@ -10,6 +10,8 @@ import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class JANALYTICSPurchaseEvent extends JANALYTICSEventObject  {
   //region constants
   
@@ -22,6 +24,17 @@ class JANALYTICSPurchaseEvent extends JANALYTICSEventObject  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<JANALYTICSPurchaseEvent>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSPurchaseEvent', {'length': length});
+  
+    final List<JANALYTICSPurchaseEvent> typedResult = resultBatch.map((result) => JANALYTICSPurchaseEvent()..refId = result..tag = 'janalytics_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -112,6 +125,64 @@ class JANALYTICSPurchaseEvent extends JANALYTICSEventObject  {
     await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_quantity', {'refId': refId, "quantity": quantity});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension JANALYTICSPurchaseEvent_Batch on List<JANALYTICSPurchaseEvent> {
+  //region getters
+  Future<List<double>> get_price_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_price_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<bool>> get_success_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_success_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_goodsID_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_goodsID_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_goodsName_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_goodsName_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_goodsType_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_goodsType_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<JANALYTICSPurchaseCurrency>> get_currency_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_currency_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => JANALYTICSPurchaseCurrency.values[result]).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<int>> get_quantity_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_quantity_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion

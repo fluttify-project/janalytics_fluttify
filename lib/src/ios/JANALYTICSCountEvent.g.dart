@@ -10,6 +10,8 @@ import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class JANALYTICSCountEvent extends JANALYTICSEventObject  {
   //region constants
   
@@ -22,6 +24,17 @@ class JANALYTICSCountEvent extends JANALYTICSEventObject  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<JANALYTICSCountEvent>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSCountEvent', {'length': length});
+  
+    final List<JANALYTICSCountEvent> typedResult = resultBatch.map((result) => JANALYTICSCountEvent()..refId = result..tag = 'janalytics_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -40,6 +53,22 @@ class JANALYTICSCountEvent extends JANALYTICSEventObject  {
     await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSCountEvent::set_eventID', {'refId': refId, "eventID": eventID});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension JANALYTICSCountEvent_Batch on List<JANALYTICSCountEvent> {
+  //region getters
+  Future<List<String>> get_eventID_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSCountEvent::get_eventID_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion

@@ -10,6 +10,8 @@ import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class JANALYTICSCalculateEvent extends JANALYTICSEventObject  {
   //region constants
   
@@ -22,6 +24,17 @@ class JANALYTICSCalculateEvent extends JANALYTICSEventObject  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<JANALYTICSCalculateEvent>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSCalculateEvent', {'length': length});
+  
+    final List<JANALYTICSCalculateEvent> typedResult = resultBatch.map((result) => JANALYTICSCalculateEvent()..refId = result..tag = 'janalytics_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -52,6 +65,29 @@ class JANALYTICSCalculateEvent extends JANALYTICSEventObject  {
     await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSCalculateEvent::set_value', {'refId': refId, "value": value});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension JANALYTICSCalculateEvent_Batch on List<JANALYTICSCalculateEvent> {
+  //region getters
+  Future<List<String>> get_eventID_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSCalculateEvent::get_eventID_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<double>> get_value_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSCalculateEvent::get_value_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion

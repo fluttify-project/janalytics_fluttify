@@ -10,7 +10,7 @@ A new flutter plugin project.
                        DESC
   s.homepage         = 'https://github.com/fluttify-project/janalytics_fluttify'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'yohom' => 'yohombao@gmail.com' }
+  s.author           = { 'yohom' => 'yohombao@qq.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
@@ -21,6 +21,7 @@ A new flutter plugin project.
   # sdk dependency
   s.dependency 'JAnalytics', '~> 2.1'
 
+  s.static_framework = true
   s.ios.deployment_target = '8.0'
   # include project framework
   s.vendored_frameworks = '**/*.framework'
