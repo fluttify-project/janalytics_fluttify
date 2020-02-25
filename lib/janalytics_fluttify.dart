@@ -1,13 +1,4 @@
-import 'dart:async';
+library janalytics_fluttify;
 
-import 'package:flutter/services.dart';
-
-class JanalyticsFluttify {
-  static const MethodChannel _channel =
-      const MethodChannel('janalytics_fluttify');
-
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
-}
+export 'src/dart/janalytics.dart';
+export 'src/dart/models.dart';

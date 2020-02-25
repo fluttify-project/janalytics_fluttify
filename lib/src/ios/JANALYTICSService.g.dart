@@ -10,6 +10,8 @@ import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class JANALYTICSService extends NSObject  {
   //region constants
   
@@ -22,6 +24,17 @@ class JANALYTICSService extends NSObject  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<JANALYTICSService>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSService', {'length': length});
+  
+    final List<JANALYTICSService> typedResult = resultBatch.map((result) => JANALYTICSService()..refId = result..tag = 'janalytics_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -312,6 +325,195 @@ class JANALYTICSService extends NSObject  {
     } else {
     
       return result;
+    }
+  }
+  
+  //endregion
+}
+
+extension JANALYTICSService_Batch on List<JANALYTICSService> {
+  //region getters
+  
+  //endregion
+
+  //region methods
+  Future<void> setupWithConfig_batch(List<JANALYTICSLaunchConfig> config) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setupWithConfig_batch', [for (int i = 0; i < this.length; i++) {"config": config[i].refId, "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<void> startLogPageView_batch(List<String> pageName) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::startLogPageView_batch', [for (int i = 0; i < this.length; i++) {"pageName": pageName[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<void> stopLogPageView_batch(List<String> pageName) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::stopLogPageView_batch', [for (int i = 0; i < this.length; i++) {"pageName": pageName[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<void> setLatitudeLongitude_batch(List<double> latitude, List<double> longitude) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setLatitudeLongitude_batch', [for (int i = 0; i < this.length; i++) {"latitude": latitude[i], "longitude": longitude[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<void> setLocation_batch(List<CLLocation> location) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setLocation_batch', [for (int i = 0; i < this.length; i++) {"location": location[i].refId, "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<void> eventRecord_batch(List<JANALYTICSEventObject> event) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::eventRecord_batch', [for (int i = 0; i < this.length; i++) {"event": event[i].refId, "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<void> setFrequency_batch(List<int> frequency) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setFrequency_batch', [for (int i = 0; i < this.length; i++) {"frequency": frequency[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<void> crashLogON_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::crashLogON_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<void> setDebug_batch(List<bool> enable) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setDebug_batch', [for (int i = 0; i < this.length; i++) {"enable": enable[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
     }
   }
   

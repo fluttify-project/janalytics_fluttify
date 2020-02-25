@@ -10,6 +10,8 @@ import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class JANALYTICSLoginEvent extends JANALYTICSEventObject  {
   //region constants
   
@@ -22,6 +24,17 @@ class JANALYTICSLoginEvent extends JANALYTICSEventObject  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<JANALYTICSLoginEvent>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSLoginEvent', {'length': length});
+  
+    final List<JANALYTICSLoginEvent> typedResult = resultBatch.map((result) => JANALYTICSLoginEvent()..refId = result..tag = 'janalytics_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -52,6 +65,29 @@ class JANALYTICSLoginEvent extends JANALYTICSEventObject  {
     await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSLoginEvent::set_success', {'refId': refId, "success": success});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension JANALYTICSLoginEvent_Batch on List<JANALYTICSLoginEvent> {
+  //region getters
+  Future<List<String>> get_method_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSLoginEvent::get_method_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<bool>> get_success_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSLoginEvent::get_success_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion

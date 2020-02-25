@@ -10,6 +10,8 @@ import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class JANALYTICSEventObject extends NSObject  {
   //region constants
   
@@ -24,13 +26,50 @@ class JANALYTICSEventObject extends NSObject  {
     return object;
   }
   
+  static Future<List<JANALYTICSEventObject>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSEventObject', {'length': length});
+  
+    final List<JANALYTICSEventObject> typedResult = resultBatch.map((result) => JANALYTICSEventObject()..refId = result..tag = 'janalytics_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
   //endregion
 
   //region getters
+  Future<Map<String, String>> get_extra() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSEventObject::get_extra", {'refId': refId});
+  
+    return result;
+  }
   
   //endregion
 
   //region setters
+  Future<void> set_extra(Map<String, String> extra) async {
+    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSEventObject::set_extra', {'refId': refId, "extra": extra});
+  
+  
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension JANALYTICSEventObject_Batch on List<JANALYTICSEventObject> {
+  //region getters
+  Future<List<Map<String, String>>> get_extra_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSEventObject::get_extra_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
   
   //endregion
 

@@ -10,10 +10,22 @@ import 'package:flutter/services.dart';
 import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:janalytics_fluttify/src/ios/ios.export.g.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-extension on Ref {
+extension TypeOpJanalyticsFluttifyAndroid on Ref {
   Future<bool> iscn_jiguang_analytics_android_view_BuryWebActivity() async {
     final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_view_BuryWebActivity', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_analytics_android_api_CountEvent() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_CountEvent', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_analytics_android_api_RegisterEvent() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_RegisterEvent', {'refId': refId});
     return result;
   }
   
@@ -42,8 +54,33 @@ extension on Ref {
     return result;
   }
   
+  Future<bool> iscn_jiguang_analytics_android_api_Event() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_Event', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_analytics_android_api_PurchaseEvent() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_PurchaseEvent', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_analytics_android_api_BrowseEvent() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_BrowseEvent', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_analytics_android_api_LoginEvent() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_LoginEvent', {'refId': refId});
+    return result;
+  }
+  
   Future<bool> iscn_jiguang_analytics_android_api_JAnalyticsInterface() async {
     final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_JAnalyticsInterface', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscn_jiguang_analytics_android_api_CalculateEvent() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_CalculateEvent', {'refId': refId});
     return result;
   }
   
@@ -56,6 +93,16 @@ extension on Ref {
   Future<cn_jiguang_analytics_android_view_BuryWebActivity> ascn_jiguang_analytics_android_view_BuryWebActivity() async {
     final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::ascn_jiguang_analytics_android_view_BuryWebActivity', {'refId': refId});
     return cn_jiguang_analytics_android_view_BuryWebActivity()..refId = result;
+  }
+  
+  Future<cn_jiguang_analytics_android_api_CountEvent> ascn_jiguang_analytics_android_api_CountEvent() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::ascn_jiguang_analytics_android_api_CountEvent', {'refId': refId});
+    return cn_jiguang_analytics_android_api_CountEvent()..refId = result;
+  }
+  
+  Future<cn_jiguang_analytics_android_api_RegisterEvent> ascn_jiguang_analytics_android_api_RegisterEvent() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::ascn_jiguang_analytics_android_api_RegisterEvent', {'refId': refId});
+    return cn_jiguang_analytics_android_api_RegisterEvent()..refId = result;
   }
   
   Future<cn_jiguang_analytics_android_api_agent_JMMIDlgPupW> ascn_jiguang_analytics_android_api_agent_JMMIDlgPupW() async {
@@ -83,9 +130,34 @@ extension on Ref {
     return cn_jiguang_analytics_android_api_aop_JMMIAgent()..refId = result;
   }
   
+  Future<cn_jiguang_analytics_android_api_Event> ascn_jiguang_analytics_android_api_Event() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::ascn_jiguang_analytics_android_api_Event', {'refId': refId});
+    return cn_jiguang_analytics_android_api_Event()..refId = result;
+  }
+  
+  Future<cn_jiguang_analytics_android_api_PurchaseEvent> ascn_jiguang_analytics_android_api_PurchaseEvent() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::ascn_jiguang_analytics_android_api_PurchaseEvent', {'refId': refId});
+    return cn_jiguang_analytics_android_api_PurchaseEvent()..refId = result;
+  }
+  
+  Future<cn_jiguang_analytics_android_api_BrowseEvent> ascn_jiguang_analytics_android_api_BrowseEvent() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::ascn_jiguang_analytics_android_api_BrowseEvent', {'refId': refId});
+    return cn_jiguang_analytics_android_api_BrowseEvent()..refId = result;
+  }
+  
+  Future<cn_jiguang_analytics_android_api_LoginEvent> ascn_jiguang_analytics_android_api_LoginEvent() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::ascn_jiguang_analytics_android_api_LoginEvent', {'refId': refId});
+    return cn_jiguang_analytics_android_api_LoginEvent()..refId = result;
+  }
+  
   Future<cn_jiguang_analytics_android_api_JAnalyticsInterface> ascn_jiguang_analytics_android_api_JAnalyticsInterface() async {
     final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::ascn_jiguang_analytics_android_api_JAnalyticsInterface', {'refId': refId});
     return cn_jiguang_analytics_android_api_JAnalyticsInterface()..refId = result;
+  }
+  
+  Future<cn_jiguang_analytics_android_api_CalculateEvent> ascn_jiguang_analytics_android_api_CalculateEvent() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('RefClass::ascn_jiguang_analytics_android_api_CalculateEvent', {'refId': refId});
+    return cn_jiguang_analytics_android_api_CalculateEvent()..refId = result;
   }
   
   Future<cn_analytics_client_android_BuildConfig> ascn_analytics_client_android_BuildConfig() async {

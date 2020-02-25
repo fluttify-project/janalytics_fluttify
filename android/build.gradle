@@ -47,7 +47,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
     compileOnly rootProject.findProject(":foundation_fluttify")
     // flutter plugin dependency
-    
+    compileOnly rootProject.findProject(":jcore_fluttify")
     // sdk dependency
-    implementation 'cn.jiguang.sdk:janalytics:2.1.0'
+    api 'cn.jiguang.sdk:janalytics:2.1.0'
 }

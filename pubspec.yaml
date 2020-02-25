@@ -1,7 +1,7 @@
 name: janalytics_fluttify
 description: A `JAnalytics` Component, Powered By `Fluttify` Engine.
-version: 0.0.1
-author: yohom <yohombao@gmail.com>
+version: 0.0.1+a652331
+author: yohom <yohombao@qq.com>
 homepage: https://github.com/fluttify-project/janalytics_fluttify
 
 environment:
@@ -11,8 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
-  foundation_fluttify: 0.4.1
+  jcore_fluttify: ^0.0.5+68b910c
+  foundation_fluttify: ^0.4.8
 
 dev_dependencies:
   flutter_test:

@@ -10,6 +10,8 @@ import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class JANALYTICSUserInfo extends NSObject  {
   //region constants
   
@@ -24,11 +26,28 @@ class JANALYTICSUserInfo extends NSObject  {
     return object;
   }
   
+  static Future<List<JANALYTICSUserInfo>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSUserInfo', {'length': length});
+  
+    final List<JANALYTICSUserInfo> typedResult = resultBatch.map((result) => JANALYTICSUserInfo()..refId = result..tag = 'janalytics_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
   //endregion
 
   //region getters
   Future<String> get_accountID() async {
     final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_accountID", {'refId': refId});
+  
+    return result;
+  }
+  
+  Future<double> get_creationTime() async {
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_creationTime", {'refId': refId});
   
     return result;
   }
@@ -96,6 +115,12 @@ class JANALYTICSUserInfo extends NSObject  {
   
   }
   
+  Future<void> set_creationTime(double creationTime) async {
+    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSUserInfo::set_creationTime', {'refId': refId, "creationTime": creationTime});
+  
+  
+  }
+  
   Future<void> set_sex(JANALYTICSSex sex) async {
     await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSUserInfo::set_sex', {'refId': refId, "sex": sex.index});
   
@@ -148,6 +173,92 @@ class JANALYTICSUserInfo extends NSObject  {
     await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSUserInfo::set_weiboID', {'refId': refId, "weiboID": weiboID});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension JANALYTICSUserInfo_Batch on List<JANALYTICSUserInfo> {
+  //region getters
+  Future<List<String>> get_accountID_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_accountID_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<double>> get_creationTime_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_creationTime_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<JANALYTICSSex>> get_sex_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_sex_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => JANALYTICSSex.values[result]).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_birthdate_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_birthdate_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<JANALYTICSPaid>> get_paid_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_paid_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => JANALYTICSPaid.values[result]).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_phone_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_phone_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_email_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_email_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_name_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_name_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_wechatID_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_wechatID_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_qqID_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_qqID_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_weiboID_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSUserInfo::get_weiboID_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion
