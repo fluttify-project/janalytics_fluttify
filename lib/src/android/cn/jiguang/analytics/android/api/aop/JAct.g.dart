@@ -27,9 +27,9 @@ class cn_jiguang_analytics_android_api_aop_JAct extends android_app_Activity  {
   }
   
   static Future<List<cn_jiguang_analytics_android_api_aop_JAct>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_aop_JAct__', {'length': length});
   
     final List<cn_jiguang_analytics_android_api_aop_JAct> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_aop_JAct()..refId = result..tag = 'janalytics_fluttify').toList();
@@ -80,10 +80,9 @@ extension cn_jiguang_analytics_android_api_aop_JAct_Batch on List<cn_jiguang_ana
 
   //region methods
   Future<void> onContentChanged_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JAct::onContentChanged_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

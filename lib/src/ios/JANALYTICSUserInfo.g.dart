@@ -27,9 +27,9 @@ class JANALYTICSUserInfo extends NSObject  {
   }
   
   static Future<List<JANALYTICSUserInfo>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSUserInfo', {'length': length});
   
     final List<JANALYTICSUserInfo> typedResult = resultBatch.map((result) => JANALYTICSUserInfo()..refId = result..tag = 'janalytics_fluttify').toList();

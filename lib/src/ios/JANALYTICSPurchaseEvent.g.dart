@@ -27,9 +27,9 @@ class JANALYTICSPurchaseEvent extends JANALYTICSEventObject  {
   }
   
   static Future<List<JANALYTICSPurchaseEvent>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSPurchaseEvent', {'length': length});
   
     final List<JANALYTICSPurchaseEvent> typedResult = resultBatch.map((result) => JANALYTICSPurchaseEvent()..refId = result..tag = 'janalytics_fluttify').toList();

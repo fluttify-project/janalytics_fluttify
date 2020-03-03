@@ -1194,9 +1194,10 @@ public class SubHandler0 {
                 methodResult.success(jsonableResult);
             });
             // method
-            put("cn.jiguang.analytics.android.api.Event::getExtMap", (args, methodResult) -> {
+            put("cn.jiguang.analytics.android.api.Event::setExtMap", (args, methodResult) -> {
                 // args
-            
+                // jsonable arg
+                Map<String,String> var1 = (Map<String,String>) ((Map<String, Object>) args).get("var1");
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -1204,13 +1205,13 @@ public class SubHandler0 {
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + refId + "::getExtMap(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + refId + "::setExtMap(" + var1 + ")");
                 }
             
                 // invoke native method
-                Map<String,String> result;
+                cn.jiguang.analytics.android.api.Event result;
                 try {
-                    result = ref.getExtMap();
+                    result = ref.setExtMap(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1221,7 +1222,48 @@ public class SubHandler0 {
                 }
             
                 // convert result to jsonable result
-                Map<String,String> jsonableResult = result;
+                Integer jsonableResult = null;
+                if (result != null) {
+                    jsonableResult = result.hashCode();
+                    getHEAP().put(jsonableResult, result);
+                }
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::addExtMap", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                Map<String,String> var1 = (Map<String,String>) ((Map<String, Object>) args).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + refId + "::addExtMap(" + var1 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.Event result;
+                try {
+                    result = ref.addExtMap(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                Integer jsonableResult = null;
+                if (result != null) {
+                    jsonableResult = result.hashCode();
+                    getHEAP().put(jsonableResult, result);
+                }
             
                 methodResult.success(jsonableResult);
             });
@@ -4224,23 +4266,24 @@ public class SubHandler0 {
                 methodResult.success(resultList);
             });
             // method
-            put("cn.jiguang.analytics.android.api.Event::getExtMap_batch", (argsBatch, methodResult) -> {
-                List<Map<String,String>> resultList = new ArrayList<>();
+            put("cn.jiguang.analytics.android.api.Event::setExtMap_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
             
                 for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
                     Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
             
                     // args
-            
+                    // jsonable arg
+                    Map<String,String> var1 = (Map<String,String>) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
                     cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
             
                     // invoke native method
-                    Map<String,String> result;
+                    cn.jiguang.analytics.android.api.Event result;
                     try {
-                        result = ref.getExtMap();
+                        result = ref.setExtMap(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4251,7 +4294,51 @@ public class SubHandler0 {
                     }
             
                     // convert result to jsonable result
-                    Map<String,String> jsonableResult = result;
+                    Integer jsonableResult = null;
+                    if (result != null) {
+                        jsonableResult = result.hashCode();
+                        getHEAP().put(jsonableResult, result);
+                    }
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::addExtMap_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+            
+                    // args
+                    // jsonable arg
+                    Map<String,String> var1 = (Map<String,String>) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.Event result;
+                    try {
+                        result = ref.addExtMap(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (result != null) {
+                        jsonableResult = result.hashCode();
+                        getHEAP().put(jsonableResult, result);
+                    }
             
                     resultList.add(jsonableResult);
                 }
@@ -6717,97 +6804,6 @@ public class SubHandler0 {
             
                     // create target object
                     cn.jiguang.analytics.android.api.aop.JAct obj = new cn.jiguang.analytics.android.api.aop.JAct();
-                    getHEAP().put(obj.hashCode(), obj);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    resultList.add(obj.hashCode());
-                }
-            
-                methodResult.success(resultList);
-            });
-            // factory
-            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_aop_JMMIAgent__", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                int length = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    length = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int i = 0; i < length; i++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    cn.jiguang.analytics.android.api.aop.JMMIAgent obj = new cn.jiguang.analytics.android.api.aop.JMMIAgent();
-                    getHEAP().put(obj.hashCode(), obj);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    resultList.add(obj.hashCode());
-                }
-            
-                methodResult.success(resultList);
-            });
-            // factory
-            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_PurchaseEvent__String__String__double__boolean__cn_jiguang_analytics_android_api_Currency__String__int", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                int length = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    length = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int i = 0; i < length; i++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    String var2 = (String) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    double var3 = (double) ((Map<String, Object>) args).get("var3");
-                    // jsonable arg
-                    boolean var5 = (boolean) ((Map<String, Object>) args).get("var5");
-                    // enum arg
-                    cn.jiguang.analytics.android.api.Currency var6 = cn.jiguang.analytics.android.api.Currency.values()[(int) ((Map<String, Object>) args).get("var6")];
-                    // jsonable arg
-                    String var7 = (String) ((Map<String, Object>) args).get("var7");
-                    // jsonable arg
-                    int var8 = (int) ((Map<String, Object>) args).get("var8");
-            
-                    // create target object
-                    cn.jiguang.analytics.android.api.PurchaseEvent obj = new cn.jiguang.analytics.android.api.PurchaseEvent(var1, var2, var3, var5, var6, var7, var8);
                     getHEAP().put(obj.hashCode(), obj);
             
                     // print current HEAP

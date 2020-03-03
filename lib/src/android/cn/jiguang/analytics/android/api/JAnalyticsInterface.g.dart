@@ -364,10 +364,9 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
 
   //region methods
   Future<void> setDebugMode_batch(List<bool> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setDebugMode_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
@@ -384,10 +383,9 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
   }
   
   Future<void> init_batch(List<android_content_Context> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::init_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
@@ -404,10 +402,9 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
   }
   
   Future<void> onPageStart_batch(List<android_content_Context> var0, List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageStart_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "refId": this[i].refId}]);
@@ -424,10 +421,9 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
   }
   
   Future<void> onPageEnd_batch(List<android_content_Context> var0, List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageEnd_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "refId": this[i].refId}]);
@@ -444,10 +440,9 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
   }
   
   Future<void> onEvent_batch(List<android_content_Context> var0, List<cn_jiguang_analytics_android_api_Event> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onEvent_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i].refId, "refId": this[i].refId}]);
@@ -464,10 +459,9 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
   }
   
   Future<void> requestPermission_batch(List<android_app_Activity> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::requestPermission_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
@@ -484,10 +478,9 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
   }
   
   Future<void> initCrashHandler_batch(List<android_content_Context> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::initCrashHandler_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
@@ -504,10 +497,9 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
   }
   
   Future<void> stopCrashHandler_batch(List<android_content_Context> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::stopCrashHandler_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
@@ -524,10 +516,9 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
   }
   
   Future<void> setAnalyticsReportPeriod__android_content_Context__int_batch(List<android_content_Context> var0, List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__android_content_Context__int_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "refId": this[i].refId}]);
@@ -544,10 +535,9 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
   }
   
   Future<void> setAnalyticsReportPeriod__int_batch(List<int> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__int_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
@@ -564,10 +554,9 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
   }
   
   Future<void> setChannel_batch(List<android_content_Context> var0, List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setChannel_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "refId": this[i].refId}]);

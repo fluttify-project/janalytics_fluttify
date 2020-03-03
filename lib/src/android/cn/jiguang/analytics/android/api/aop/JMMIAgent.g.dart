@@ -27,9 +27,9 @@ class cn_jiguang_analytics_android_api_aop_JMMIAgent extends java_lang_Object  {
   }
   
   static Future<List<cn_jiguang_analytics_android_api_aop_JMMIAgent>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_aop_JMMIAgent__', {'length': length});
   
     final List<cn_jiguang_analytics_android_api_aop_JMMIAgent> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_aop_JMMIAgent()..refId = result..tag = 'janalytics_fluttify').toList();
@@ -322,10 +322,9 @@ extension cn_jiguang_analytics_android_api_aop_JMMIAgent_Batch on List<cn_jiguan
 
   //region methods
   Future<void> clickOn_batch(List<android_view_View> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JMMIAgent::clickOn_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
@@ -342,10 +341,9 @@ extension cn_jiguang_analytics_android_api_aop_JMMIAgent_Batch on List<cn_jiguan
   }
   
   Future<void> onClick__Object__android_view_View_batch(List<Object> var0, List<android_view_View> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JMMIAgent::onClick__Object__android_view_View_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i].refId, "refId": this[i].refId}]);
@@ -362,10 +360,9 @@ extension cn_jiguang_analytics_android_api_aop_JMMIAgent_Batch on List<cn_jiguan
   }
   
   Future<void> onViewShow_batch(List<android_view_View> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JMMIAgent::onViewShow_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
@@ -382,10 +379,9 @@ extension cn_jiguang_analytics_android_api_aop_JMMIAgent_Batch on List<cn_jiguan
   }
   
   Future<void> onViewHide_batch(List<android_view_View> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JMMIAgent::onViewHide_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
@@ -402,10 +398,9 @@ extension cn_jiguang_analytics_android_api_aop_JMMIAgent_Batch on List<cn_jiguan
   }
   
   Future<void> onResume_batch(List<Object> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JMMIAgent::onResume_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
@@ -422,10 +417,9 @@ extension cn_jiguang_analytics_android_api_aop_JMMIAgent_Batch on List<cn_jiguan
   }
   
   Future<void> onPause_batch(List<Object> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JMMIAgent::onPause_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
@@ -442,10 +436,9 @@ extension cn_jiguang_analytics_android_api_aop_JMMIAgent_Batch on List<cn_jiguan
   }
   
   Future<void> fragmentSetUserVisibleHint_batch(List<Object> var0, List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JMMIAgent::fragmentSetUserVisibleHint_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
@@ -462,10 +455,9 @@ extension cn_jiguang_analytics_android_api_aop_JMMIAgent_Batch on List<cn_jiguan
   }
   
   Future<void> fragmentOnHiddenChanged_batch(List<Object> var0, List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JMMIAgent::fragmentOnHiddenChanged_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i], "refId": this[i].refId}]);
@@ -482,10 +474,9 @@ extension cn_jiguang_analytics_android_api_aop_JMMIAgent_Batch on List<cn_jiguan
   }
   
   Future<void> onCreateView_batch(List<Object> var0, List<android_view_View> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JMMIAgent::onCreateView_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i].refId, "refId": this[i].refId}]);
@@ -502,10 +493,9 @@ extension cn_jiguang_analytics_android_api_aop_JMMIAgent_Batch on List<cn_jiguan
   }
   
   Future<void> onLocationChanged_batch(List<Object> var0, List<android_location_Location> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JMMIAgent::onLocationChanged_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "var1": var1[i].refId, "refId": this[i].refId}]);
@@ -522,10 +512,9 @@ extension cn_jiguang_analytics_android_api_aop_JMMIAgent_Batch on List<cn_jiguan
   }
   
   Future<void> handleClickResult_batch(List<Object> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JMMIAgent::handleClickResult_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
@@ -542,10 +531,9 @@ extension cn_jiguang_analytics_android_api_aop_JMMIAgent_Batch on List<cn_jiguan
   }
   
   Future<void> performClickTabLayoutTabView_batch(List<android_view_View> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JMMIAgent::performClickTabLayoutTabView_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);

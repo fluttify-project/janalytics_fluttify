@@ -27,9 +27,9 @@ class JANALYTICSService extends NSObject  {
   }
   
   static Future<List<JANALYTICSService>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSService', {'length': length});
   
     final List<JANALYTICSService> typedResult = resultBatch.map((result) => JANALYTICSService()..refId = result..tag = 'janalytics_fluttify').toList();
@@ -338,10 +338,9 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
 
   //region methods
   Future<void> setupWithConfig_batch(List<JANALYTICSLaunchConfig> config) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setupWithConfig_batch', [for (int i = 0; i < this.length; i++) {"config": config[i].refId, "refId": this[i].refId}]);
@@ -358,10 +357,9 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
   }
   
   Future<void> startLogPageView_batch(List<String> pageName) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::startLogPageView_batch', [for (int i = 0; i < this.length; i++) {"pageName": pageName[i], "refId": this[i].refId}]);
@@ -378,10 +376,9 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
   }
   
   Future<void> stopLogPageView_batch(List<String> pageName) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::stopLogPageView_batch', [for (int i = 0; i < this.length; i++) {"pageName": pageName[i], "refId": this[i].refId}]);
@@ -398,10 +395,9 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
   }
   
   Future<void> setLatitudeLongitude_batch(List<double> latitude, List<double> longitude) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (latitude.length != longitude.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setLatitudeLongitude_batch', [for (int i = 0; i < this.length; i++) {"latitude": latitude[i], "longitude": longitude[i], "refId": this[i].refId}]);
@@ -418,10 +414,9 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
   }
   
   Future<void> setLocation_batch(List<CLLocation> location) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setLocation_batch', [for (int i = 0; i < this.length; i++) {"location": location[i].refId, "refId": this[i].refId}]);
@@ -438,10 +433,9 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
   }
   
   Future<void> eventRecord_batch(List<JANALYTICSEventObject> event) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::eventRecord_batch', [for (int i = 0; i < this.length; i++) {"event": event[i].refId, "refId": this[i].refId}]);
@@ -458,10 +452,9 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
   }
   
   Future<void> setFrequency_batch(List<int> frequency) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setFrequency_batch', [for (int i = 0; i < this.length; i++) {"frequency": frequency[i], "refId": this[i].refId}]);
@@ -478,10 +471,9 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
   }
   
   Future<void> crashLogON_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::crashLogON_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -498,10 +490,9 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
   }
   
   Future<void> setDebug_batch(List<bool> enable) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setDebug_batch', [for (int i = 0; i < this.length; i++) {"enable": enable[i], "refId": this[i].refId}]);

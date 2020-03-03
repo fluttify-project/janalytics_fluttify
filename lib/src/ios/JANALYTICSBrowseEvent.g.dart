@@ -27,9 +27,9 @@ class JANALYTICSBrowseEvent extends JANALYTICSEventObject  {
   }
   
   static Future<List<JANALYTICSBrowseEvent>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSBrowseEvent', {'length': length});
   
     final List<JANALYTICSBrowseEvent> typedResult = resultBatch.map((result) => JANALYTICSBrowseEvent()..refId = result..tag = 'janalytics_fluttify').toList();

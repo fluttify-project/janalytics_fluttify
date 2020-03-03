@@ -30,14 +30,14 @@ class cn_jiguang_analytics_android_api_Event extends java_lang_Object with java_
   //endregion
 
   //region methods
-  Future<Map> getExtMap() async {
+  Future<cn_jiguang_analytics_android_api_Event> setExtMap(Map<String, String> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: cn.jiguang.analytics.android.api.Event@$refId::getExtMap([])');
+      print('fluttify-dart: cn.jiguang.analytics.android.api.Event@$refId::setExtMap([\'var1\':$var1])');
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::getExtMap', {"refId": refId});
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::setExtMap', {"var1": var1, "refId": refId});
   
   
     // handle native call
@@ -47,8 +47,30 @@ class cn_jiguang_analytics_android_api_Event extends java_lang_Object with java_
     if (result == null) {
       return null;
     } else {
-    
-      return result;
+      kNativeObjectPool.add(cn_jiguang_analytics_android_api_CountEvent()..refId = result..tag = 'janalytics_fluttify');
+      return cn_jiguang_analytics_android_api_CountEvent()..refId = result..tag = 'janalytics_fluttify';
+    }
+  }
+  
+  Future<cn_jiguang_analytics_android_api_Event> addExtMap(Map<String, String> var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: cn.jiguang.analytics.android.api.Event@$refId::addExtMap([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::addExtMap', {"var1": var1, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+      kNativeObjectPool.add(cn_jiguang_analytics_android_api_CountEvent()..refId = result..tag = 'janalytics_fluttify');
+      return cn_jiguang_analytics_android_api_CountEvent()..refId = result..tag = 'janalytics_fluttify';
     }
   }
   
@@ -149,31 +171,48 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
   //endregion
 
   //region methods
-  Future<List<Map>> getExtMap_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+  Future<List<cn_jiguang_analytics_android_api_Event>> setExtMap_batch(List<Map<String, String>> var1) async {
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::getExtMap_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::setExtMap_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
-    
+      final typedResult = (resultBatch as List).map((result) => cn_jiguang_analytics_android_api_CountEvent()..refId = result..tag = 'janalytics_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
+    }
+  }
+  
+  Future<List<cn_jiguang_analytics_android_api_Event>> addExtMap_batch(List<Map<String, String>> var1) async {
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::addExtMap_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => cn_jiguang_analytics_android_api_CountEvent()..refId = result..tag = 'janalytics_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
   
   Future<List<int>> getItime_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::getItime_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -190,10 +229,9 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
   }
   
   Future<List<cn_jiguang_analytics_android_api_Event>> setItime_batch(List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::setItime_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -210,10 +248,9 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
   }
   
   Future<List<cn_jiguang_analytics_android_api_Event>> addKeyValue_batch(List<String> var1, List<String> var2) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::addKeyValue_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
@@ -230,10 +267,9 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
   }
   
   Future<List<bool>> checkEvent_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::checkEvent_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

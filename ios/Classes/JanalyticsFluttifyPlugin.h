@@ -3,8 +3,8 @@
 //////////////////////////////////////////////////////////
 
 #import <Flutter/Flutter.h>
-#import <JAnalytics/JANALYTICSService.h>
-#import <JAnalytics/JANALYTICSEventObject.h>
+#import "JANALYTICSService.h"
+#import "JANALYTICSEventObject.h"
 
 @interface JanalyticsFluttifyPlugin : NSObject<FlutterPlugin>
 

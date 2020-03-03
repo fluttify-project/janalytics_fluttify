@@ -27,9 +27,9 @@ class JANALYTICSEventObject extends NSObject  {
   }
   
   static Future<List<JANALYTICSEventObject>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSEventObject', {'length': length});
   
     final List<JANALYTICSEventObject> typedResult = resultBatch.map((result) => JANALYTICSEventObject()..refId = result..tag = 'janalytics_fluttify').toList();

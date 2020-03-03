@@ -31,6 +31,97 @@ public class SubHandler1 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_aop_JMMIAgent__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int i = 0; i < length; i++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.aop.JMMIAgent obj = new cn.jiguang.analytics.android.api.aop.JMMIAgent();
+                    getHEAP().put(obj.hashCode(), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(obj.hashCode());
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_PurchaseEvent__String__String__double__boolean__cn_jiguang_analytics_android_api_Currency__String__int", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int i = 0; i < length; i++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+                    // jsonable arg
+                    double var3 = (double) ((Map<String, Object>) args).get("var3");
+                    // jsonable arg
+                    boolean var5 = (boolean) ((Map<String, Object>) args).get("var5");
+                    // enum arg
+                    cn.jiguang.analytics.android.api.Currency var6 = cn.jiguang.analytics.android.api.Currency.values()[(int) ((Map<String, Object>) args).get("var6")];
+                    // jsonable arg
+                    String var7 = (String) ((Map<String, Object>) args).get("var7");
+                    // jsonable arg
+                    int var8 = (int) ((Map<String, Object>) args).get("var8");
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.PurchaseEvent obj = new cn.jiguang.analytics.android.api.PurchaseEvent(var1, var2, var3, var5, var6, var7, var8);
+                    getHEAP().put(obj.hashCode(), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(obj.hashCode());
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
             put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_PurchaseEvent__", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
