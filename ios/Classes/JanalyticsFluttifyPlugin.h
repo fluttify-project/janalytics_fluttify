@@ -3,11 +3,15 @@
 //////////////////////////////////////////////////////////
 
 #import <Flutter/Flutter.h>
-#import <JAnalytics/JANALYTICSService.h>
-#import <JAnalytics/JANALYTICSEventObject.h>
+#import "JANALYTICSService.h"
+#import "JANALYTICSEventObject.h"
+
+typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, id, FlutterResult);
 
 @interface JanalyticsFluttifyPlugin : NSObject<FlutterPlugin>
 
 - (instancetype) initWithFlutterPluginRegistrar: (NSObject <FlutterPluginRegistrar> *) registrar;
+
+@property(nonatomic) NSObject<FlutterPluginRegistrar>* registrar;
 
 @end

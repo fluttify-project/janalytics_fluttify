@@ -141,7 +141,7 @@ class JAnalytics {
         );
       },
       ios: (pool) async {
-        await JANALYTICSService.identifyAccountWith(
+        await JANALYTICSService.identifyAccount_with(
           await account.toIOSModel(),
           (err, msg) {
             if (err != 0) {

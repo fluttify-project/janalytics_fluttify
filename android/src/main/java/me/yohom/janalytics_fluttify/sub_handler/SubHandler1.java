@@ -30,330 +30,4561 @@ import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 public class SubHandler1 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
-            // factory
-            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_PurchaseEvent__", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::performClickTabLayoutTabView_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                int length = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    length = ((List<Map<String, Object>>) argsBatch).size();
-                }
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                for (int i = 0; i < length; i++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                    // args
+                    // ref arg
+                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                    android.view.View var0 = __var0RefId__ != null ? (android.view.View) getHEAP().get(__var0RefId__) : null;
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    try {
+                        cn.jiguang.analytics.android.api.aop.JMMIAgent.performClickTabLayoutTabView(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
                     }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JACActAx::onContentChanged_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
             
             
-                    // create target object
-                    cn.jiguang.analytics.android.api.PurchaseEvent obj = new cn.jiguang.analytics.android.api.PurchaseEvent();
-                    getHEAP().put(obj.hashCode(), obj);
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JACActAx ref = (cn.jiguang.analytics.android.api.aop.JACActAx) getHEAP().get(refId);
             
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    // invoke native method
+                    try {
+                        ref.onContentChanged();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
                     }
             
-                    resultList.add(obj.hashCode());
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::onActivityCreated_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    android.os.Bundle var1 = __var1RefId__ != null ? (android.os.Bundle) getHEAP().get(__var1RefId__) : null;
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JPrefFrag ref = (cn.jiguang.analytics.android.api.aop.JPrefFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onActivityCreated(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::onStart_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JPrefFrag ref = (cn.jiguang.analytics.android.api.aop.JPrefFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onStart();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::onResume_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JPrefFrag ref = (cn.jiguang.analytics.android.api.aop.JPrefFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onResume();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::onPause_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JPrefFrag ref = (cn.jiguang.analytics.android.api.aop.JPrefFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onPause();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::onStop_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JPrefFrag ref = (cn.jiguang.analytics.android.api.aop.JPrefFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onStop();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::setUserVisibleHint_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JPrefFrag ref = (cn.jiguang.analytics.android.api.aop.JPrefFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.setUserVisibleHint(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::onHiddenChanged_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JPrefFrag ref = (cn.jiguang.analytics.android.api.aop.JPrefFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onHiddenChanged(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::onActivityCreated_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    android.os.Bundle var1 = __var1RefId__ != null ? (android.os.Bundle) getHEAP().get(__var1RefId__) : null;
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFrag ref = (cn.jiguang.analytics.android.api.aop.JDlgFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onActivityCreated(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::onStart_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFrag ref = (cn.jiguang.analytics.android.api.aop.JDlgFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onStart();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::onResume_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFrag ref = (cn.jiguang.analytics.android.api.aop.JDlgFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onResume();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::onPause_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFrag ref = (cn.jiguang.analytics.android.api.aop.JDlgFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onPause();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::onStop_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFrag ref = (cn.jiguang.analytics.android.api.aop.JDlgFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onStop();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::setUserVisibleHint_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFrag ref = (cn.jiguang.analytics.android.api.aop.JDlgFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.setUserVisibleHint(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::onHiddenChanged_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFrag ref = (cn.jiguang.analytics.android.api.aop.JDlgFrag) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onHiddenChanged(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JPrefAct::onContentChanged_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JPrefAct ref = (cn.jiguang.analytics.android.api.aop.JPrefAct) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onContentChanged();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::onActivityCreated_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    android.os.Bundle var1 = __var1RefId__ != null ? (android.os.Bundle) getHEAP().get(__var1RefId__) : null;
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragV4 ref = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onActivityCreated(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::onStart_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragV4 ref = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onStart();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::onResume_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragV4 ref = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onResume();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::onPause_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragV4 ref = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onPause();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::onStop_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragV4 ref = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onStop();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::setUserVisibleHint_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragV4 ref = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.setUserVisibleHint(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::onHiddenChanged_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragV4 ref = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onHiddenChanged(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JFragAx::onActivityCreated_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    android.os.Bundle var1 = __var1RefId__ != null ? (android.os.Bundle) getHEAP().get(__var1RefId__) : null;
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JFragAx ref = (cn.jiguang.analytics.android.api.aop.JFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onActivityCreated(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JFragAx::onStart_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JFragAx ref = (cn.jiguang.analytics.android.api.aop.JFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onStart();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JFragAx::onResume_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JFragAx ref = (cn.jiguang.analytics.android.api.aop.JFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onResume();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JFragAx::onPause_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JFragAx ref = (cn.jiguang.analytics.android.api.aop.JFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onPause();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JFragAx::onStop_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JFragAx ref = (cn.jiguang.analytics.android.api.aop.JFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onStop();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JFragAx::setUserVisibleHint_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JFragAx ref = (cn.jiguang.analytics.android.api.aop.JFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.setUserVisibleHint(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JFragAx::onHiddenChanged_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JFragAx ref = (cn.jiguang.analytics.android.api.aop.JFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onHiddenChanged(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JFragActAx::onContentChanged_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JFragActAx ref = (cn.jiguang.analytics.android.api.aop.JFragActAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onContentChanged();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::onActivityCreated_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    android.os.Bundle var1 = __var1RefId__ != null ? (android.os.Bundle) getHEAP().get(__var1RefId__) : null;
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragAx ref = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onActivityCreated(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::onStart_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragAx ref = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onStart();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::onResume_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragAx ref = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onResume();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::onPause_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragAx ref = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onPause();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::onStop_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragAx ref = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onStop();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::setUserVisibleHint_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragAx ref = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.setUserVisibleHint(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::onHiddenChanged_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.aop.JDlgFragAx ref = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.onHiddenChanged(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::setExtMap_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.Event __result__;
+                    try {
+                        __result__ = ref.setExtMap(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::addExtMap_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.Event __result__;
+                    try {
+                        __result__ = ref.addExtMap(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::getExtMap_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.Map<String,String>> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+            
+                    // invoke native method
+                    java.util.Map<String,String> __result__;
+                    try {
+                        __result__ = ref.getExtMap();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    java.util.Map<String,String> jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::getItime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+            
+                    // invoke native method
+                    long __result__;
+                    try {
+                        __result__ = ref.getItime();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    long jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::setItime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    long var1 = (long) (int) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.Event __result__;
+                    try {
+                        __result__ = ref.setItime(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::addKeyValue_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.Event __result__;
+                    try {
+                        __result__ = ref.addKeyValue(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::checkEvent_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.Event ref = (cn.jiguang.analytics.android.api.Event) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean __result__;
+                    try {
+                        __result__ = ref.checkEvent();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsid_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String __result__;
+                    try {
+                        __result__ = ref.getPurchaseGoodsid();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsid_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__;
+                    try {
+                        __result__ = ref.setPurchaseGoodsid(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsname_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String __result__;
+                    try {
+                        __result__ = ref.getPurchaseGoodsname();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsname_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__;
+                    try {
+                        __result__ = ref.setPurchaseGoodsname(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchasePrice_batch", (__argsBatch__, __methodResult__) -> {
+                List<Double> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    double __result__;
+                    try {
+                        __result__ = ref.getPurchasePrice();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    double jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchasePrice_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    double var1 = (double) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__;
+                    try {
+                        __result__ = ref.setPurchasePrice(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseSuccess_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean __result__;
+                    try {
+                        __result__ = ref.getPurchaseSuccess();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseSuccess_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__;
+                    try {
+                        __result__ = ref.setPurchaseSuccess(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseCurrency_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.Currency __result__;
+                    try {
+                        __result__ = ref.getPurchaseCurrency();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseCurrency_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // enum arg
+                    cn.jiguang.analytics.android.api.Currency var1 = cn.jiguang.analytics.android.api.Currency.values()[(int) ((Map<String, Object>) __args__).get("var1")];
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__;
+                    try {
+                        __result__ = ref.setPurchaseCurrency(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodstype_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String __result__;
+                    try {
+                        __result__ = ref.getPurchaseGoodstype();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodstype_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__;
+                    try {
+                        __result__ = ref.setPurchaseGoodstype(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsCount_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    int __result__;
+                    try {
+                        __result__ = ref.getPurchaseGoodsCount();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    int jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsCount_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.PurchaseEvent ref = (cn.jiguang.analytics.android.api.PurchaseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__;
+                    try {
+                        __result__ = ref.setPurchaseGoodsCount(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::getBrowseId_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String __result__;
+                    try {
+                        __result__ = ref.getBrowseId();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::setBrowseId_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.BrowseEvent __result__;
+                    try {
+                        __result__ = ref.setBrowseId(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::getBrowseName_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String __result__;
+                    try {
+                        __result__ = ref.getBrowseName();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::setBrowseName_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.BrowseEvent __result__;
+                    try {
+                        __result__ = ref.setBrowseName(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::getBrowseType_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String __result__;
+                    try {
+                        __result__ = ref.getBrowseType();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::setBrowseType_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.BrowseEvent __result__;
+                    try {
+                        __result__ = ref.setBrowseType(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::getBrowseDuration_batch", (__argsBatch__, __methodResult__) -> {
+                List<Float> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    float __result__;
+                    try {
+                        __result__ = ref.getBrowseDuration();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    float jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::setBrowseDuration_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.BrowseEvent ref = (cn.jiguang.analytics.android.api.BrowseEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.BrowseEvent __result__;
+                    try {
+                        __result__ = ref.setBrowseDuration(new Double(var1).floatValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.LoginEvent::getLoginMethod_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.LoginEvent ref = (cn.jiguang.analytics.android.api.LoginEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String __result__;
+                    try {
+                        __result__ = ref.getLoginMethod();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.LoginEvent::setLoginMethod_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.LoginEvent ref = (cn.jiguang.analytics.android.api.LoginEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.LoginEvent __result__;
+                    try {
+                        __result__ = ref.setLoginMethod(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.LoginEvent::getLoginSuccess_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.LoginEvent ref = (cn.jiguang.analytics.android.api.LoginEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean __result__;
+                    try {
+                        __result__ = ref.getLoginSuccess();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.LoginEvent::setLoginSuccess_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.LoginEvent ref = (cn.jiguang.analytics.android.api.LoginEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.LoginEvent __result__;
+                    try {
+                        __result__ = ref.setLoginSuccess(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::setDebugMode_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.setDebugMode(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::init_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.init(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageStart_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.onPageStart(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageEnd_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.onPageEnd(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::onEvent_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                    // ref arg
+                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    cn.jiguang.analytics.android.api.Event var1 = __var1RefId__ != null ? (cn.jiguang.analytics.android.api.Event) getHEAP().get(__var1RefId__) : null;
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.onEvent(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::requestPermission_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                    android.app.Activity var0 = __var0RefId__ != null ? (android.app.Activity) getHEAP().get(__var0RefId__) : null;
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.requestPermission(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::initCrashHandler_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.initCrashHandler(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::stopCrashHandler_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.stopCrashHandler(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__android_content_Context__int_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                    // jsonable arg
+                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.setAnalyticsReportPeriod(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__int_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    int var0 = (int) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.setAnalyticsReportPeriod(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::setChannel_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.setChannel(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CalculateEvent::getEventId_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.CalculateEvent ref = (cn.jiguang.analytics.android.api.CalculateEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String __result__;
+                    try {
+                        __result__ = ref.getEventId();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CalculateEvent::setEventId_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.CalculateEvent ref = (cn.jiguang.analytics.android.api.CalculateEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.CalculateEvent __result__;
+                    try {
+                        __result__ = ref.setEventId(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CalculateEvent::getEventValue_batch", (__argsBatch__, __methodResult__) -> {
+                List<Double> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.CalculateEvent ref = (cn.jiguang.analytics.android.api.CalculateEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    double __result__;
+                    try {
+                        __result__ = ref.getEventValue();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    double jsonableResult = __result__;
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CalculateEvent::setEventValue_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    double var1 = (double) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.CalculateEvent ref = (cn.jiguang.analytics.android.api.CalculateEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.CalculateEvent __result__;
+                    try {
+                        __result__ = ref.setEventValue(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CalculateEvent::addEventValue_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    double var1 = (double) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                    cn.jiguang.analytics.android.api.CalculateEvent ref = (cn.jiguang.analytics.android.api.CalculateEvent) getHEAP().get(refId);
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.CalculateEvent __result__;
+                    try {
+                        __result__ = ref.addEventValue(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (__result__ != null) {
+                        jsonableResult = System.identityHashCode(__result__);
+                        getHEAP().put(jsonableResult, __result__);
+                    }
+            
+                    __resultList__.add(jsonableResult);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_view_BuryWebActivity", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.view.BuryWebActivity);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_CountEvent", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.CountEvent);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_RegisterEvent", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.RegisterEvent);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_agent_JMMIDlgPupW", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.agent.JMMIDlgPupW);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_agent_JMMIClick", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.agent.JMMIClick);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_Account", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.Account);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JAct", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JAct);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JFragAct", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JFragAct);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JListFragV4", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JListFragV4);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JListAct", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JListAct);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JACAct", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JACAct);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JListFrag", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JListFrag);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JMMIAgent", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JMMIAgent);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JACActAx", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JACActAx);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JPrefFrag", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JPrefFrag);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JDlgFrag", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JDlgFrag);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JPrefAct", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JPrefAct);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JDlgFragV4", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JDlgFragV4);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JFragAx", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JFragAx);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JFragActAx", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JFragActAx);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JDlgFragAx", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.aop.JDlgFragAx);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_Event", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.Event);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_PurchaseEvent", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.PurchaseEvent);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_BrowseEvent", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.BrowseEvent);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_LoginEvent", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.LoginEvent);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_JAnalyticsInterface", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.JAnalyticsInterface);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_CalculateEvent", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.jiguang.analytics.android.api.CalculateEvent);
+            });
+            put("RefClass::isKindOfcn_analytics_client_android_BuildConfig", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof cn.analytics.client.android.BuildConfig);
             });
             // factory
-            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_BrowseEvent__String__String__String__float", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                int length = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    length = ((List<Map<String, Object>>) argsBatch).size();
+            put("ObjectFactory::createcn_jiguang_analytics_android_view_BuryWebActivity__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_view_BuryWebActivity__");
                 }
             
-                for (int i = 0; i < length; i++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
-                    }
+                // args
             
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    String var2 = (String) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    String var3 = (String) ((Map<String, Object>) args).get("var3");
-                    // jsonable arg
-                    Double var4 = (Double) ((Map<String, Object>) args).get("var4");
             
-                    // create target object
-                    cn.jiguang.analytics.android.api.BrowseEvent obj = new cn.jiguang.analytics.android.api.BrowseEvent(var1, var2, var3, new Double(var4).floatValue());
-                    getHEAP().put(obj.hashCode(), obj);
+                // create target object
+                cn.jiguang.analytics.android.view.BuryWebActivity __obj__ = new cn.jiguang.analytics.android.view.BuryWebActivity();
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    resultList.add(obj.hashCode());
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(System.identityHashCode(__obj__));
             });
             // factory
-            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_BrowseEvent__", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_CountEvent__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_CountEvent__String");
+                }
             
-                int length = 0;
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.CountEvent __obj__ = new cn.jiguang.analytics.android.api.CountEvent(var1);
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_CountEvent__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_CountEvent__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.CountEvent __obj__ = new cn.jiguang.analytics.android.api.CountEvent();
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_RegisterEvent__String__boolean", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_RegisterEvent__String__boolean");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // jsonable arg
+                boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.RegisterEvent __obj__ = new cn.jiguang.analytics.android.api.RegisterEvent(var1, var2);
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_RegisterEvent__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_RegisterEvent__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.RegisterEvent __obj__ = new cn.jiguang.analytics.android.api.RegisterEvent();
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_agent_JMMIDlgPupW__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_agent_JMMIDlgPupW__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.agent.JMMIDlgPupW __obj__ = new cn.jiguang.analytics.android.api.agent.JMMIDlgPupW();
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_agent_JMMIClick__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_agent_JMMIClick__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.agent.JMMIClick __obj__ = new cn.jiguang.analytics.android.api.agent.JMMIClick();
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_Account__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_Account__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.Account __obj__ = new cn.jiguang.analytics.android.api.Account(var1);
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_aop_JAct__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_aop_JAct__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.aop.JAct __obj__ = new cn.jiguang.analytics.android.api.aop.JAct();
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_aop_JMMIAgent__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_aop_JMMIAgent__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.aop.JMMIAgent __obj__ = new cn.jiguang.analytics.android.api.aop.JMMIAgent();
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_PurchaseEvent__String__String__double__boolean__cn_jiguang_analytics_android_api_Currency__String__int", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_PurchaseEvent__String__String__double__boolean__cn_jiguang_analytics_android_api_Currency__String__int");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // jsonable arg
+                double var3 = (double) ((Map<String, Object>) __args__).get("var3");
+                // jsonable arg
+                boolean var5 = (boolean) ((Map<String, Object>) __args__).get("var5");
+                // enum arg
+                cn.jiguang.analytics.android.api.Currency var6 = cn.jiguang.analytics.android.api.Currency.values()[(int) ((Map<String, Object>) __args__).get("var6")];
+                // jsonable arg
+                String var7 = (String) ((Map<String, Object>) __args__).get("var7");
+                // jsonable arg
+                int var8 = (int) ((Map<String, Object>) __args__).get("var8");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.PurchaseEvent __obj__ = new cn.jiguang.analytics.android.api.PurchaseEvent(var1, var2, var3, var5, var6, var7, var8);
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_PurchaseEvent__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_PurchaseEvent__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.PurchaseEvent __obj__ = new cn.jiguang.analytics.android.api.PurchaseEvent();
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_BrowseEvent__String__String__String__float", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_BrowseEvent__String__String__String__float");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                // jsonable arg
+                Double var4 = (Double) ((Map<String, Object>) __args__).get("var4");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.BrowseEvent __obj__ = new cn.jiguang.analytics.android.api.BrowseEvent(var1, var2, var3, new Double(var4).floatValue());
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_BrowseEvent__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_BrowseEvent__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.BrowseEvent __obj__ = new cn.jiguang.analytics.android.api.BrowseEvent();
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_LoginEvent__String__boolean", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_LoginEvent__String__boolean");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // jsonable arg
+                boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.LoginEvent __obj__ = new cn.jiguang.analytics.android.api.LoginEvent(var1, var2);
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_LoginEvent__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_LoginEvent__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.LoginEvent __obj__ = new cn.jiguang.analytics.android.api.LoginEvent();
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_CalculateEvent__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_CalculateEvent__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.CalculateEvent __obj__ = new cn.jiguang.analytics.android.api.CalculateEvent();
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_CalculateEvent__String__double", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_CalculateEvent__String__double");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // jsonable arg
+                double var2 = (double) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.CalculateEvent __obj__ = new cn.jiguang.analytics.android.api.CalculateEvent(var1, var2);
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::createcn_analytics_client_android_BuildConfig__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_analytics_client_android_BuildConfig__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.analytics.client.android.BuildConfig __obj__ = new cn.analytics.client.android.BuildConfig();
+                getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(System.identityHashCode(__obj__));
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_view_BuryWebActivity__", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
                 // of this batch
-                if (argsBatch instanceof Map) {
-                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
                 }
                 // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    length = ((List<Map<String, Object>>) argsBatch).size();
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
                 }
             
-                for (int i = 0; i < length; i++) {
-                    Map<String, Object> args = new HashMap<>();
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
                     }
             
                     // args
             
             
                     // create target object
-                    cn.jiguang.analytics.android.api.BrowseEvent obj = new cn.jiguang.analytics.android.api.BrowseEvent();
-                    getHEAP().put(obj.hashCode(), obj);
+                    cn.jiguang.analytics.android.view.BuryWebActivity __obj__ = new cn.jiguang.analytics.android.view.BuryWebActivity();
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    __resultList__.add(System.identityHashCode(__obj__));
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_LoginEvent__String__boolean", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_CountEvent__String", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
-                int length = 0;
+                int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
                 // of this batch
-                if (argsBatch instanceof Map) {
-                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
                 }
                 // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    length = ((List<Map<String, Object>>) argsBatch).size();
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
                 }
             
-                for (int i = 0; i < length; i++) {
-                    Map<String, Object> args = new HashMap<>();
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
                     }
             
                     // args
                     // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    boolean var2 = (boolean) ((Map<String, Object>) args).get("var2");
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
-                    cn.jiguang.analytics.android.api.LoginEvent obj = new cn.jiguang.analytics.android.api.LoginEvent(var1, var2);
-                    getHEAP().put(obj.hashCode(), obj);
+                    cn.jiguang.analytics.android.api.CountEvent __obj__ = new cn.jiguang.analytics.android.api.CountEvent(var1);
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    __resultList__.add(System.identityHashCode(__obj__));
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_LoginEvent__", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_CountEvent__", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
-                int length = 0;
+                int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
                 // of this batch
-                if (argsBatch instanceof Map) {
-                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
                 }
                 // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    length = ((List<Map<String, Object>>) argsBatch).size();
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
                 }
             
-                for (int i = 0; i < length; i++) {
-                    Map<String, Object> args = new HashMap<>();
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
                     }
             
                     // args
             
             
                     // create target object
-                    cn.jiguang.analytics.android.api.LoginEvent obj = new cn.jiguang.analytics.android.api.LoginEvent();
-                    getHEAP().put(obj.hashCode(), obj);
+                    cn.jiguang.analytics.android.api.CountEvent __obj__ = new cn.jiguang.analytics.android.api.CountEvent();
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    __resultList__.add(System.identityHashCode(__obj__));
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_CalculateEvent__", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_RegisterEvent__String__boolean", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
-                int length = 0;
+                int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
                 // of this batch
-                if (argsBatch instanceof Map) {
-                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
                 }
                 // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    length = ((List<Map<String, Object>>) argsBatch).size();
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
                 }
             
-                for (int i = 0; i < length; i++) {
-                    Map<String, Object> args = new HashMap<>();
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    cn.jiguang.analytics.android.api.CalculateEvent obj = new cn.jiguang.analytics.android.api.CalculateEvent();
-                    getHEAP().put(obj.hashCode(), obj);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    resultList.add(obj.hashCode());
-                }
-            
-                methodResult.success(resultList);
-            });
-            // factory
-            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_CalculateEvent__String__double", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                int length = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (argsBatch instanceof Map) {
-                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
-                }
-                // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    length = ((List<Map<String, Object>>) argsBatch).size();
-                }
-            
-                for (int i = 0; i < length; i++) {
-                    Map<String, Object> args = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
                     }
             
                     // args
                     // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                     // jsonable arg
-                    double var2 = (double) ((Map<String, Object>) args).get("var2");
+                    boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
-                    cn.jiguang.analytics.android.api.CalculateEvent obj = new cn.jiguang.analytics.android.api.CalculateEvent(var1, var2);
-                    getHEAP().put(obj.hashCode(), obj);
+                    cn.jiguang.analytics.android.api.RegisterEvent __obj__ = new cn.jiguang.analytics.android.api.RegisterEvent(var1, var2);
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    __resultList__.add(System.identityHashCode(__obj__));
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
             });
             // factory
-            put("ObjectFactory::create_batchcn_analytics_client_android_BuildConfig__", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_RegisterEvent__", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
-                int length = 0;
+                int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
                 // of this batch
-                if (argsBatch instanceof Map) {
-                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
                 }
                 // or directly put the arg batch
-                else if (argsBatch instanceof List) {
-                    length = ((List<Map<String, Object>>) argsBatch).size();
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
                 }
             
-                for (int i = 0; i < length; i++) {
-                    Map<String, Object> args = new HashMap<>();
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
-                    if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
                     }
             
                     // args
             
             
                     // create target object
-                    cn.analytics.client.android.BuildConfig obj = new cn.analytics.client.android.BuildConfig();
-                    getHEAP().put(obj.hashCode(), obj);
+                    cn.jiguang.analytics.android.api.RegisterEvent __obj__ = new cn.jiguang.analytics.android.api.RegisterEvent();
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    __resultList__.add(System.identityHashCode(__obj__));
                 }
             
-                methodResult.success(resultList);
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_agent_JMMIDlgPupW__", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.agent.JMMIDlgPupW __obj__ = new cn.jiguang.analytics.android.api.agent.JMMIDlgPupW();
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_agent_JMMIClick__", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.agent.JMMIClick __obj__ = new cn.jiguang.analytics.android.api.agent.JMMIClick();
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_Account__String", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.Account __obj__ = new cn.jiguang.analytics.android.api.Account(var1);
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_aop_JAct__", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.aop.JAct __obj__ = new cn.jiguang.analytics.android.api.aop.JAct();
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_aop_JMMIAgent__", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.aop.JMMIAgent __obj__ = new cn.jiguang.analytics.android.api.aop.JMMIAgent();
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_PurchaseEvent__String__String__double__boolean__cn_jiguang_analytics_android_api_Currency__String__int", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // jsonable arg
+                    double var3 = (double) ((Map<String, Object>) __args__).get("var3");
+                    // jsonable arg
+                    boolean var5 = (boolean) ((Map<String, Object>) __args__).get("var5");
+                    // enum arg
+                    cn.jiguang.analytics.android.api.Currency var6 = cn.jiguang.analytics.android.api.Currency.values()[(int) ((Map<String, Object>) __args__).get("var6")];
+                    // jsonable arg
+                    String var7 = (String) ((Map<String, Object>) __args__).get("var7");
+                    // jsonable arg
+                    int var8 = (int) ((Map<String, Object>) __args__).get("var8");
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.PurchaseEvent __obj__ = new cn.jiguang.analytics.android.api.PurchaseEvent(var1, var2, var3, var5, var6, var7, var8);
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_PurchaseEvent__", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.PurchaseEvent __obj__ = new cn.jiguang.analytics.android.api.PurchaseEvent();
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_BrowseEvent__String__String__String__float", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // jsonable arg
+                    String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                    // jsonable arg
+                    Double var4 = (Double) ((Map<String, Object>) __args__).get("var4");
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.BrowseEvent __obj__ = new cn.jiguang.analytics.android.api.BrowseEvent(var1, var2, var3, new Double(var4).floatValue());
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_BrowseEvent__", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.BrowseEvent __obj__ = new cn.jiguang.analytics.android.api.BrowseEvent();
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_LoginEvent__String__boolean", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // jsonable arg
+                    boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.LoginEvent __obj__ = new cn.jiguang.analytics.android.api.LoginEvent(var1, var2);
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_LoginEvent__", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.LoginEvent __obj__ = new cn.jiguang.analytics.android.api.LoginEvent();
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_CalculateEvent__", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.CalculateEvent __obj__ = new cn.jiguang.analytics.android.api.CalculateEvent();
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_CalculateEvent__String__double", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // jsonable arg
+                    double var2 = (double) ((Map<String, Object>) __args__).get("var2");
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.CalculateEvent __obj__ = new cn.jiguang.analytics.android.api.CalculateEvent(var1, var2);
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_analytics_client_android_BuildConfig__", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.analytics.client.android.BuildConfig __obj__ = new cn.analytics.client.android.BuildConfig();
+                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    __resultList__.add(System.identityHashCode(__obj__));
+                }
+            
+                __methodResult__.success(__resultList__);
             });
         }};
     }
