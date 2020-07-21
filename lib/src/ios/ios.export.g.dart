@@ -5,6 +5,7 @@ export 'JANALYTICSUserInfo.g.dart';
 export 'JANALYTICSCalculateEvent.g.dart';
 export 'JANALYTICSBrowseEvent.g.dart';
 export 'type_op.g.dart';
+export 'constants.g.dart';
 export 'JANALYTICSSex.g.dart';
 export 'functions.g.dart';
 export 'JANALYTICSPurchaseEvent.g.dart';

@@ -25,6 +25,7 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.janalytics_fluttify.sub_handler.*;
+import me.yohom.janalytics_fluttify.sub_handler.custom.SubHandlerCustom;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -32,7 +33,7 @@ import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 @SuppressWarnings("ALL")
 public class JanalyticsFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodCallHandler, ActivityAware {
 
-    private static final List<Map<String, Handler>> handlerMapList = new ArrayList<>();
+    private static List<Map<String, Handler>> handlerMapList;
 
     // v1 android embedding for compatible
     public static void registerWith(Registrar registrar) {
@@ -47,8 +48,10 @@ public class JanalyticsFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         plugin.messenger = messenger;
         plugin.platformViewRegistry = platformViewRegistry;
 
+        handlerMapList = new ArrayList<>();
         handlerMapList.add(SubHandler0.getSubHandler(messenger));
         handlerMapList.add(SubHandler1.getSubHandler(messenger));
+        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger, registrar.activity()));
 
         channel.setMethodCallHandler(plugin);
 
@@ -62,11 +65,16 @@ public class JanalyticsFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
     // v2 android embedding
     @Override
     public void onAttachedToEngine(FlutterPluginBinding binding) {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "JanalyticsFluttifyPlugin::onAttachedToEngine@" + binding);
+        }
+
         final MethodChannel channel = new MethodChannel(binding.getBinaryMessenger(), "me.yohom/janalytics_fluttify");
 
         messenger = binding.getBinaryMessenger();
         platformViewRegistry = binding.getPlatformViewRegistry();
 
+        handlerMapList = new ArrayList<>();
         handlerMapList.add(SubHandler0.getSubHandler(messenger));
         handlerMapList.add(SubHandler1.getSubHandler(messenger));
 
@@ -75,25 +83,44 @@ public class JanalyticsFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
 
     @Override
     public void onDetachedFromEngine(FlutterPluginBinding binding) {
-
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "JanalyticsFluttifyPlugin::onDetachedFromEngine@" + binding);
+        }
     }
 
     @Override
     public void onAttachedToActivity(ActivityPluginBinding binding) {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "JanalyticsFluttifyPlugin::onAttachedToActivity@" + binding);
+        }
         Activity activity = binding.getActivity();
+
+        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger, activity));
 
         // register platform view
         
     }
 
     @Override
-    public void onDetachedFromActivityForConfigChanges() { }
+    public void onDetachedFromActivity() {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "JanalyticsFluttifyPlugin::onDetachedFromActivity");
+        }
+    }
 
     @Override
-    public void onReattachedToActivityForConfigChanges(ActivityPluginBinding binding) { }
+    public void onReattachedToActivityForConfigChanges(ActivityPluginBinding binding) {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "JanalyticsFluttifyPlugin::onReattachedToActivityForConfigChanges@" + binding);
+        }
+    }
 
     @Override
-    public void onDetachedFromActivity() { }
+    public void onDetachedFromActivityForConfigChanges() {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "JanalyticsFluttifyPlugin::onDetachedFromActivityForConfigChanges");
+        }
+    }
 
     @Override
     public void onMethodCall(@NonNull MethodCall methodCall, @NonNull MethodChannel.Result methodResult) {
