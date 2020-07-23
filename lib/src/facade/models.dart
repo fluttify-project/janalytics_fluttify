@@ -24,7 +24,7 @@ class CountEvent extends Event {
   /// 自定义计数事件模型中扩展参数中不能使用以下 key 值：
   /// event_id
   /// 此类 key 已被模型使用，如果使用则会导致统计到的数据不准确.
-  final Map<String, dynamic> extMap;
+  final Map<String, String> extMap;
 
   @override
   String toString() {
@@ -72,7 +72,7 @@ class CalculateEvent extends Event {
   /// event_id
   /// event_value
   /// 此类 key 已被模型使用，如果使用则会导致统计到的数据不准确.
-  final Map<String, dynamic> extMap;
+  final Map<String, String> extMap;
 
   @override
   Future<cn_jiguang_analytics_android_api_Event> toAndroidModel() async {
@@ -116,7 +116,7 @@ class LoginEvent extends Event {
   /// login_method
   /// login_success
   /// 此类 key 已被模型使用，如果使用则会导致统计到的数据不准确.
-  final Map<String, dynamic> extMap;
+  final Map<String, String> extMap;
 
   @override
   Future<cn_jiguang_analytics_android_api_Event> toAndroidModel() async {
@@ -160,7 +160,7 @@ class RegisterEvent extends Event {
   /// register_method
   /// register_success
   /// 此类 key 已被模型使用，如果使用则会导致统计到的数据不准确.
-  final Map<String, dynamic> extMap;
+  final Map<String, String> extMap;
 
   @override
   Future<cn_jiguang_analytics_android_api_Event> toAndroidModel() async {
@@ -213,7 +213,7 @@ class BrowseEvent extends Event {
   /// browse_type
   /// browse_duration
   /// 此类 key 已被模型使用，如果使用则会导致统计到的数据不准确.
-  final Map<String, dynamic> extMap;
+  final Map<String, String> extMap;
 
   @override
   Future<cn_jiguang_analytics_android_api_Event> toAndroidModel() async {
@@ -288,7 +288,7 @@ class PurchaseEvent extends Event {
   /// purchase_goods_type
   /// purchase_quantity
   /// 此类 key 已被模型使用，如果使用则会导致统计到的数据不准确.
-  final Map<String, dynamic> extMap;
+  final Map<String, String> extMap;
 
   @override
   Future<cn_jiguang_analytics_android_api_Event> toAndroidModel() async {
