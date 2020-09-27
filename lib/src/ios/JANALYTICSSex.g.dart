@@ -15,6 +15,7 @@ extension JANALYTICSSexToX on JANALYTICSSex {
       case JANALYTICSSex.JANALYTICSSexUnknown: return JANALYTICSSex.JANALYTICSSexUnknown.index + 0;
       case JANALYTICSSex.JANALYTICSSexMale: return JANALYTICSSex.JANALYTICSSexMale.index + 0;
       case JANALYTICSSex.JANALYTICSSexFemale: return JANALYTICSSex.JANALYTICSSexFemale.index + 0;
+      default: return 0;
     }
   }
 }

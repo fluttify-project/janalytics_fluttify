@@ -15,6 +15,7 @@ extension JANALYTICSPaidToX on JANALYTICSPaid {
       case JANALYTICSPaid.JANALYTICSPaidUnknown: return JANALYTICSPaid.JANALYTICSPaidUnknown.index + 0;
       case JANALYTICSPaid.JANALYTICSPaidPaid: return JANALYTICSPaid.JANALYTICSPaidPaid.index + 0;
       case JANALYTICSPaid.JANALYTICSPaidUnpaid: return JANALYTICSPaid.JANALYTICSPaidUnpaid.index + 0;
+      default: return 0;
     }
   }
 }

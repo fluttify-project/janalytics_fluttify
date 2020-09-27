@@ -21,10 +21,8 @@ class cn_jiguang_analytics_android_view_BuryWebActivity extends android_app_Acti
 
   //region creators
   static Future<cn_jiguang_analytics_android_view_BuryWebActivity> create__() async {
-    final int refId = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_view_BuryWebActivity__');
+    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_view_BuryWebActivity__', );
     final object = cn_jiguang_analytics_android_view_BuryWebActivity()..refId = refId..tag__ = 'janalytics_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class cn_jiguang_analytics_android_view_BuryWebActivity extends android_app_Acti
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_view_BuryWebActivity__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_view_BuryWebActivity__', {'length': length});
   
     final List<cn_jiguang_analytics_android_view_BuryWebActivity> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_view_BuryWebActivity()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -51,30 +48,6 @@ class cn_jiguang_analytics_android_view_BuryWebActivity extends android_app_Acti
 
   //region methods
   
-  static Future<void> a(android_view_View var0) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: cn.jiguang.analytics.android.view.BuryWebActivity::a([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.view.BuryWebActivity::a', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
-    }
-  }
-  
-  
   Future<void> onBackPressed() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -82,7 +55,7 @@ class cn_jiguang_analytics_android_view_BuryWebActivity extends android_app_Acti
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.view.BuryWebActivity::onBackPressed', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.view.BuryWebActivity::onBackPressed', {"__this__": this});
   
   
     // handle native call
@@ -93,7 +66,6 @@ class cn_jiguang_analytics_android_view_BuryWebActivity extends android_app_Acti
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -112,33 +84,13 @@ extension cn_jiguang_analytics_android_view_BuryWebActivity_Batch on List<cn_jig
 
   //region methods
   
-  static Future<List<void>> a_batch(List<android_view_View> var0) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.view.BuryWebActivity::a_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  
   Future<List<void>> onBackPressed_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.view.BuryWebActivity::onBackPressed_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.view.BuryWebActivity::onBackPressed_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -146,7 +98,6 @@ extension cn_jiguang_analytics_android_view_BuryWebActivity_Batch on List<cn_jig
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

@@ -20,22 +20,19 @@ class JANALYTICSCalculateEvent extends JANALYTICSEventObject  {
   //endregion
 
   //region creators
-  static Future<JANALYTICSCalculateEvent> create__() async {
-    final int refId = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::createJANALYTICSCalculateEvent');
+  static Future<JANALYTICSCalculateEvent> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createJANALYTICSCalculateEvent', {'init': init});
     final object = JANALYTICSCalculateEvent()..refId = refId..tag__ = 'janalytics_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<JANALYTICSCalculateEvent>> create_batch__(int length) async {
+  static Future<List<JANALYTICSCalculateEvent>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSCalculateEvent', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchJANALYTICSCalculateEvent', {'length': length, 'init': init});
   
     final List<JANALYTICSCalculateEvent> typedResult = resultBatch.map((result) => JANALYTICSCalculateEvent()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,28 +40,26 @@ class JANALYTICSCalculateEvent extends JANALYTICSEventObject  {
 
   //region getters
   Future<String> get_eventID() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSCalculateEvent::get_eventID", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSCalculateEvent::get_eventID", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_value() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSCalculateEvent::get_value", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSCalculateEvent::get_value", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_eventID(String eventID) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSCalculateEvent::set_eventID', {'refId': refId, "eventID": eventID});
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSCalculateEvent::set_eventID', <String, dynamic>{'__this__': this, "eventID": eventID});
   
   
   }
   
   Future<void> set_value(double value) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSCalculateEvent::set_value', {'refId': refId, "value": value});
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSCalculateEvent::set_value', <String, dynamic>{'__this__': this, "value": value});
   
   
   }
@@ -79,16 +74,16 @@ class JANALYTICSCalculateEvent extends JANALYTICSEventObject  {
 extension JANALYTICSCalculateEvent_Batch on List<JANALYTICSCalculateEvent> {
   //region getters
   Future<List<String>> get_eventID_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSCalculateEvent::get_eventID_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSCalculateEvent::get_eventID_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_value_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSCalculateEvent::get_value_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSCalculateEvent::get_value_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -96,13 +91,13 @@ extension JANALYTICSCalculateEvent_Batch on List<JANALYTICSCalculateEvent> {
 
   //region setters
   Future<void> set_eventID_batch(List<String> eventID) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSCalculateEvent::set_eventID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "eventID": eventID[__i__]}]);
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSCalculateEvent::set_eventID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "eventID": eventID[__i__]}]);
   
   
   }
   
   Future<void> set_value_batch(List<double> value) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSCalculateEvent::set_value_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "value": value[__i__]}]);
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSCalculateEvent::set_value_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "value": value[__i__]}]);
   
   
   }

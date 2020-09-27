@@ -24,13 +24,7 @@ mixin cn_jiguang_analytics_android_api_AccountCallback on java_lang_Object {
   
 
   @mustCallSuper
-  Future<void> callback(int var1, String var2) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('callback::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> callback(int var1, String var2) {}
   
 }
 

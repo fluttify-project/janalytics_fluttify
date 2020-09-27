@@ -40,7 +40,7 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::setExtMap', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::setExtMap', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -51,7 +51,6 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_android_api_Event()..refId = __result__..tag__ = 'janalytics_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -64,7 +63,7 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::addExtMap', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::addExtMap', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -75,7 +74,6 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_android_api_Event()..refId = __result__..tag__ = 'janalytics_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -88,7 +86,7 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::getExtMap', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::getExtMap', {"__this__": this});
   
   
     // handle native call
@@ -99,7 +97,6 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -112,7 +109,7 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::getItime', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::getItime', {"__this__": this});
   
   
     // handle native call
@@ -123,7 +120,6 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -136,7 +132,7 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::setItime', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::setItime', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -147,7 +143,6 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_android_api_Event()..refId = __result__..tag__ = 'janalytics_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -160,7 +155,7 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::addKeyValue', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::addKeyValue', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -171,7 +166,6 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_android_api_Event()..refId = __result__..tag__ = 'janalytics_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -184,7 +178,7 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::checkEvent', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::checkEvent', {"__this__": this});
   
   
     // handle native call
@@ -195,7 +189,6 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -220,15 +213,14 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::setExtMap_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::setExtMap_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_android_api_Event()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_Event()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
       return typedResult;
     }
   }
@@ -240,15 +232,14 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::addExtMap_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::addExtMap_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_android_api_Event()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_Event()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
       return typedResult;
     }
   }
@@ -260,7 +251,7 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::getExtMap_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::getExtMap_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -268,7 +259,6 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<Map<String,String>>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -280,7 +270,7 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::getItime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::getItime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -288,7 +278,6 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -300,15 +289,14 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::setItime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::setItime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_android_api_Event()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_Event()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
       return typedResult;
     }
   }
@@ -320,15 +308,14 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::addKeyValue_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::addKeyValue_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_android_api_Event()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_Event()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
       return typedResult;
     }
   }
@@ -340,7 +327,7 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.Event::checkEvent_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.Event::checkEvent_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -348,7 +335,6 @@ extension cn_jiguang_analytics_android_api_Event_Batch on List<cn_jiguang_analyt
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

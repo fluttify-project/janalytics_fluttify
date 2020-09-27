@@ -203,7 +203,7 @@ class BrowseEvent extends Event {
   final String browseType;
 
   /// 浏览时长，单位秒
-  final int browseDuration;
+  final Duration browseDuration;
 
   /// 扩展参数
   ///
@@ -222,7 +222,7 @@ class BrowseEvent extends Event {
       browseId,
       browseName,
       browseType,
-      browseDuration.toDouble(),
+      browseDuration.inSeconds.toDouble(),
     );
     extMap?.forEach((key, value) async {
       await event.addKeyValue(key, value);
@@ -236,7 +236,7 @@ class BrowseEvent extends Event {
     await event.set_name(browseName);
     await event.set_type(browseType);
     await event.set_contentID(browseId);
-    await event.set_duration(browseDuration.toDouble());
+    await event.set_duration(browseDuration.inSeconds.toDouble());
     if (extMap != null) {
       await event.set_extra(extMap);
     }

@@ -1,0 +1,4 @@
+-keep class cn.jiguang.** { *; }
+-keep class android.support.** { *; }
+-keep class androidx.** { *; }
+-keep class com.google.android.** { *; }

@@ -20,22 +20,19 @@ class JANALYTICSService extends NSObject  {
   //endregion
 
   //region creators
-  static Future<JANALYTICSService> create__() async {
-    final int refId = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::createJANALYTICSService');
+  static Future<JANALYTICSService> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createJANALYTICSService', {'init': init});
     final object = JANALYTICSService()..refId = refId..tag__ = 'janalytics_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<JANALYTICSService>> create_batch__(int length) async {
+  static Future<List<JANALYTICSService>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSService', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchJANALYTICSService', {'length': length, 'init': init});
   
     final List<JANALYTICSService> typedResult = resultBatch.map((result) => JANALYTICSService()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -58,7 +55,7 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setupWithConfig', {"config": config is Ref ? (config as Ref)?.refId : config});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setupWithConfig', {"config": config});
   
   
     // handle native call
@@ -69,7 +66,6 @@ class JANALYTICSService extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -82,7 +78,7 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::startLogPageView', {"pageName": pageName});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::startLogPageView', {"pageName": pageName});
   
   
     // handle native call
@@ -93,7 +89,6 @@ class JANALYTICSService extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -106,7 +101,7 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::stopLogPageView', {"pageName": pageName});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::stopLogPageView', {"pageName": pageName});
   
   
     // handle native call
@@ -117,7 +112,6 @@ class JANALYTICSService extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -130,7 +124,7 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setLatitude_longitude', {"latitude": latitude, "longitude": longitude});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setLatitude_longitude', {"latitude": latitude, "longitude": longitude});
   
   
     // handle native call
@@ -141,7 +135,6 @@ class JANALYTICSService extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -154,7 +147,7 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setLocation', {"location": location is Ref ? (location as Ref)?.refId : location});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setLocation', {"location": location});
   
   
     // handle native call
@@ -165,7 +158,6 @@ class JANALYTICSService extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -178,7 +170,7 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::eventRecord', {"event": event is Ref ? (event as Ref)?.refId : event});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::eventRecord', {"event": event});
   
   
     // handle native call
@@ -189,7 +181,6 @@ class JANALYTICSService extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -202,25 +193,30 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::identifyAccount_with', {"userInfo": userInfo is Ref ? (userInfo as Ref)?.refId : userInfo});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::identifyAccount_with', {"userInfo": userInfo});
   
   
     // handle native call
-    MethodChannel('void|NSInteger#err,NSString*#msg::Callback')
+    MethodChannel('void|NSInteger#err,NSString*#msg::Callback', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::void|NSInteger#err,NSString*#msg::void|NSInteger#err,NSString*#msg':
-              // print log
-              if (fluttifyLogEnabled) {
-        
-              }
-        
-              // handle the native call
-              if (completion != null) completion(args['err'], args['msg']);
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::void|NSInteger#err,NSString*#msg::void|NSInteger#err,NSString*#msg':
+                // print log
+                if (fluttifyLogEnabled) {
+          
+                }
+          
+                // handle the native call
+                if (completion != null) completion(args['err'], args['msg']);
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -229,7 +225,6 @@ class JANALYTICSService extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -242,25 +237,30 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::detachAccount', );
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::detachAccount', );
   
   
     // handle native call
-    MethodChannel('void|NSInteger#err,NSString*#msg::Callback')
+    MethodChannel('void|NSInteger#err,NSString*#msg::Callback', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::void|NSInteger#err,NSString*#msg::void|NSInteger#err,NSString*#msg':
-              // print log
-              if (fluttifyLogEnabled) {
-        
-              }
-        
-              // handle the native call
-              if (completion != null) completion(args['err'], args['msg']);
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::void|NSInteger#err,NSString*#msg::void|NSInteger#err,NSString*#msg':
+                // print log
+                if (fluttifyLogEnabled) {
+          
+                }
+          
+                // handle the native call
+                if (completion != null) completion(args['err'], args['msg']);
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -269,7 +269,6 @@ class JANALYTICSService extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -282,7 +281,7 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setFrequency', {"frequency": frequency});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setFrequency', {"frequency": frequency});
   
   
     // handle native call
@@ -293,7 +292,6 @@ class JANALYTICSService extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -306,7 +304,7 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::crashLogON', );
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::crashLogON', );
   
   
     // handle native call
@@ -317,7 +315,6 @@ class JANALYTICSService extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -330,7 +327,7 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setDebug', {"enable": enable});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setDebug', {"enable": enable});
   
   
     // handle native call
@@ -341,7 +338,6 @@ class JANALYTICSService extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -366,7 +362,7 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setupWithConfig_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setupWithConfig_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
     // convert native result to dart side object
@@ -374,7 +370,6 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -386,7 +381,7 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::startLogPageView_batch', [for (int __i__ = 0; __i__ < pageName.length; __i__++) {"pageName": pageName[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::startLogPageView_batch', [for (int __i__ = 0; __i__ < pageName.length; __i__++) {"pageName": pageName[__i__]}]);
   
   
     // convert native result to dart side object
@@ -394,7 +389,6 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -406,7 +400,7 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::stopLogPageView_batch', [for (int __i__ = 0; __i__ < pageName.length; __i__++) {"pageName": pageName[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::stopLogPageView_batch', [for (int __i__ = 0; __i__ < pageName.length; __i__++) {"pageName": pageName[__i__]}]);
   
   
     // convert native result to dart side object
@@ -414,7 +408,6 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -426,7 +419,7 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setLatitude_longitude_batch', [for (int __i__ = 0; __i__ < latitude.length; __i__++) {"latitude": latitude[__i__], "longitude": longitude[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setLatitude_longitude_batch', [for (int __i__ = 0; __i__ < latitude.length; __i__++) {"latitude": latitude[__i__], "longitude": longitude[__i__]}]);
   
   
     // convert native result to dart side object
@@ -434,7 +427,6 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -446,7 +438,7 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setLocation_batch', [for (int __i__ = 0; __i__ < location.length; __i__++) {"location": location[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setLocation_batch', [for (int __i__ = 0; __i__ < location.length; __i__++) {"location": location[__i__]}]);
   
   
     // convert native result to dart side object
@@ -454,7 +446,6 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -466,7 +457,7 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::eventRecord_batch', [for (int __i__ = 0; __i__ < event.length; __i__++) {"event": event[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::eventRecord_batch', [for (int __i__ = 0; __i__ < event.length; __i__++) {"event": event[__i__]}]);
   
   
     // convert native result to dart side object
@@ -474,7 +465,6 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -486,7 +476,7 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setFrequency_batch', [for (int __i__ = 0; __i__ < frequency.length; __i__++) {"frequency": frequency[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setFrequency_batch', [for (int __i__ = 0; __i__ < frequency.length; __i__++) {"frequency": frequency[__i__]}]);
   
   
     // convert native result to dart side object
@@ -494,7 +484,6 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -506,7 +495,7 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::crashLogON_batch', );
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::crashLogON_batch', );
   
   
     // convert native result to dart side object
@@ -514,7 +503,6 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -526,7 +514,7 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSService::setDebug_batch', [for (int __i__ = 0; __i__ < enable.length; __i__++) {"enable": enable[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setDebug_batch', [for (int __i__ = 0; __i__ < enable.length; __i__++) {"enable": enable[__i__]}]);
   
   
     // convert native result to dart side object
@@ -534,7 +522,6 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

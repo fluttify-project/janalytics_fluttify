@@ -40,7 +40,7 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setDebugMode', {"var0": var0});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setDebugMode', {"var0": var0});
   
   
     // handle native call
@@ -51,7 +51,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -64,7 +63,7 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::init', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::init', {"var0": var0});
   
   
     // handle native call
@@ -75,7 +74,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -88,7 +86,7 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageStart', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageStart', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -99,7 +97,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -112,7 +109,7 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageEnd', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageEnd', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -123,7 +120,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -136,7 +132,7 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onEvent', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1 is Ref ? (var1 as Ref)?.refId : var1});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onEvent', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -147,7 +143,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -160,7 +155,7 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::requestPermission', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::requestPermission', {"var0": var0});
   
   
     // handle native call
@@ -171,7 +166,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -184,7 +178,7 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::initCrashHandler', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::initCrashHandler', {"var0": var0});
   
   
     // handle native call
@@ -195,7 +189,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -208,7 +201,7 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::stopCrashHandler', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::stopCrashHandler', {"var0": var0});
   
   
     // handle native call
@@ -219,7 +212,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -232,25 +224,30 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::identifyAccount__android_content_Context__cn_jiguang_analytics_android_api_Account__cn_jiguang_analytics_android_api_AccountCallback', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1 is Ref ? (var1 as Ref)?.refId : var1});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::identifyAccount__android_content_Context__cn_jiguang_analytics_android_api_Account__cn_jiguang_analytics_android_api_AccountCallback', {"var0": var0, "var1": var1});
   
   
     // handle native call
-    MethodChannel('cn.jiguang.analytics.android.api.JAnalyticsInterface::identifyAccount__android_content_Context__cn_jiguang_analytics_android_api_Account__cn_jiguang_analytics_android_api_AccountCallback::Callback')
+    MethodChannel('cn.jiguang.analytics.android.api.JAnalyticsInterface::identifyAccount__android_content_Context__cn_jiguang_analytics_android_api_Account__cn_jiguang_analytics_android_api_AccountCallback::Callback', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::cn.jiguang.analytics.android.api.AccountCallback::callback':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: callback([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var2?.callback(args['var1'], args['var2']);
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::cn.jiguang.analytics.android.api.AccountCallback::callback':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: callback([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var2?.callback(args['var1'], args['var2']);
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -259,7 +256,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -272,25 +268,30 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::identifyAccount__cn_jiguang_analytics_android_api_Account__cn_jiguang_analytics_android_api_AccountCallback', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::identifyAccount__cn_jiguang_analytics_android_api_Account__cn_jiguang_analytics_android_api_AccountCallback', {"var0": var0});
   
   
     // handle native call
-    MethodChannel('cn.jiguang.analytics.android.api.JAnalyticsInterface::identifyAccount__cn_jiguang_analytics_android_api_Account__cn_jiguang_analytics_android_api_AccountCallback::Callback')
+    MethodChannel('cn.jiguang.analytics.android.api.JAnalyticsInterface::identifyAccount__cn_jiguang_analytics_android_api_Account__cn_jiguang_analytics_android_api_AccountCallback::Callback', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::cn.jiguang.analytics.android.api.AccountCallback::callback':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: callback([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.callback(args['var1'], args['var2']);
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::cn.jiguang.analytics.android.api.AccountCallback::callback':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: callback([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var1?.callback(args['var1'], args['var2']);
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -299,7 +300,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -312,25 +312,30 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::detachAccount__android_content_Context__cn_jiguang_analytics_android_api_AccountCallback', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::detachAccount__android_content_Context__cn_jiguang_analytics_android_api_AccountCallback', {"var0": var0});
   
   
     // handle native call
-    MethodChannel('cn.jiguang.analytics.android.api.JAnalyticsInterface::detachAccount__android_content_Context__cn_jiguang_analytics_android_api_AccountCallback::Callback')
+    MethodChannel('cn.jiguang.analytics.android.api.JAnalyticsInterface::detachAccount__android_content_Context__cn_jiguang_analytics_android_api_AccountCallback::Callback', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::cn.jiguang.analytics.android.api.AccountCallback::callback':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: callback([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.callback(args['var1'], args['var2']);
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::cn.jiguang.analytics.android.api.AccountCallback::callback':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: callback([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var1?.callback(args['var1'], args['var2']);
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -339,7 +344,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -352,25 +356,30 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::detachAccount__cn_jiguang_analytics_android_api_AccountCallback', );
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::detachAccount__cn_jiguang_analytics_android_api_AccountCallback', );
   
   
     // handle native call
-    MethodChannel('cn.jiguang.analytics.android.api.JAnalyticsInterface::detachAccount__cn_jiguang_analytics_android_api_AccountCallback::Callback')
+    MethodChannel('cn.jiguang.analytics.android.api.JAnalyticsInterface::detachAccount__cn_jiguang_analytics_android_api_AccountCallback::Callback', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::cn.jiguang.analytics.android.api.AccountCallback::callback':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: callback([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var0?.callback(args['var1'], args['var2']);
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::cn.jiguang.analytics.android.api.AccountCallback::callback':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: callback([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+          
+                // handle the native call
+                var0?.callback(args['var1'], args['var2']);
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -379,7 +388,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -392,7 +400,7 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__android_content_Context__int', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__android_content_Context__int', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -403,7 +411,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -416,7 +423,7 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__int', {"var0": var0});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__int', {"var0": var0});
   
   
     // handle native call
@@ -427,7 +434,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -440,7 +446,7 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setChannel', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setChannel', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -451,7 +457,6 @@ class cn_jiguang_analytics_android_api_JAnalyticsInterface extends java_lang_Obj
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -476,7 +481,7 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setDebugMode_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setDebugMode_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -484,7 +489,6 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -496,7 +500,7 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::init_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::init_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -504,7 +508,6 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -516,7 +519,7 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageStart_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageStart_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -524,7 +527,6 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -536,7 +538,7 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageEnd_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageEnd_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -544,7 +546,6 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -556,7 +557,7 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onEvent_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::onEvent_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -564,7 +565,6 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -576,7 +576,7 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::requestPermission_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::requestPermission_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -584,7 +584,6 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -596,7 +595,7 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::initCrashHandler_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::initCrashHandler_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -604,7 +603,6 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -616,7 +614,7 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::stopCrashHandler_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::stopCrashHandler_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -624,7 +622,6 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -636,7 +633,7 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__android_content_Context__int_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__android_content_Context__int_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -644,7 +641,6 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -656,7 +652,7 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__int_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__int_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -664,7 +660,6 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -676,7 +671,7 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setChannel_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.JAnalyticsInterface::setChannel_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -684,7 +679,6 @@ extension cn_jiguang_analytics_android_api_JAnalyticsInterface_Batch on List<cn_
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
