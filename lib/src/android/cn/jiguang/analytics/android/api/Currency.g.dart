@@ -13,6 +13,7 @@ extension cn_jiguang_analytics_android_api_CurrencyToX on cn_jiguang_analytics_a
     switch (this) {
       case cn_jiguang_analytics_android_api_Currency.CNY: return cn_jiguang_analytics_android_api_Currency.CNY.index + 0;
       case cn_jiguang_analytics_android_api_Currency.USD: return cn_jiguang_analytics_android_api_Currency.USD.index + 0;
+      default: return 0;
     }
   }
 }

@@ -20,22 +20,19 @@ class JANALYTICSBrowseEvent extends JANALYTICSEventObject  {
   //endregion
 
   //region creators
-  static Future<JANALYTICSBrowseEvent> create__() async {
-    final int refId = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::createJANALYTICSBrowseEvent');
+  static Future<JANALYTICSBrowseEvent> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createJANALYTICSBrowseEvent', {'init': init});
     final object = JANALYTICSBrowseEvent()..refId = refId..tag__ = 'janalytics_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<JANALYTICSBrowseEvent>> create_batch__(int length) async {
+  static Future<List<JANALYTICSBrowseEvent>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSBrowseEvent', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchJANALYTICSBrowseEvent', {'length': length, 'init': init});
   
     final List<JANALYTICSBrowseEvent> typedResult = resultBatch.map((result) => JANALYTICSBrowseEvent()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,52 +40,48 @@ class JANALYTICSBrowseEvent extends JANALYTICSEventObject  {
 
   //region getters
   Future<String> get_name() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSBrowseEvent::get_name", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSBrowseEvent::get_name", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_contentID() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSBrowseEvent::get_contentID", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSBrowseEvent::get_contentID", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_type() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSBrowseEvent::get_type", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSBrowseEvent::get_type", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_duration() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSBrowseEvent::get_duration", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSBrowseEvent::get_duration", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_name(String name) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSBrowseEvent::set_name', {'refId': refId, "name": name});
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSBrowseEvent::set_name', <String, dynamic>{'__this__': this, "name": name});
   
   
   }
   
   Future<void> set_contentID(String contentID) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSBrowseEvent::set_contentID', {'refId': refId, "contentID": contentID});
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSBrowseEvent::set_contentID', <String, dynamic>{'__this__': this, "contentID": contentID});
   
   
   }
   
   Future<void> set_type(String type) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSBrowseEvent::set_type', {'refId': refId, "type": type});
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSBrowseEvent::set_type', <String, dynamic>{'__this__': this, "type": type});
   
   
   }
   
   Future<void> set_duration(double duration) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSBrowseEvent::set_duration', {'refId': refId, "duration": duration});
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSBrowseEvent::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
   
   
   }
@@ -103,30 +96,30 @@ class JANALYTICSBrowseEvent extends JANALYTICSEventObject  {
 extension JANALYTICSBrowseEvent_Batch on List<JANALYTICSBrowseEvent> {
   //region getters
   Future<List<String>> get_name_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSBrowseEvent::get_name_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSBrowseEvent::get_name_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_contentID_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSBrowseEvent::get_contentID_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSBrowseEvent::get_contentID_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_type_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSBrowseEvent::get_type_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSBrowseEvent::get_type_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_duration_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSBrowseEvent::get_duration_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSBrowseEvent::get_duration_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -134,25 +127,25 @@ extension JANALYTICSBrowseEvent_Batch on List<JANALYTICSBrowseEvent> {
 
   //region setters
   Future<void> set_name_batch(List<String> name) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSBrowseEvent::set_name_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "name": name[__i__]}]);
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSBrowseEvent::set_name_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "name": name[__i__]}]);
   
   
   }
   
   Future<void> set_contentID_batch(List<String> contentID) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSBrowseEvent::set_contentID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "contentID": contentID[__i__]}]);
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSBrowseEvent::set_contentID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "contentID": contentID[__i__]}]);
   
   
   }
   
   Future<void> set_type_batch(List<String> type) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSBrowseEvent::set_type_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "type": type[__i__]}]);
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSBrowseEvent::set_type_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "type": type[__i__]}]);
   
   
   }
   
   Future<void> set_duration_batch(List<double> duration) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSBrowseEvent::set_duration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "duration": duration[__i__]}]);
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSBrowseEvent::set_duration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "duration": duration[__i__]}]);
   
   
   }

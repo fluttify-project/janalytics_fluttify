@@ -21,18 +21,14 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
 
   //region creators
   static Future<cn_jiguang_analytics_android_api_PurchaseEvent> create__String__String__double__boolean__cn_jiguang_analytics_android_api_Currency__String__int(String var1, String var2, double var3, bool var5, cn_jiguang_analytics_android_api_Currency var6, String var7, int var8) async {
-    final int refId = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_PurchaseEvent__String__String__double__boolean__cn_jiguang_analytics_android_api_Currency__String__int', {"var1": var1, "var2": var2, "var3": var3, "var5": var5, "var6": var6.index, "var7": var7, "var8": var8});
+    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_PurchaseEvent__String__String__double__boolean__cn_jiguang_analytics_android_api_Currency__String__int', {"var1": var1, "var2": var2, "var3": var3, "var5": var5, "var6": var6, "var7": var7, "var8": var8});
     final object = cn_jiguang_analytics_android_api_PurchaseEvent()..refId = refId..tag__ = 'janalytics_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
   static Future<cn_jiguang_analytics_android_api_PurchaseEvent> create__() async {
-    final int refId = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_PurchaseEvent__');
+    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_PurchaseEvent__', );
     final object = cn_jiguang_analytics_android_api_PurchaseEvent()..refId = refId..tag__ = 'janalytics_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -40,10 +36,9 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     if (var1.length != var2.length || var2.length != var3.length || var3.length != var5.length || var5.length != var6.length || var6.length != var7.length || var7.length != var8.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_PurchaseEvent__String__String__double__boolean__cn_jiguang_analytics_android_api_Currency__String__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var5": var5[__i__], "var6": var6[__i__].index, "var7": var7[__i__], "var8": var8[__i__]}]);
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_PurchaseEvent__String__String__double__boolean__cn_jiguang_analytics_android_api_Currency__String__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var5": var5[__i__], "var6": var6[__i__], "var7": var7[__i__], "var8": var8[__i__]}]);
   
     final List<cn_jiguang_analytics_android_api_PurchaseEvent> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -51,10 +46,9 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_PurchaseEvent__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_PurchaseEvent__', {'length': length});
   
     final List<cn_jiguang_analytics_android_api_PurchaseEvent> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -77,7 +71,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsid', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsid', {"__this__": this});
   
   
     // handle native call
@@ -88,7 +82,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -101,7 +94,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsid', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsid', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -112,7 +105,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -125,7 +117,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsname', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsname', {"__this__": this});
   
   
     // handle native call
@@ -136,7 +128,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -149,7 +140,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsname', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsname', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -160,7 +151,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -173,7 +163,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchasePrice', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchasePrice', {"__this__": this});
   
   
     // handle native call
@@ -184,7 +174,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -197,7 +186,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchasePrice', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchasePrice', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -208,7 +197,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -221,7 +209,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseSuccess', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseSuccess', {"__this__": this});
   
   
     // handle native call
@@ -232,7 +220,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -245,7 +232,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseSuccess', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseSuccess', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -256,7 +243,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -269,7 +255,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseCurrency', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseCurrency', {"__this__": this});
   
   
     // handle native call
@@ -280,7 +266,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = (__result__ as int).tocn_jiguang_analytics_android_api_Currency();
-    
       return __return__;
     }
   }
@@ -293,7 +278,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseCurrency', {"var1": var1.toValue(), "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseCurrency', {"var1": var1.toValue(), "__this__": this});
   
   
     // handle native call
@@ -304,7 +289,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -317,7 +301,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodstype', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodstype', {"__this__": this});
   
   
     // handle native call
@@ -328,7 +312,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -341,7 +324,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodstype', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodstype', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -352,7 +335,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -365,7 +347,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsCount', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsCount', {"__this__": this});
   
   
     // handle native call
@@ -376,7 +358,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -389,7 +370,7 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsCount', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsCount', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -400,7 +381,6 @@ class cn_jiguang_analytics_android_api_PurchaseEvent extends cn_jiguang_analytic
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -425,7 +405,7 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -433,7 +413,6 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -445,15 +424,14 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
       return typedResult;
     }
   }
@@ -465,7 +443,7 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsname_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsname_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -473,7 +451,6 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -485,15 +462,14 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsname_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsname_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
       return typedResult;
     }
   }
@@ -505,7 +481,7 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchasePrice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchasePrice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -513,7 +489,6 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -525,15 +500,14 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchasePrice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchasePrice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
       return typedResult;
     }
   }
@@ -545,7 +519,7 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseSuccess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseSuccess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -553,7 +527,6 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -565,15 +538,14 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseSuccess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseSuccess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
       return typedResult;
     }
   }
@@ -585,15 +557,14 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseCurrency_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseCurrency_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).tocn_jiguang_analytics_android_api_Currency()).toList();
-    
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).tocn_jiguang_analytics_android_api_Currency()).toList();
       return typedResult;
     }
   }
@@ -605,15 +576,14 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseCurrency_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseCurrency_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
       return typedResult;
     }
   }
@@ -625,7 +595,7 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodstype_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodstype_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -633,7 +603,6 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -645,15 +614,14 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodstype_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodstype_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
       return typedResult;
     }
   }
@@ -665,7 +633,7 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsCount_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsCount_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -673,7 +641,6 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -685,15 +652,14 @@ extension cn_jiguang_analytics_android_api_PurchaseEvent_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsCount_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsCount_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_PurchaseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
       return typedResult;
     }
   }

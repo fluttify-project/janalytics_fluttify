@@ -20,22 +20,19 @@ class JANALYTICSPurchaseEvent extends JANALYTICSEventObject  {
   //endregion
 
   //region creators
-  static Future<JANALYTICSPurchaseEvent> create__() async {
-    final int refId = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::createJANALYTICSPurchaseEvent');
+  static Future<JANALYTICSPurchaseEvent> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createJANALYTICSPurchaseEvent', {'init': init});
     final object = JANALYTICSPurchaseEvent()..refId = refId..tag__ = 'janalytics_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<JANALYTICSPurchaseEvent>> create_batch__(int length) async {
+  static Future<List<JANALYTICSPurchaseEvent>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchJANALYTICSPurchaseEvent', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchJANALYTICSPurchaseEvent', {'length': length, 'init': init});
   
     final List<JANALYTICSPurchaseEvent> typedResult = resultBatch.map((result) => JANALYTICSPurchaseEvent()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,88 +40,81 @@ class JANALYTICSPurchaseEvent extends JANALYTICSEventObject  {
 
   //region getters
   Future<double> get_price() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_price", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_price", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_success() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_success", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_success", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_goodsID() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_goodsID", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_goodsID", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_goodsName() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_goodsName", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_goodsName", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_goodsType() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_goodsType", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_goodsType", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<JANALYTICSPurchaseCurrency> get_currency() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_currency", {'refId': refId});
-  
-    return (__result__ as int).toJANALYTICSPurchaseCurrency();
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_currency", {'__this__': this});
+    return __result__ == null ? null : ((__result__ as int).toJANALYTICSPurchaseCurrency());
   }
   
   Future<int> get_quantity() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_quantity", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_quantity", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_price(double price) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_price', {'refId': refId, "price": price});
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSPurchaseEvent::set_price', <String, dynamic>{'__this__': this, "price": price});
   
   
   }
   
   Future<void> set_success(bool success) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_success', {'refId': refId, "success": success});
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSPurchaseEvent::set_success', <String, dynamic>{'__this__': this, "success": success});
   
   
   }
   
   Future<void> set_goodsID(String goodsID) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_goodsID', {'refId': refId, "goodsID": goodsID});
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSPurchaseEvent::set_goodsID', <String, dynamic>{'__this__': this, "goodsID": goodsID});
   
   
   }
   
   Future<void> set_goodsName(String goodsName) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_goodsName', {'refId': refId, "goodsName": goodsName});
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSPurchaseEvent::set_goodsName', <String, dynamic>{'__this__': this, "goodsName": goodsName});
   
   
   }
   
   Future<void> set_goodsType(String goodsType) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_goodsType', {'refId': refId, "goodsType": goodsType});
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSPurchaseEvent::set_goodsType', <String, dynamic>{'__this__': this, "goodsType": goodsType});
   
   
   }
   
   Future<void> set_currency(JANALYTICSPurchaseCurrency currency) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_currency', {'refId': refId, "currency": currency.toValue()});
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSPurchaseEvent::set_currency', <String, dynamic>{'__this__': this, "currency": currency.toValue()});
   
   
   }
   
   Future<void> set_quantity(int quantity) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_quantity', {'refId': refId, "quantity": quantity});
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSPurchaseEvent::set_quantity', <String, dynamic>{'__this__': this, "quantity": quantity});
   
   
   }
@@ -139,51 +129,51 @@ class JANALYTICSPurchaseEvent extends JANALYTICSEventObject  {
 extension JANALYTICSPurchaseEvent_Batch on List<JANALYTICSPurchaseEvent> {
   //region getters
   Future<List<double>> get_price_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_price_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_price_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_success_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_success_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_success_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_goodsID_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_goodsID_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_goodsID_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_goodsName_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_goodsName_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_goodsName_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_goodsType_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_goodsType_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_goodsType_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<JANALYTICSPurchaseCurrency>> get_currency_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_currency_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toJANALYTICSPurchaseCurrency()).toList();
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_currency_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toJANALYTICSPurchaseCurrency()).toList();
     return typedResult;
   }
   
   Future<List<int>> get_quantity_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod("JANALYTICSPurchaseEvent::get_quantity_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSPurchaseEvent::get_quantity_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -191,43 +181,43 @@ extension JANALYTICSPurchaseEvent_Batch on List<JANALYTICSPurchaseEvent> {
 
   //region setters
   Future<void> set_price_batch(List<double> price) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_price_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "price": price[__i__]}]);
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSPurchaseEvent::set_price_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "price": price[__i__]}]);
   
   
   }
   
   Future<void> set_success_batch(List<bool> success) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_success_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "success": success[__i__]}]);
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSPurchaseEvent::set_success_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "success": success[__i__]}]);
   
   
   }
   
   Future<void> set_goodsID_batch(List<String> goodsID) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_goodsID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "goodsID": goodsID[__i__]}]);
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSPurchaseEvent::set_goodsID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "goodsID": goodsID[__i__]}]);
   
   
   }
   
   Future<void> set_goodsName_batch(List<String> goodsName) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_goodsName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "goodsName": goodsName[__i__]}]);
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSPurchaseEvent::set_goodsName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "goodsName": goodsName[__i__]}]);
   
   
   }
   
   Future<void> set_goodsType_batch(List<String> goodsType) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_goodsType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "goodsType": goodsType[__i__]}]);
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSPurchaseEvent::set_goodsType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "goodsType": goodsType[__i__]}]);
   
   
   }
   
   Future<void> set_currency_batch(List<JANALYTICSPurchaseCurrency> currency) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_currency_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "currency": currency[__i__].toValue()}]);
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSPurchaseEvent::set_currency_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "currency": currency[__i__].toValue()}]);
   
   
   }
   
   Future<void> set_quantity_batch(List<int> quantity) async {
-    await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('JANALYTICSPurchaseEvent::set_quantity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "quantity": quantity[__i__]}]);
+    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSPurchaseEvent::set_quantity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "quantity": quantity[__i__]}]);
   
   
   }

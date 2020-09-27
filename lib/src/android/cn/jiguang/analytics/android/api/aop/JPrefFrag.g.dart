@@ -20,6 +20,21 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
   //endregion
 
   //region creators
+  static Future<cn_jiguang_analytics_android_api_aop_JPrefFrag> create__() async {
+    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_aop_JPrefFrag__', );
+    final object = cn_jiguang_analytics_android_api_aop_JPrefFrag()..refId = refId..tag__ = 'janalytics_fluttify';
+    return object;
+  }
+  
+  static Future<List<cn_jiguang_analytics_android_api_aop_JPrefFrag>> create_batch__(int length) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_aop_JPrefFrag__', {'length': length});
+  
+    final List<cn_jiguang_analytics_android_api_aop_JPrefFrag> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_aop_JPrefFrag()..refId = result..tag__ = 'janalytics_fluttify').toList();
+    return typedResult;
+  }
   
   //endregion
 
@@ -40,7 +55,7 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onActivityCreated', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onActivityCreated', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -51,7 +66,6 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -64,7 +78,7 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onStart', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onStart', {"__this__": this});
   
   
     // handle native call
@@ -75,7 +89,6 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -88,7 +101,7 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onResume', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onResume', {"__this__": this});
   
   
     // handle native call
@@ -99,7 +112,6 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -112,7 +124,7 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onPause', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onPause', {"__this__": this});
   
   
     // handle native call
@@ -123,7 +135,6 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -136,7 +147,7 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onStop', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onStop', {"__this__": this});
   
   
     // handle native call
@@ -147,7 +158,6 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -160,7 +170,7 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::setUserVisibleHint', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::setUserVisibleHint', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -171,7 +181,6 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -184,7 +193,7 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onHiddenChanged', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onHiddenChanged', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -195,7 +204,6 @@ class cn_jiguang_analytics_android_api_aop_JPrefFrag extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -220,7 +228,7 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onActivityCreated_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onActivityCreated_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -228,7 +236,6 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -240,7 +247,7 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onStart_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onStart_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -248,7 +255,6 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -260,7 +266,7 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onResume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onResume_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -268,7 +274,6 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -280,7 +285,7 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onPause_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onPause_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -288,7 +293,6 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -300,7 +304,7 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onStop_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onStop_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -308,7 +312,6 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -320,7 +323,7 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::setUserVisibleHint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::setUserVisibleHint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -328,7 +331,6 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -340,7 +342,7 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onHiddenChanged_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.aop.JPrefFrag::onHiddenChanged_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -348,7 +350,6 @@ extension cn_jiguang_analytics_android_api_aop_JPrefFrag_Batch on List<cn_jiguan
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

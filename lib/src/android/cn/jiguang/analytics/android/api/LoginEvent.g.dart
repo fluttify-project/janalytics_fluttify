@@ -21,18 +21,14 @@ class cn_jiguang_analytics_android_api_LoginEvent extends cn_jiguang_analytics_a
 
   //region creators
   static Future<cn_jiguang_analytics_android_api_LoginEvent> create__String__boolean(String var1, bool var2) async {
-    final int refId = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_LoginEvent__String__boolean', {"var1": var1, "var2": var2});
+    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_LoginEvent__String__boolean', {"var1": var1, "var2": var2});
     final object = cn_jiguang_analytics_android_api_LoginEvent()..refId = refId..tag__ = 'janalytics_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
   static Future<cn_jiguang_analytics_android_api_LoginEvent> create__() async {
-    final int refId = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_LoginEvent__');
+    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_LoginEvent__', );
     final object = cn_jiguang_analytics_android_api_LoginEvent()..refId = refId..tag__ = 'janalytics_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -40,10 +36,9 @@ class cn_jiguang_analytics_android_api_LoginEvent extends cn_jiguang_analytics_a
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_LoginEvent__String__boolean', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_LoginEvent__String__boolean', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
     final List<cn_jiguang_analytics_android_api_LoginEvent> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_LoginEvent()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -51,10 +46,9 @@ class cn_jiguang_analytics_android_api_LoginEvent extends cn_jiguang_analytics_a
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_LoginEvent__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_LoginEvent__', {'length': length});
   
     final List<cn_jiguang_analytics_android_api_LoginEvent> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_LoginEvent()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -77,7 +71,7 @@ class cn_jiguang_analytics_android_api_LoginEvent extends cn_jiguang_analytics_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::getLoginMethod', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::getLoginMethod', {"__this__": this});
   
   
     // handle native call
@@ -88,7 +82,6 @@ class cn_jiguang_analytics_android_api_LoginEvent extends cn_jiguang_analytics_a
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -101,7 +94,7 @@ class cn_jiguang_analytics_android_api_LoginEvent extends cn_jiguang_analytics_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::setLoginMethod', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::setLoginMethod', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -112,7 +105,6 @@ class cn_jiguang_analytics_android_api_LoginEvent extends cn_jiguang_analytics_a
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_android_api_LoginEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -125,7 +117,7 @@ class cn_jiguang_analytics_android_api_LoginEvent extends cn_jiguang_analytics_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::getLoginSuccess', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::getLoginSuccess', {"__this__": this});
   
   
     // handle native call
@@ -136,7 +128,6 @@ class cn_jiguang_analytics_android_api_LoginEvent extends cn_jiguang_analytics_a
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -149,7 +140,7 @@ class cn_jiguang_analytics_android_api_LoginEvent extends cn_jiguang_analytics_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::setLoginSuccess', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::setLoginSuccess', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -160,7 +151,6 @@ class cn_jiguang_analytics_android_api_LoginEvent extends cn_jiguang_analytics_a
       return null;
     } else {
       final __return__ = cn_jiguang_analytics_android_api_LoginEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -185,7 +175,7 @@ extension cn_jiguang_analytics_android_api_LoginEvent_Batch on List<cn_jiguang_a
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::getLoginMethod_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::getLoginMethod_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -193,7 +183,6 @@ extension cn_jiguang_analytics_android_api_LoginEvent_Batch on List<cn_jiguang_a
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -205,15 +194,14 @@ extension cn_jiguang_analytics_android_api_LoginEvent_Batch on List<cn_jiguang_a
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::setLoginMethod_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::setLoginMethod_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_android_api_LoginEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_LoginEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
       return typedResult;
     }
   }
@@ -225,7 +213,7 @@ extension cn_jiguang_analytics_android_api_LoginEvent_Batch on List<cn_jiguang_a
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::getLoginSuccess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::getLoginSuccess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -233,7 +221,6 @@ extension cn_jiguang_analytics_android_api_LoginEvent_Batch on List<cn_jiguang_a
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -245,15 +232,14 @@ extension cn_jiguang_analytics_android_api_LoginEvent_Batch on List<cn_jiguang_a
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::setLoginSuccess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.LoginEvent::setLoginSuccess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => cn_jiguang_analytics_android_api_LoginEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_LoginEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
       return typedResult;
     }
   }

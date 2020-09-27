@@ -21,10 +21,8 @@ class cn_jiguang_analytics_android_api_agent_JMMIDlgPupW extends java_lang_Objec
 
   //region creators
   static Future<cn_jiguang_analytics_android_api_agent_JMMIDlgPupW> create__() async {
-    final int refId = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_agent_JMMIDlgPupW__');
+    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_agent_JMMIDlgPupW__', );
     final object = cn_jiguang_analytics_android_api_agent_JMMIDlgPupW()..refId = refId..tag__ = 'janalytics_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class cn_jiguang_analytics_android_api_agent_JMMIDlgPupW extends java_lang_Objec
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_agent_JMMIDlgPupW__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_agent_JMMIDlgPupW__', {'length': length});
   
     final List<cn_jiguang_analytics_android_api_agent_JMMIDlgPupW> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_agent_JMMIDlgPupW()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -58,7 +55,7 @@ class cn_jiguang_analytics_android_api_agent_JMMIDlgPupW extends java_lang_Objec
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow', {"var0": var0});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow', {"var0": var0});
   
   
     // handle native call
@@ -69,7 +66,6 @@ class cn_jiguang_analytics_android_api_agent_JMMIDlgPupW extends java_lang_Objec
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -94,7 +90,7 @@ extension cn_jiguang_analytics_android_api_agent_JMMIDlgPupW_Batch on List<cn_ji
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -102,7 +98,6 @@ extension cn_jiguang_analytics_android_api_agent_JMMIDlgPupW_Batch on List<cn_ji
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////
 
 #import "SubHandler0.h"
+#import "FluttifyMessageCodec.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -18,7 +19,7 @@ extern BOOL enableLog;
         @"JANALYTICSService::setupWithConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            JANALYTICSLaunchConfig* config = (JANALYTICSLaunchConfig*) HEAP[args[@"config"]];
+            JANALYTICSLaunchConfig* config = (JANALYTICSLaunchConfig*) args[@"config"];
         
             // ref
         
@@ -33,9 +34,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"JANALYTICSService::startLogPageView": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -55,9 +56,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"JANALYTICSService::stopLogPageView": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -77,9 +78,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"JANALYTICSService::setLatitude_longitude": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -101,14 +102,14 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"JANALYTICSService::setLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            CLLocation* location = (CLLocation*) HEAP[args[@"location"]];
+            CLLocation* location = (CLLocation*) args[@"location"];
         
             // ref
         
@@ -123,14 +124,14 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"JANALYTICSService::eventRecord": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            JANALYTICSEventObject* event = (JANALYTICSEventObject*) HEAP[args[@"event"]];
+            JANALYTICSEventObject* event = (JANALYTICSEventObject*) args[@"event"];
         
             // ref
         
@@ -145,14 +146,14 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"JANALYTICSService::identifyAccount_with": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            JANALYTICSUserInfo* userInfo = (JANALYTICSUserInfo*) HEAP[args[@"userInfo"]];
+            JANALYTICSUserInfo* userInfo = (JANALYTICSUserInfo*) args[@"userInfo"];
         
         
             // ref
@@ -166,8 +167,9 @@ extern BOOL enableLog;
             // invoke native method
             [JANALYTICSService identifyAccount: userInfo with: ^(NSInteger err, NSString* msg) {
                 FlutterMethodChannel *channel = [FlutterMethodChannel
-                    methodChannelWithName:@"void|NSInteger#err,NSString*#msg::Callback"
-                          binaryMessenger:[[weakSelf registrar] messenger]];
+                      methodChannelWithName:@"void|NSInteger#err,NSString*#msg::Callback"
+                            binaryMessenger:[[weakSelf registrar] messenger]
+                                      codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
         
                 // print log
                 if (enableLog) {
@@ -177,20 +179,20 @@ extern BOOL enableLog;
                 // 构造可以直接传输的参数
                 // primitive callback arg
                 NSNumber* argerr = @(err);
-                // jsonable callback arg
-                NSString* argmsg = msg == nil ? [NSNull null] : msg;
+                // ref callback arg
+                NSString* argmsg = msg;
         
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [channel invokeMethod:@"Callback::void|NSInteger#err,NSString*#msg::void|NSInteger#err,NSString*#msg" arguments:@{@"err": argerr, @"msg": argmsg}];
+                  [channel invokeMethod:@"Callback::void|NSInteger#err,NSString*#msg::void|NSInteger#err,NSString*#msg" arguments:@{@"err": argerr == nil ? [NSNull null] : argerr, @"msg": argmsg == nil ? [NSNull null] : argmsg}];
                 });
         
             }];
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"JANALYTICSService::detachAccount": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -207,8 +209,9 @@ extern BOOL enableLog;
             // invoke native method
             [JANALYTICSService detachAccount: ^(NSInteger err, NSString* msg) {
                 FlutterMethodChannel *channel = [FlutterMethodChannel
-                    methodChannelWithName:@"void|NSInteger#err,NSString*#msg::Callback"
-                          binaryMessenger:[[weakSelf registrar] messenger]];
+                      methodChannelWithName:@"void|NSInteger#err,NSString*#msg::Callback"
+                            binaryMessenger:[[weakSelf registrar] messenger]
+                                      codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
         
                 // print log
                 if (enableLog) {
@@ -218,20 +221,20 @@ extern BOOL enableLog;
                 // 构造可以直接传输的参数
                 // primitive callback arg
                 NSNumber* argerr = @(err);
-                // jsonable callback arg
-                NSString* argmsg = msg == nil ? [NSNull null] : msg;
+                // ref callback arg
+                NSString* argmsg = msg;
         
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [channel invokeMethod:@"Callback::void|NSInteger#err,NSString*#msg::void|NSInteger#err,NSString*#msg" arguments:@{@"err": argerr, @"msg": argmsg}];
+                  [channel invokeMethod:@"Callback::void|NSInteger#err,NSString*#msg::void|NSInteger#err,NSString*#msg" arguments:@{@"err": argerr == nil ? [NSNull null] : argerr, @"msg": argmsg == nil ? [NSNull null] : argmsg}];
                 });
         
             }];
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"JANALYTICSService::setFrequency": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -251,9 +254,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"JANALYTICSService::crashLogON": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -272,9 +275,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"JANALYTICSService::setDebug": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -294,9 +297,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"JANALYTICSUserInfo::setExtraObject_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -317,7 +320,7 @@ extern BOOL enableLog;
             NSString* key = (NSString*) args[@"key"];
         
             // ref
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -329,9 +332,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"JANALYTICSService::setupWithConfig_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
@@ -341,7 +344,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                JANALYTICSLaunchConfig* config = (JANALYTICSLaunchConfig*) HEAP[args[@"config"]];
+                JANALYTICSLaunchConfig* config = (JANALYTICSLaunchConfig*) args[@"config"];
         
                 // ref
         
@@ -351,9 +354,9 @@ extern BOOL enableLog;
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -376,9 +379,9 @@ extern BOOL enableLog;
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -401,9 +404,9 @@ extern BOOL enableLog;
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -428,9 +431,9 @@ extern BOOL enableLog;
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -443,7 +446,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                CLLocation* location = (CLLocation*) HEAP[args[@"location"]];
+                CLLocation* location = (CLLocation*) args[@"location"];
         
                 // ref
         
@@ -453,9 +456,9 @@ extern BOOL enableLog;
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -468,7 +471,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                JANALYTICSEventObject* event = (JANALYTICSEventObject*) HEAP[args[@"event"]];
+                JANALYTICSEventObject* event = (JANALYTICSEventObject*) args[@"event"];
         
                 // ref
         
@@ -478,9 +481,9 @@ extern BOOL enableLog;
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -503,9 +506,9 @@ extern BOOL enableLog;
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -527,9 +530,9 @@ extern BOOL enableLog;
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -552,9 +555,9 @@ extern BOOL enableLog;
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -583,16 +586,16 @@ extern BOOL enableLog;
                 NSString* key = (NSString*) args[@"key"];
         
                 // ref
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 // invoke native method
                 [ref setExtraObject : obj forKey: key];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -604,15 +607,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.appKey;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSLaunchConfig::get_channel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -622,15 +625,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.channel;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSLaunchConfig::get_advertisingId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -640,15 +643,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.advertisingId;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSLaunchConfig::get_isProduction": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -658,15 +661,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.isProduction;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSEventObject::get_extra": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -676,15 +679,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSEventObject* ref = (JANALYTICSEventObject*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSEventObject* ref = (JANALYTICSEventObject*) args[@"__this__"];
         
             // invoke native method
             NSDictionary<NSString*,NSString*>* result = ref.extra;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSLoginEvent::get_method": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -694,15 +697,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.method;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSLoginEvent::get_success": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -712,15 +715,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.success;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSRegisterEvent::get_method": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -730,15 +733,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.method;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSRegisterEvent::get_success": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -748,15 +751,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.success;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSPurchaseEvent::get_price": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -766,15 +769,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             // invoke native method
             CGFloat result = ref.price;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSPurchaseEvent::get_success": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -784,15 +787,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.success;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSPurchaseEvent::get_goodsID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -802,15 +805,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.goodsID;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSPurchaseEvent::get_goodsName": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -820,15 +823,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.goodsName;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSPurchaseEvent::get_goodsType": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -838,15 +841,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.goodsType;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSPurchaseEvent::get_currency": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -856,15 +859,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             // invoke native method
             JANALYTICSPurchaseCurrency result = ref.currency;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSPurchaseEvent::get_quantity": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -874,15 +877,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             // invoke native method
             NSInteger result = ref.quantity;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSBrowseEvent::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -892,15 +895,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.name;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSBrowseEvent::get_contentID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -910,15 +913,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.contentID;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSBrowseEvent::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -928,15 +931,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.type;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSBrowseEvent::get_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -946,15 +949,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
             // invoke native method
             CGFloat result = ref.duration;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSCountEvent::get_eventID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -964,15 +967,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.eventID;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSCalculateEvent::get_eventID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -982,15 +985,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.eventID;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSCalculateEvent::get_value": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1000,15 +1003,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
         
             // invoke native method
             CGFloat result = ref.value;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSUserInfo::get_accountID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1018,15 +1021,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.accountID;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSUserInfo::get_creationTime": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1036,15 +1039,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             // invoke native method
             NSTimeInterval result = ref.creationTime;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSUserInfo::get_sex": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1054,15 +1057,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             // invoke native method
             JANALYTICSSex result = ref.sex;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSUserInfo::get_birthdate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1072,15 +1075,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.birthdate;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSUserInfo::get_paid": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1090,15 +1093,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             // invoke native method
             JANALYTICSPaid result = ref.paid;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSUserInfo::get_phone": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1108,15 +1111,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.phone;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSUserInfo::get_email": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1126,15 +1129,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.email;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSUserInfo::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1144,15 +1147,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.name;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSUserInfo::get_wechatID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1162,15 +1165,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.wechatID;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSUserInfo::get_qqID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1180,15 +1183,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.qqID;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSUserInfo::get_weiboID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1198,15 +1201,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.weiboID;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"JANALYTICSLaunchConfig::get_appKey_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
@@ -1216,14 +1219,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
                 NSString* result = ref.appKey;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1236,14 +1239,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
                 NSString* result = ref.channel;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1256,14 +1259,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
                 NSString* result = ref.advertisingId;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1276,14 +1279,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
                 BOOL result = ref.isProduction;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1296,14 +1299,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSEventObject* ref = (JANALYTICSEventObject*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSEventObject* ref = (JANALYTICSEventObject*) args[@"__this__"];
         
                 NSDictionary<NSString*,NSString*>* result = ref.extra;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1316,14 +1319,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
         
                 NSString* result = ref.method;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1336,14 +1339,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
         
                 BOOL result = ref.success;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1356,14 +1359,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
         
                 NSString* result = ref.method;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1376,14 +1379,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
         
                 BOOL result = ref.success;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1396,14 +1399,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 CGFloat result = ref.price;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1416,14 +1419,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 BOOL result = ref.success;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1436,14 +1439,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 NSString* result = ref.goodsID;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1456,14 +1459,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 NSString* result = ref.goodsName;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1476,14 +1479,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 NSString* result = ref.goodsType;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1496,14 +1499,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 JANALYTICSPurchaseCurrency result = ref.currency;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1516,14 +1519,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 NSInteger result = ref.quantity;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1536,14 +1539,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
                 NSString* result = ref.name;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1556,14 +1559,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
                 NSString* result = ref.contentID;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1576,14 +1579,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
                 NSString* result = ref.type;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1596,14 +1599,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
                 CGFloat result = ref.duration;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1616,14 +1619,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) args[@"__this__"];
         
                 NSString* result = ref.eventID;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1636,14 +1639,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
         
                 NSString* result = ref.eventID;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1656,14 +1659,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
         
                 CGFloat result = ref.value;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1676,14 +1679,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 NSString* result = ref.accountID;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1696,14 +1699,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 NSTimeInterval result = ref.creationTime;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1716,14 +1719,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 JANALYTICSSex result = ref.sex;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1736,14 +1739,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 NSString* result = ref.birthdate;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1756,14 +1759,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 JANALYTICSPaid result = ref.paid;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1776,14 +1779,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 NSString* result = ref.phone;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1796,14 +1799,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 NSString* result = ref.email;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1816,14 +1819,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 NSString* result = ref.name;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1836,14 +1839,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 NSString* result = ref.wechatID;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1856,14 +1859,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 NSString* result = ref.qqID;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1876,14 +1879,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 NSString* result = ref.weiboID;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1900,7 +1903,7 @@ extern BOOL enableLog;
             NSString* appKey = (NSString*) args[@"appKey"];
         
             // ref
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
             ref.appKey = appKey;
             methodResult(@"success");
@@ -1917,7 +1920,7 @@ extern BOOL enableLog;
             NSString* channel = (NSString*) args[@"channel"];
         
             // ref
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
             ref.channel = channel;
             methodResult(@"success");
@@ -1934,7 +1937,7 @@ extern BOOL enableLog;
             NSString* advertisingId = (NSString*) args[@"advertisingId"];
         
             // ref
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
             ref.advertisingId = advertisingId;
             methodResult(@"success");
@@ -1951,7 +1954,7 @@ extern BOOL enableLog;
             BOOL isProduction = [args[@"isProduction"] boolValue];
         
             // ref
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
             ref.isProduction = isProduction;
             methodResult(@"success");
@@ -1968,7 +1971,7 @@ extern BOOL enableLog;
             NSDictionary<NSString*,NSString*>* extra = (NSDictionary<NSString*,NSString*>*) args[@"extra"];
         
             // ref
-            JANALYTICSEventObject* ref = (JANALYTICSEventObject*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSEventObject* ref = (JANALYTICSEventObject*) args[@"__this__"];
         
             ref.extra = extra;
             methodResult(@"success");
@@ -1985,7 +1988,7 @@ extern BOOL enableLog;
             NSString* method = (NSString*) args[@"method"];
         
             // ref
-            JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
         
             ref.method = method;
             methodResult(@"success");
@@ -2002,7 +2005,7 @@ extern BOOL enableLog;
             BOOL success = [args[@"success"] boolValue];
         
             // ref
-            JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
         
             ref.success = success;
             methodResult(@"success");
@@ -2019,7 +2022,7 @@ extern BOOL enableLog;
             NSString* method = (NSString*) args[@"method"];
         
             // ref
-            JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
         
             ref.method = method;
             methodResult(@"success");
@@ -2036,7 +2039,7 @@ extern BOOL enableLog;
             BOOL success = [args[@"success"] boolValue];
         
             // ref
-            JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
         
             ref.success = success;
             methodResult(@"success");
@@ -2053,7 +2056,7 @@ extern BOOL enableLog;
             CGFloat price = [args[@"price"] floatValue];
         
             // ref
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             ref.price = price;
             methodResult(@"success");
@@ -2070,7 +2073,7 @@ extern BOOL enableLog;
             BOOL success = [args[@"success"] boolValue];
         
             // ref
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             ref.success = success;
             methodResult(@"success");
@@ -2087,7 +2090,7 @@ extern BOOL enableLog;
             NSString* goodsID = (NSString*) args[@"goodsID"];
         
             // ref
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             ref.goodsID = goodsID;
             methodResult(@"success");
@@ -2104,7 +2107,7 @@ extern BOOL enableLog;
             NSString* goodsName = (NSString*) args[@"goodsName"];
         
             // ref
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             ref.goodsName = goodsName;
             methodResult(@"success");
@@ -2121,7 +2124,7 @@ extern BOOL enableLog;
             NSString* goodsType = (NSString*) args[@"goodsType"];
         
             // ref
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             ref.goodsType = goodsType;
             methodResult(@"success");
@@ -2138,7 +2141,7 @@ extern BOOL enableLog;
             JANALYTICSPurchaseCurrency currency = (JANALYTICSPurchaseCurrency) [args[@"currency"] integerValue];
         
             // ref
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             ref.currency = currency;
             methodResult(@"success");
@@ -2155,7 +2158,7 @@ extern BOOL enableLog;
             NSInteger quantity = [args[@"quantity"] longValue];
         
             // ref
-            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
             ref.quantity = quantity;
             methodResult(@"success");
@@ -2172,7 +2175,7 @@ extern BOOL enableLog;
             NSString* name = (NSString*) args[@"name"];
         
             // ref
-            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
             ref.name = name;
             methodResult(@"success");
@@ -2189,7 +2192,7 @@ extern BOOL enableLog;
             NSString* contentID = (NSString*) args[@"contentID"];
         
             // ref
-            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
             ref.contentID = contentID;
             methodResult(@"success");
@@ -2206,7 +2209,7 @@ extern BOOL enableLog;
             NSString* type = (NSString*) args[@"type"];
         
             // ref
-            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
             ref.type = type;
             methodResult(@"success");
@@ -2223,7 +2226,7 @@ extern BOOL enableLog;
             CGFloat duration = [args[@"duration"] floatValue];
         
             // ref
-            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
             ref.duration = duration;
             methodResult(@"success");
@@ -2240,7 +2243,7 @@ extern BOOL enableLog;
             NSString* eventID = (NSString*) args[@"eventID"];
         
             // ref
-            JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) args[@"__this__"];
         
             ref.eventID = eventID;
             methodResult(@"success");
@@ -2257,7 +2260,7 @@ extern BOOL enableLog;
             NSString* eventID = (NSString*) args[@"eventID"];
         
             // ref
-            JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
         
             ref.eventID = eventID;
             methodResult(@"success");
@@ -2274,7 +2277,7 @@ extern BOOL enableLog;
             CGFloat value = [args[@"value"] floatValue];
         
             // ref
-            JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
         
             ref.value = value;
             methodResult(@"success");
@@ -2291,7 +2294,7 @@ extern BOOL enableLog;
             NSString* accountID = (NSString*) args[@"accountID"];
         
             // ref
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             ref.accountID = accountID;
             methodResult(@"success");
@@ -2308,7 +2311,7 @@ extern BOOL enableLog;
             NSTimeInterval creationTime = [args[@"creationTime"] doubleValue];
         
             // ref
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             ref.creationTime = creationTime;
             methodResult(@"success");
@@ -2325,7 +2328,7 @@ extern BOOL enableLog;
             JANALYTICSSex sex = (JANALYTICSSex) [args[@"sex"] integerValue];
         
             // ref
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             ref.sex = sex;
             methodResult(@"success");
@@ -2342,7 +2345,7 @@ extern BOOL enableLog;
             NSString* birthdate = (NSString*) args[@"birthdate"];
         
             // ref
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             ref.birthdate = birthdate;
             methodResult(@"success");
@@ -2359,7 +2362,7 @@ extern BOOL enableLog;
             JANALYTICSPaid paid = (JANALYTICSPaid) [args[@"paid"] integerValue];
         
             // ref
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             ref.paid = paid;
             methodResult(@"success");
@@ -2376,7 +2379,7 @@ extern BOOL enableLog;
             NSString* phone = (NSString*) args[@"phone"];
         
             // ref
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             ref.phone = phone;
             methodResult(@"success");
@@ -2393,7 +2396,7 @@ extern BOOL enableLog;
             NSString* email = (NSString*) args[@"email"];
         
             // ref
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             ref.email = email;
             methodResult(@"success");
@@ -2410,7 +2413,7 @@ extern BOOL enableLog;
             NSString* name = (NSString*) args[@"name"];
         
             // ref
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             ref.name = name;
             methodResult(@"success");
@@ -2427,7 +2430,7 @@ extern BOOL enableLog;
             NSString* wechatID = (NSString*) args[@"wechatID"];
         
             // ref
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             ref.wechatID = wechatID;
             methodResult(@"success");
@@ -2444,7 +2447,7 @@ extern BOOL enableLog;
             NSString* qqID = (NSString*) args[@"qqID"];
         
             // ref
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             ref.qqID = qqID;
             methodResult(@"success");
@@ -2461,7 +2464,7 @@ extern BOOL enableLog;
             NSString* weiboID = (NSString*) args[@"weiboID"];
         
             // ref
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
             ref.weiboID = weiboID;
             methodResult(@"success");
@@ -2476,7 +2479,7 @@ extern BOOL enableLog;
                 NSString* appKey = (NSString*) args[@"appKey"];
         
                 // ref
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
                 ref.appKey = appKey;
                 methodResult(@"success");
@@ -2494,7 +2497,7 @@ extern BOOL enableLog;
                 NSString* channel = (NSString*) args[@"channel"];
         
                 // ref
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
                 ref.channel = channel;
                 methodResult(@"success");
@@ -2512,7 +2515,7 @@ extern BOOL enableLog;
                 NSString* advertisingId = (NSString*) args[@"advertisingId"];
         
                 // ref
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
                 ref.advertisingId = advertisingId;
                 methodResult(@"success");
@@ -2530,7 +2533,7 @@ extern BOOL enableLog;
                 BOOL isProduction = [args[@"isProduction"] boolValue];
         
                 // ref
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
         
                 ref.isProduction = isProduction;
                 methodResult(@"success");
@@ -2548,7 +2551,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*,NSString*>* extra = (NSDictionary<NSString*,NSString*>*) args[@"extra"];
         
                 // ref
-                JANALYTICSEventObject* ref = (JANALYTICSEventObject*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSEventObject* ref = (JANALYTICSEventObject*) args[@"__this__"];
         
                 ref.extra = extra;
                 methodResult(@"success");
@@ -2566,7 +2569,7 @@ extern BOOL enableLog;
                 NSString* method = (NSString*) args[@"method"];
         
                 // ref
-                JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
         
                 ref.method = method;
                 methodResult(@"success");
@@ -2584,7 +2587,7 @@ extern BOOL enableLog;
                 BOOL success = [args[@"success"] boolValue];
         
                 // ref
-                JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
         
                 ref.success = success;
                 methodResult(@"success");
@@ -2602,7 +2605,7 @@ extern BOOL enableLog;
                 NSString* method = (NSString*) args[@"method"];
         
                 // ref
-                JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
         
                 ref.method = method;
                 methodResult(@"success");
@@ -2620,7 +2623,7 @@ extern BOOL enableLog;
                 BOOL success = [args[@"success"] boolValue];
         
                 // ref
-                JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
         
                 ref.success = success;
                 methodResult(@"success");
@@ -2638,7 +2641,7 @@ extern BOOL enableLog;
                 CGFloat price = [args[@"price"] floatValue];
         
                 // ref
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 ref.price = price;
                 methodResult(@"success");
@@ -2656,7 +2659,7 @@ extern BOOL enableLog;
                 BOOL success = [args[@"success"] boolValue];
         
                 // ref
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 ref.success = success;
                 methodResult(@"success");
@@ -2674,7 +2677,7 @@ extern BOOL enableLog;
                 NSString* goodsID = (NSString*) args[@"goodsID"];
         
                 // ref
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 ref.goodsID = goodsID;
                 methodResult(@"success");
@@ -2692,7 +2695,7 @@ extern BOOL enableLog;
                 NSString* goodsName = (NSString*) args[@"goodsName"];
         
                 // ref
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 ref.goodsName = goodsName;
                 methodResult(@"success");
@@ -2710,7 +2713,7 @@ extern BOOL enableLog;
                 NSString* goodsType = (NSString*) args[@"goodsType"];
         
                 // ref
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 ref.goodsType = goodsType;
                 methodResult(@"success");
@@ -2728,7 +2731,7 @@ extern BOOL enableLog;
                 JANALYTICSPurchaseCurrency currency = (JANALYTICSPurchaseCurrency) [args[@"currency"] integerValue];
         
                 // ref
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 ref.currency = currency;
                 methodResult(@"success");
@@ -2746,7 +2749,7 @@ extern BOOL enableLog;
                 NSInteger quantity = [args[@"quantity"] longValue];
         
                 // ref
-                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
         
                 ref.quantity = quantity;
                 methodResult(@"success");
@@ -2764,7 +2767,7 @@ extern BOOL enableLog;
                 NSString* name = (NSString*) args[@"name"];
         
                 // ref
-                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
                 ref.name = name;
                 methodResult(@"success");
@@ -2782,7 +2785,7 @@ extern BOOL enableLog;
                 NSString* contentID = (NSString*) args[@"contentID"];
         
                 // ref
-                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
                 ref.contentID = contentID;
                 methodResult(@"success");
@@ -2800,7 +2803,7 @@ extern BOOL enableLog;
                 NSString* type = (NSString*) args[@"type"];
         
                 // ref
-                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
                 ref.type = type;
                 methodResult(@"success");
@@ -2818,7 +2821,7 @@ extern BOOL enableLog;
                 CGFloat duration = [args[@"duration"] floatValue];
         
                 // ref
-                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
         
                 ref.duration = duration;
                 methodResult(@"success");
@@ -2836,7 +2839,7 @@ extern BOOL enableLog;
                 NSString* eventID = (NSString*) args[@"eventID"];
         
                 // ref
-                JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) args[@"__this__"];
         
                 ref.eventID = eventID;
                 methodResult(@"success");
@@ -2854,7 +2857,7 @@ extern BOOL enableLog;
                 NSString* eventID = (NSString*) args[@"eventID"];
         
                 // ref
-                JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
         
                 ref.eventID = eventID;
                 methodResult(@"success");
@@ -2872,7 +2875,7 @@ extern BOOL enableLog;
                 CGFloat value = [args[@"value"] floatValue];
         
                 // ref
-                JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
         
                 ref.value = value;
                 methodResult(@"success");
@@ -2890,7 +2893,7 @@ extern BOOL enableLog;
                 NSString* accountID = (NSString*) args[@"accountID"];
         
                 // ref
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 ref.accountID = accountID;
                 methodResult(@"success");
@@ -2908,7 +2911,7 @@ extern BOOL enableLog;
                 NSTimeInterval creationTime = [args[@"creationTime"] doubleValue];
         
                 // ref
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 ref.creationTime = creationTime;
                 methodResult(@"success");
@@ -2926,7 +2929,7 @@ extern BOOL enableLog;
                 JANALYTICSSex sex = (JANALYTICSSex) [args[@"sex"] integerValue];
         
                 // ref
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 ref.sex = sex;
                 methodResult(@"success");
@@ -2944,7 +2947,7 @@ extern BOOL enableLog;
                 NSString* birthdate = (NSString*) args[@"birthdate"];
         
                 // ref
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 ref.birthdate = birthdate;
                 methodResult(@"success");
@@ -2962,7 +2965,7 @@ extern BOOL enableLog;
                 JANALYTICSPaid paid = (JANALYTICSPaid) [args[@"paid"] integerValue];
         
                 // ref
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 ref.paid = paid;
                 methodResult(@"success");
@@ -2980,7 +2983,7 @@ extern BOOL enableLog;
                 NSString* phone = (NSString*) args[@"phone"];
         
                 // ref
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 ref.phone = phone;
                 methodResult(@"success");
@@ -2998,7 +3001,7 @@ extern BOOL enableLog;
                 NSString* email = (NSString*) args[@"email"];
         
                 // ref
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 ref.email = email;
                 methodResult(@"success");
@@ -3016,7 +3019,7 @@ extern BOOL enableLog;
                 NSString* name = (NSString*) args[@"name"];
         
                 // ref
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 ref.name = name;
                 methodResult(@"success");
@@ -3034,7 +3037,7 @@ extern BOOL enableLog;
                 NSString* wechatID = (NSString*) args[@"wechatID"];
         
                 // ref
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 ref.wechatID = wechatID;
                 methodResult(@"success");
@@ -3052,7 +3055,7 @@ extern BOOL enableLog;
                 NSString* qqID = (NSString*) args[@"qqID"];
         
                 // ref
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 ref.qqID = qqID;
                 methodResult(@"success");
@@ -3070,7 +3073,7 @@ extern BOOL enableLog;
                 NSString* weiboID = (NSString*) args[@"weiboID"];
         
                 // ref
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
         
                 ref.weiboID = weiboID;
                 methodResult(@"success");
@@ -3081,91 +3084,81 @@ extern BOOL enableLog;
         
         @"RefClass::isKindOfJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[JANALYTICSLaunchConfig class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSLaunchConfig class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[JANALYTICSService class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSService class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfJANALYTICSEventObject": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[JANALYTICSEventObject class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSEventObject class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfJANALYTICSLoginEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[JANALYTICSLoginEvent class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSLoginEvent class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfJANALYTICSRegisterEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[JANALYTICSRegisterEvent class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSRegisterEvent class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfJANALYTICSPurchaseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[JANALYTICSPurchaseEvent class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSPurchaseEvent class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfJANALYTICSBrowseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[JANALYTICSBrowseEvent class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSBrowseEvent class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfJANALYTICSCountEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[JANALYTICSCountEvent class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSCountEvent class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfJANALYTICSCalculateEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[JANALYTICSCalculateEvent class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSCalculateEvent class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfJANALYTICSUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[JANALYTICSUserInfo class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSUserInfo class]];
             methodResult(@(isTargetType));
         },
         
@@ -3175,10 +3168,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createJANALYTICSLaunchConfig");
             }
         
-            JANALYTICSLaunchConfig* ref = [[JANALYTICSLaunchConfig alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
+            JANALYTICSLaunchConfig* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[JANALYTICSLaunchConfig alloc] init];
+            } else {
+                __this__ = [JANALYTICSLaunchConfig alloc];
+            }
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -3189,10 +3186,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createJANALYTICSService");
             }
         
-            JANALYTICSService* ref = [[JANALYTICSService alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
+            JANALYTICSService* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[JANALYTICSService alloc] init];
+            } else {
+                __this__ = [JANALYTICSService alloc];
+            }
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -3203,10 +3204,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createJANALYTICSEventObject");
             }
         
-            JANALYTICSEventObject* ref = [[JANALYTICSEventObject alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
+            JANALYTICSEventObject* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[JANALYTICSEventObject alloc] init];
+            } else {
+                __this__ = [JANALYTICSEventObject alloc];
+            }
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -3217,10 +3222,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createJANALYTICSLoginEvent");
             }
         
-            JANALYTICSLoginEvent* ref = [[JANALYTICSLoginEvent alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
+            JANALYTICSLoginEvent* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[JANALYTICSLoginEvent alloc] init];
+            } else {
+                __this__ = [JANALYTICSLoginEvent alloc];
+            }
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -3231,10 +3240,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createJANALYTICSRegisterEvent");
             }
         
-            JANALYTICSRegisterEvent* ref = [[JANALYTICSRegisterEvent alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
+            JANALYTICSRegisterEvent* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[JANALYTICSRegisterEvent alloc] init];
+            } else {
+                __this__ = [JANALYTICSRegisterEvent alloc];
+            }
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -3245,10 +3258,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createJANALYTICSPurchaseEvent");
             }
         
-            JANALYTICSPurchaseEvent* ref = [[JANALYTICSPurchaseEvent alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
+            JANALYTICSPurchaseEvent* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[JANALYTICSPurchaseEvent alloc] init];
+            } else {
+                __this__ = [JANALYTICSPurchaseEvent alloc];
+            }
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -3259,10 +3276,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createJANALYTICSBrowseEvent");
             }
         
-            JANALYTICSBrowseEvent* ref = [[JANALYTICSBrowseEvent alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
+            JANALYTICSBrowseEvent* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[JANALYTICSBrowseEvent alloc] init];
+            } else {
+                __this__ = [JANALYTICSBrowseEvent alloc];
+            }
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -3273,10 +3294,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createJANALYTICSCountEvent");
             }
         
-            JANALYTICSCountEvent* ref = [[JANALYTICSCountEvent alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
+            JANALYTICSCountEvent* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[JANALYTICSCountEvent alloc] init];
+            } else {
+                __this__ = [JANALYTICSCountEvent alloc];
+            }
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -3287,10 +3312,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createJANALYTICSCalculateEvent");
             }
         
-            JANALYTICSCalculateEvent* ref = [[JANALYTICSCalculateEvent alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
+            JANALYTICSCalculateEvent* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[JANALYTICSCalculateEvent alloc] init];
+            } else {
+                __this__ = [JANALYTICSCalculateEvent alloc];
+            }
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -3301,22 +3330,31 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createJANALYTICSUserInfo");
             }
         
-            JANALYTICSUserInfo* ref = [[JANALYTICSUserInfo alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
+            JANALYTICSUserInfo* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[JANALYTICSUserInfo alloc] init];
+            } else {
+                __this__ = [JANALYTICSUserInfo alloc];
+            }
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
         
         @"ObjectFactory::create_batchJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                JANALYTICSLaunchConfig* ref = [[JANALYTICSLaunchConfig alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                JANALYTICSLaunchConfig* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[JANALYTICSLaunchConfig alloc] init];
+                } else {
+                    __this__ = [JANALYTICSLaunchConfig alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -3325,13 +3363,18 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                JANALYTICSService* ref = [[JANALYTICSService alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                JANALYTICSService* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[JANALYTICSService alloc] init];
+                } else {
+                    __this__ = [JANALYTICSService alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -3340,13 +3383,18 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchJANALYTICSEventObject": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                JANALYTICSEventObject* ref = [[JANALYTICSEventObject alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                JANALYTICSEventObject* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[JANALYTICSEventObject alloc] init];
+                } else {
+                    __this__ = [JANALYTICSEventObject alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -3355,13 +3403,18 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchJANALYTICSLoginEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                JANALYTICSLoginEvent* ref = [[JANALYTICSLoginEvent alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                JANALYTICSLoginEvent* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[JANALYTICSLoginEvent alloc] init];
+                } else {
+                    __this__ = [JANALYTICSLoginEvent alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -3370,13 +3423,18 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchJANALYTICSRegisterEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                JANALYTICSRegisterEvent* ref = [[JANALYTICSRegisterEvent alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                JANALYTICSRegisterEvent* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[JANALYTICSRegisterEvent alloc] init];
+                } else {
+                    __this__ = [JANALYTICSRegisterEvent alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -3385,13 +3443,18 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchJANALYTICSPurchaseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                JANALYTICSPurchaseEvent* ref = [[JANALYTICSPurchaseEvent alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                JANALYTICSPurchaseEvent* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[JANALYTICSPurchaseEvent alloc] init];
+                } else {
+                    __this__ = [JANALYTICSPurchaseEvent alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -3400,13 +3463,18 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchJANALYTICSBrowseEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                JANALYTICSBrowseEvent* ref = [[JANALYTICSBrowseEvent alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                JANALYTICSBrowseEvent* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[JANALYTICSBrowseEvent alloc] init];
+                } else {
+                    __this__ = [JANALYTICSBrowseEvent alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -3415,13 +3483,18 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchJANALYTICSCountEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                JANALYTICSCountEvent* ref = [[JANALYTICSCountEvent alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                JANALYTICSCountEvent* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[JANALYTICSCountEvent alloc] init];
+                } else {
+                    __this__ = [JANALYTICSCountEvent alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -3430,13 +3503,18 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchJANALYTICSCalculateEvent": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                JANALYTICSCalculateEvent* ref = [[JANALYTICSCalculateEvent alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                JANALYTICSCalculateEvent* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[JANALYTICSCalculateEvent alloc] init];
+                } else {
+                    __this__ = [JANALYTICSCalculateEvent alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -3445,13 +3523,18 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchJANALYTICSUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                JANALYTICSUserInfo* ref = [[JANALYTICSUserInfo alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                JANALYTICSUserInfo* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[JANALYTICSUserInfo alloc] init];
+                } else {
+                    __this__ = [JANALYTICSUserInfo alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);

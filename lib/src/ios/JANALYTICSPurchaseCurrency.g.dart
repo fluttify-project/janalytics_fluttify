@@ -13,6 +13,7 @@ extension JANALYTICSPurchaseCurrencyToX on JANALYTICSPurchaseCurrency {
     switch (this) {
       case JANALYTICSPurchaseCurrency.JANALYTICSCurrencyCNY: return JANALYTICSPurchaseCurrency.JANALYTICSCurrencyCNY.index + 0;
       case JANALYTICSPurchaseCurrency.JANALYTICSCurrencyUSD: return JANALYTICSPurchaseCurrency.JANALYTICSCurrencyUSD.index + 0;
+      default: return 0;
     }
   }
 }

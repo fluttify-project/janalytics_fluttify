@@ -21,10 +21,8 @@ class cn_jiguang_analytics_android_api_agent_JMMIClick extends java_lang_Object 
 
   //region creators
   static Future<cn_jiguang_analytics_android_api_agent_JMMIClick> create__() async {
-    final int refId = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_agent_JMMIClick__');
+    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_agent_JMMIClick__', );
     final object = cn_jiguang_analytics_android_api_agent_JMMIClick()..refId = refId..tag__ = 'janalytics_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class cn_jiguang_analytics_android_api_agent_JMMIClick extends java_lang_Object 
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_agent_JMMIClick__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_agent_JMMIClick__', {'length': length});
   
     final List<cn_jiguang_analytics_android_api_agent_JMMIClick> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_agent_JMMIClick()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -58,7 +55,7 @@ class cn_jiguang_analytics_android_api_agent_JMMIClick extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIClick::clickOn', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIClick::clickOn', {"var0": var0});
   
   
     // handle native call
@@ -69,7 +66,6 @@ class cn_jiguang_analytics_android_api_agent_JMMIClick extends java_lang_Object 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -82,7 +78,7 @@ class cn_jiguang_analytics_android_api_agent_JMMIClick extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIClick::onClick__Object__android_view_View', {"var0": var0, "var1": var1 is Ref ? (var1 as Ref)?.refId : var1});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIClick::onClick__Object__android_view_View', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -93,7 +89,6 @@ class cn_jiguang_analytics_android_api_agent_JMMIClick extends java_lang_Object 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -106,7 +101,7 @@ class cn_jiguang_analytics_android_api_agent_JMMIClick extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIClick::performClickTabLayoutTabView', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0});
+    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIClick::performClickTabLayoutTabView', {"var0": var0});
   
   
     // handle native call
@@ -117,7 +112,6 @@ class cn_jiguang_analytics_android_api_agent_JMMIClick extends java_lang_Object 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -142,7 +136,7 @@ extension cn_jiguang_analytics_android_api_agent_JMMIClick_Batch on List<cn_jigu
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIClick::clickOn_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIClick::clickOn_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -150,7 +144,6 @@ extension cn_jiguang_analytics_android_api_agent_JMMIClick_Batch on List<cn_jigu
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -162,7 +155,7 @@ extension cn_jiguang_analytics_android_api_agent_JMMIClick_Batch on List<cn_jigu
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIClick::onClick__Object__android_view_View_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIClick::onClick__Object__android_view_View_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -170,7 +163,6 @@ extension cn_jiguang_analytics_android_api_agent_JMMIClick_Batch on List<cn_jigu
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -182,7 +174,7 @@ extension cn_jiguang_analytics_android_api_agent_JMMIClick_Batch on List<cn_jigu
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify').invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIClick::performClickTabLayoutTabView_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIClick::performClickTabLayoutTabView_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -190,7 +182,6 @@ extension cn_jiguang_analytics_android_api_agent_JMMIClick_Batch on List<cn_jigu
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
