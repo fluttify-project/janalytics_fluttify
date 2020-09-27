@@ -32,7 +32,24 @@ dependencies:
 ```
 
 ## 配置
-无需配置, 直接使用
+#### Android
+在 module 的 gradle 中添加依赖和AndroidManifest的替换变量。
+```groovy
+android {
+    ......
+    defaultConfig {
+        applicationId "com.xxx.xxx" // 你应用的包名.
+        ......
+
+        manifestPlaceholders = [
+            JPUSH_APPKEY : "你的appkey", //JPush上注册的包名对应的appkey.
+            JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+        ......
+    }
+    ......
+}
+```
 
 ## 导入
 ```dart

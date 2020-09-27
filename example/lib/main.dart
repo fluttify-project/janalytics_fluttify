@@ -65,7 +65,7 @@ class HomeScreen extends StatelessWidget {
           ),
           RaisedButton(
             onPressed: () async {
-              await JAnalytics.setReportPeriod(60);
+              await JAnalytics.setReportPeriod(Duration(seconds: 60));
             },
             child: Text('设置统计上报的自动周期'),
           ),
