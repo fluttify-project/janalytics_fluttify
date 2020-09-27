@@ -158,6 +158,33 @@ class JAnalytics {
     );
     return completer.future;
   }
+
+  /// 解绑当前用户信息
+  static Future<void> detachAccount() async {
+    final completer = Completer();
+    platform(
+      android: (pool) async {
+        final context = await android_app_Application.get();
+        await cn_jiguang_analytics_android_api_JAnalyticsInterface
+            .detachAccount__android_content_Context__cn_jiguang_analytics_android_api_AccountCallback(
+          context,
+          _IdentifyAccountCallback(completer),
+        );
+      },
+      ios: (pool) async {
+        await JANALYTICSService.detachAccount(
+          (err, msg) {
+            if (err != 0) {
+              completer.completeError(msg);
+            } else {
+              completer.complete();
+            }
+          },
+        );
+      },
+    );
+    return completer.future;
+  }
 }
 
 class _IdentifyAccountCallback extends java_lang_Object
