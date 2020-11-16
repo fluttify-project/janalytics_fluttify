@@ -11,402 +11,243 @@ import 'package:janalytics_fluttify/src/android/android.export.g.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:jcore_fluttify/jcore_fluttify.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-extension TypeOpJanalyticsFluttifyAndroid on Object {
-  // type check
-  Future<bool> is__<T>() async {
-    final typeName = T.toString();
-    if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
-      return this is T;
-    }
-    else if (T == cn_jiguang_analytics_android_view_BuryWebActivity) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_view_BuryWebActivity', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_CountEvent) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_CountEvent', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_RegisterEvent) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_RegisterEvent', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_agent_JMMIDlgPupW) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_agent_JMMIDlgPupW', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_agent_JMMIClick) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_agent_JMMIClick', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_Account) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_Account', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JAct) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JAct', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JFragAct) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JFragAct', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JListFragV4) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JListFragV4', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JListAct) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JListAct', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JACAct) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JACAct', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JListFrag) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JListFrag', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JMMIAgent) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JMMIAgent', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JACActAx) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JACActAx', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JPrefFrag) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JPrefFrag', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JDlgFrag) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JDlgFrag', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JPrefAct) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JPrefAct', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JDlgFragV4) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JDlgFragV4', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JFragAx) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JFragAx', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JFragActAx) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JFragActAx', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JDlgFragAx) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_aop_JDlgFragAx', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_Event) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_Event', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_PurchaseEvent) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_PurchaseEvent', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_BrowseEvent) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_BrowseEvent', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_LoginEvent) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_LoginEvent', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_JAnalyticsInterface) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_JAnalyticsInterface', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_jiguang_analytics_android_api_CalculateEvent) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_CalculateEvent', {'__this__': this});
-      return result;
-    }
-    else if (T == cn_analytics_client_android_BuildConfig) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfcn_analytics_client_android_BuildConfig', {'__this__': this});
-      return result;
-    }
-    else if (T == android_content_Context) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_content_Context', {'__this__': this});
-      return result;
-    }
-    else if (T == android_content_Intent) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_content_Intent', {'__this__': this});
-      return result;
-    }
-    else if (T == android_content_ContentProvider) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_content_ContentProvider', {'__this__': this});
-      return result;
-    }
-    else if (T == android_app_Application) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_app_Application', {'__this__': this});
-      return result;
-    }
-    else if (T == android_app_Notification) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_app_Notification', {'__this__': this});
-      return result;
-    }
-    else if (T == android_app_Activity) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_app_Activity', {'__this__': this});
-      return result;
-    }
-    else if (T == android_app_PendingIntent) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_app_PendingIntent', {'__this__': this});
-      return result;
-    }
-    else if (T == android_os_Bundle) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_os_Bundle', {'__this__': this});
-      return result;
-    }
-    else if (T == android_os_Binder) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_os_Binder', {'__this__': this});
-      return result;
-    }
-    else if (T == android_view_View) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_view_View', {'__this__': this});
-      return result;
-    }
-    else if (T == android_view_SurfaceView) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_view_SurfaceView', {'__this__': this});
-      return result;
-    }
-    else if (T == android_view_ViewGroup) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_view_ViewGroup', {'__this__': this});
-      return result;
-    }
-    else if (T == android_graphics_Point) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_graphics_Point', {'__this__': this});
-      return result;
-    }
-    else if (T == android_graphics_PointF) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_graphics_PointF', {'__this__': this});
-      return result;
-    }
-    else if (T == android_graphics_Bitmap) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_graphics_Bitmap', {'__this__': this});
-      return result;
-    }
-    else if (T == android_widget_ImageView) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_widget_ImageView', {'__this__': this});
-      return result;
-    }
-    else if (T == java_io_Serializable) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfjava_io_Serializable', {'__this__': this});
-      return result;
-    }
-    else if (T == java_io_File) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfjava_io_File', {'__this__': this});
-      return result;
-    }
-    else if (T == android_location_Location) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_location_Location', {'__this__': this});
-      return result;
-    }
-    else if (T == android_view_MotionEvent) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_view_MotionEvent', {'__this__': this});
-      return result;
-    }
-    else if (T == android_graphics_drawable_Drawable) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_graphics_drawable_Drawable', {'__this__': this});
-      return result;
-    }
-    else if (T == android_widget_FrameLayout) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_widget_FrameLayout', {'__this__': this});
-      return result;
-    }
-    else if (T == android_widget_TextView) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_widget_TextView', {'__this__': this});
-      return result;
-    }
-    else if (T == android_widget_LinearLayout) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_widget_LinearLayout', {'__this__': this});
-      return result;
-    }
-    else if (T == android_widget_RelativeLayout) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_widget_RelativeLayout', {'__this__': this});
-      return result;
-    }
-    else if (T == android_util_Pair) {
-      final result = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfandroid_util_Pair', {'__this__': this});
-      return result;
-    }
+// type check
+@optionalTypeArgs
+Future<bool> JanalyticsFluttifyAndroidIs<T>(dynamic __this__) async {
+  final typeName = T.toString();
+  if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
+    return __this__ is T;
   }
+  else if (T == cn_analytics_client_android_BuildConfig) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfcn_analytics_client_android_BuildConfig', {'__this__': __this__});
+    return result;
+  } else if (T == cn_jiguang_analytics_android_api_Account) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_Account', {'__this__': __this__});
+    return result;
+  } else if (T == cn_jiguang_analytics_android_api_agent_JMMIClick) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_agent_JMMIClick', {'__this__': __this__});
+    return result;
+  } else if (T == cn_jiguang_analytics_android_api_agent_JMMIDlgPupW) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_agent_JMMIDlgPupW', {'__this__': __this__});
+    return result;
+  } else if (T == cn_jiguang_analytics_android_api_BrowseEvent) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_BrowseEvent', {'__this__': __this__});
+    return result;
+  } else if (T == cn_jiguang_analytics_android_api_CalculateEvent) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_CalculateEvent', {'__this__': __this__});
+    return result;
+  } else if (T == cn_jiguang_analytics_android_api_CountEvent) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_CountEvent', {'__this__': __this__});
+    return result;
+  } else if (T == cn_jiguang_analytics_android_api_Event) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_Event', {'__this__': __this__});
+    return result;
+  } else if (T == cn_jiguang_analytics_android_api_JAnalyticsInterface) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_JAnalyticsInterface', {'__this__': __this__});
+    return result;
+  } else if (T == cn_jiguang_analytics_android_api_LoginEvent) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_LoginEvent', {'__this__': __this__});
+    return result;
+  } else if (T == cn_jiguang_analytics_android_api_PurchaseEvent) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_PurchaseEvent', {'__this__': __this__});
+    return result;
+  } else if (T == cn_jiguang_analytics_android_api_RegisterEvent) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_api_RegisterEvent', {'__this__': __this__});
+    return result;
+  } else if (T == cn_jiguang_analytics_android_view_BuryWebActivity) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfcn_jiguang_analytics_android_view_BuryWebActivity', {'__this__': __this__});
+    return result;
+  } else if (T == android_content_Context) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_content_Context', {'__this__': __this__});
+    return result;
+  } else if (T == android_content_Intent) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_content_Intent', {'__this__': __this__});
+    return result;
+  } else if (T == android_content_ContentProvider) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_content_ContentProvider', {'__this__': __this__});
+    return result;
+  } else if (T == android_app_Application) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_app_Application', {'__this__': __this__});
+    return result;
+  } else if (T == android_app_Notification) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_app_Notification', {'__this__': __this__});
+    return result;
+  } else if (T == android_app_Activity) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_app_Activity', {'__this__': __this__});
+    return result;
+  } else if (T == android_app_PendingIntent) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_app_PendingIntent', {'__this__': __this__});
+    return result;
+  } else if (T == android_os_Bundle) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_os_Bundle', {'__this__': __this__});
+    return result;
+  } else if (T == android_os_Binder) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_os_Binder', {'__this__': __this__});
+    return result;
+  } else if (T == android_view_View) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_View', {'__this__': __this__});
+    return result;
+  } else if (T == android_view_SurfaceView) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_SurfaceView', {'__this__': __this__});
+    return result;
+  } else if (T == android_view_SurfaceHolder) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_SurfaceHolder', {'__this__': __this__});
+    return result;
+  } else if (T == android_opengl_GLSurfaceView) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_opengl_GLSurfaceView', {'__this__': __this__});
+    return result;
+  } else if (T == android_view_ViewGroup) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_ViewGroup', {'__this__': __this__});
+    return result;
+  } else if (T == android_graphics_Point) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_graphics_Point', {'__this__': __this__});
+    return result;
+  } else if (T == android_graphics_PointF) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_graphics_PointF', {'__this__': __this__});
+    return result;
+  } else if (T == android_graphics_Bitmap) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_graphics_Bitmap', {'__this__': __this__});
+    return result;
+  } else if (T == android_widget_ImageView) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_widget_ImageView', {'__this__': __this__});
+    return result;
+  } else if (T == java_io_Serializable) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfjava_io_Serializable', {'__this__': __this__});
+    return result;
+  } else if (T == java_io_File) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfjava_io_File', {'__this__': __this__});
+    return result;
+  } else if (T == android_location_Location) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_location_Location', {'__this__': __this__});
+    return result;
+  } else if (T == android_view_MotionEvent) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_MotionEvent', {'__this__': __this__});
+    return result;
+  } else if (T == android_graphics_drawable_Drawable) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_graphics_drawable_Drawable', {'__this__': __this__});
+    return result;
+  } else if (T == android_widget_FrameLayout) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_widget_FrameLayout', {'__this__': __this__});
+    return result;
+  } else if (T == android_widget_TextView) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_widget_TextView', {'__this__': __this__});
+    return result;
+  } else if (T == android_widget_LinearLayout) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_widget_LinearLayout', {'__this__': __this__});
+    return result;
+  } else if (T == android_widget_RelativeLayout) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_widget_RelativeLayout', {'__this__': __this__});
+    return result;
+  } else if (T == android_util_Pair) {
+    final result = await kJanalyticsFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_util_Pair', {'__this__': __this__});
+    return result;
+  }
+  else {
+    return false;
+  }
+}
 
-  // type cast
-  T as__<T>() {
-    final typeName = T.toString();
-    // jsonable 直接造型 返回
-    if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
-      return this as T;
-    }
-    // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
-    else if (T == cn_jiguang_analytics_android_view_BuryWebActivity) {
-      return (cn_jiguang_analytics_android_view_BuryWebActivity()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_CountEvent) {
-      return (cn_jiguang_analytics_android_api_CountEvent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_RegisterEvent) {
-      return (cn_jiguang_analytics_android_api_RegisterEvent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_agent_JMMIDlgPupW) {
-      return (cn_jiguang_analytics_android_api_agent_JMMIDlgPupW()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_agent_JMMIClick) {
-      return (cn_jiguang_analytics_android_api_agent_JMMIClick()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_Account) {
-      return (cn_jiguang_analytics_android_api_Account()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JAct) {
-      return (cn_jiguang_analytics_android_api_aop_JAct()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JFragAct) {
-      return (cn_jiguang_analytics_android_api_aop_JFragAct()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JListFragV4) {
-      return (cn_jiguang_analytics_android_api_aop_JListFragV4()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JListAct) {
-      return (cn_jiguang_analytics_android_api_aop_JListAct()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JACAct) {
-      return (cn_jiguang_analytics_android_api_aop_JACAct()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JListFrag) {
-      return (cn_jiguang_analytics_android_api_aop_JListFrag()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JMMIAgent) {
-      return (cn_jiguang_analytics_android_api_aop_JMMIAgent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JACActAx) {
-      return (cn_jiguang_analytics_android_api_aop_JACActAx()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JPrefFrag) {
-      return (cn_jiguang_analytics_android_api_aop_JPrefFrag()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JDlgFrag) {
-      return (cn_jiguang_analytics_android_api_aop_JDlgFrag()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JPrefAct) {
-      return (cn_jiguang_analytics_android_api_aop_JPrefAct()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JDlgFragV4) {
-      return (cn_jiguang_analytics_android_api_aop_JDlgFragV4()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JFragAx) {
-      return (cn_jiguang_analytics_android_api_aop_JFragAx()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JFragActAx) {
-      return (cn_jiguang_analytics_android_api_aop_JFragActAx()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_aop_JDlgFragAx) {
-      return (cn_jiguang_analytics_android_api_aop_JDlgFragAx()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_Event) {
-      return (cn_jiguang_analytics_android_api_Event()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_PurchaseEvent) {
-      return (cn_jiguang_analytics_android_api_PurchaseEvent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_BrowseEvent) {
-      return (cn_jiguang_analytics_android_api_BrowseEvent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_LoginEvent) {
-      return (cn_jiguang_analytics_android_api_LoginEvent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_JAnalyticsInterface) {
-      return (cn_jiguang_analytics_android_api_JAnalyticsInterface()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_jiguang_analytics_android_api_CalculateEvent) {
-      return (cn_jiguang_analytics_android_api_CalculateEvent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == cn_analytics_client_android_BuildConfig) {
-      return (cn_analytics_client_android_BuildConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_content_Context) {
-      return (android_content_Context()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_content_Intent) {
-      return (android_content_Intent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_content_ContentProvider) {
-      return (android_content_ContentProvider()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_app_Application) {
-      return (android_app_Application()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_app_Notification) {
-      return (android_app_Notification()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_app_Activity) {
-      return (android_app_Activity()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_app_PendingIntent) {
-      return (android_app_PendingIntent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_os_Bundle) {
-      return (android_os_Bundle()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_os_Binder) {
-      return (android_os_Binder()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_view_View) {
-      return (android_view_View()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_view_SurfaceView) {
-      return (android_view_SurfaceView()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_view_ViewGroup) {
-      return (android_view_ViewGroup()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_graphics_Point) {
-      return (android_graphics_Point()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_graphics_PointF) {
-      return (android_graphics_PointF()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_graphics_Bitmap) {
-      return (android_graphics_Bitmap()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_widget_ImageView) {
-      return (android_widget_ImageView()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == java_io_Serializable) {
-      return (java_io_Serializable.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == java_io_File) {
-      return (java_io_File()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_location_Location) {
-      return (android_location_Location()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_view_MotionEvent) {
-      return (android_view_MotionEvent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_graphics_drawable_Drawable) {
-      return (android_graphics_drawable_Drawable()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_widget_FrameLayout) {
-      return (android_widget_FrameLayout()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_widget_TextView) {
-      return (android_widget_TextView()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_widget_LinearLayout) {
-      return (android_widget_LinearLayout()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_widget_RelativeLayout) {
-      return (android_widget_RelativeLayout()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
-    else if (T == android_util_Pair) {
-      return (android_util_Pair()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'janalytics_fluttify') as T;
-    }
+// type cast
+// 给一个可选的泛型, 如果没有指定泛型就返回dynamic
+@optionalTypeArgs
+T JanalyticsFluttifyAndroidAs<T>(dynamic __this__) {
+  final typeName = T.toString();
+
+  if (__this__ == null) {
+    return null;
+  } else if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
+    return __this__ as T;
+  }
+  else if (T == cn_analytics_client_android_BuildConfig) {
+    return (cn_analytics_client_android_BuildConfig()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == cn_jiguang_analytics_android_api_Account) {
+    return (cn_jiguang_analytics_android_api_Account()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == cn_jiguang_analytics_android_api_agent_JMMIClick) {
+    return (cn_jiguang_analytics_android_api_agent_JMMIClick()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == cn_jiguang_analytics_android_api_agent_JMMIDlgPupW) {
+    return (cn_jiguang_analytics_android_api_agent_JMMIDlgPupW()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == cn_jiguang_analytics_android_api_BrowseEvent) {
+    return (cn_jiguang_analytics_android_api_BrowseEvent()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == cn_jiguang_analytics_android_api_CalculateEvent) {
+    return (cn_jiguang_analytics_android_api_CalculateEvent()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == cn_jiguang_analytics_android_api_CountEvent) {
+    return (cn_jiguang_analytics_android_api_CountEvent()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == cn_jiguang_analytics_android_api_Event) {
+    return (cn_jiguang_analytics_android_api_Event()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == cn_jiguang_analytics_android_api_JAnalyticsInterface) {
+    return (cn_jiguang_analytics_android_api_JAnalyticsInterface()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == cn_jiguang_analytics_android_api_LoginEvent) {
+    return (cn_jiguang_analytics_android_api_LoginEvent()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == cn_jiguang_analytics_android_api_PurchaseEvent) {
+    return (cn_jiguang_analytics_android_api_PurchaseEvent()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == cn_jiguang_analytics_android_api_RegisterEvent) {
+    return (cn_jiguang_analytics_android_api_RegisterEvent()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == cn_jiguang_analytics_android_view_BuryWebActivity) {
+    return (cn_jiguang_analytics_android_view_BuryWebActivity()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_content_Context) {
+    return (android_content_Context()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_content_Intent) {
+    return (android_content_Intent()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_content_ContentProvider) {
+    return (android_content_ContentProvider()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_app_Application) {
+    return (android_app_Application()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_app_Notification) {
+    return (android_app_Notification()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_app_Activity) {
+    return (android_app_Activity()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_app_PendingIntent) {
+    return (android_app_PendingIntent()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_os_Bundle) {
+    return (android_os_Bundle()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_os_Binder) {
+    return (android_os_Binder()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_View) {
+    return (android_view_View()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_SurfaceView) {
+    return (android_view_SurfaceView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_SurfaceHolder) {
+    return (android_view_SurfaceHolder.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_opengl_GLSurfaceView) {
+    return (android_opengl_GLSurfaceView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_ViewGroup) {
+    return (android_view_ViewGroup()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_graphics_Point) {
+    return (android_graphics_Point()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_graphics_PointF) {
+    return (android_graphics_PointF()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_graphics_Bitmap) {
+    return (android_graphics_Bitmap()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_widget_ImageView) {
+    return (android_widget_ImageView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == java_io_Serializable) {
+    return (java_io_Serializable.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == java_io_File) {
+    return (java_io_File()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_location_Location) {
+    return (android_location_Location()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_MotionEvent) {
+    return (android_view_MotionEvent()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_graphics_drawable_Drawable) {
+    return (android_graphics_drawable_Drawable()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_widget_FrameLayout) {
+    return (android_widget_FrameLayout()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_widget_TextView) {
+    return (android_widget_TextView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_widget_LinearLayout) {
+    return (android_widget_LinearLayout()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_widget_RelativeLayout) {
+    return (android_widget_RelativeLayout()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_util_Pair) {
+    return (android_util_Pair()..refId = (__this__ as Ref).refId) as T;
+  }
+  else if (JcoreFluttifyAndroidAs<T>(__this__) != null) {
+    return JcoreFluttifyAndroidAs<T>(__this__);
+  }
+  else {
+    return null;
   }
 }

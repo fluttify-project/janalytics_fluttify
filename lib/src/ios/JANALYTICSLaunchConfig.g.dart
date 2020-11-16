@@ -16,72 +16,78 @@ class JANALYTICSLaunchConfig extends NSObject  {
   //region constants
   static const String name__ = 'JANALYTICSLaunchConfig';
 
+  @override
+  final String tag__ = 'janalytics_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<JANALYTICSLaunchConfig> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createJANALYTICSLaunchConfig', {'init': init});
-    final object = JANALYTICSLaunchConfig()..refId = refId..tag__ = 'janalytics_fluttify';
-    return object;
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod(
+      'ObjectFactory::createJANALYTICSLaunchConfig',
+      {'init': init}
+    );
+    return JanalyticsFluttifyIOSAs<JANALYTICSLaunchConfig>(__result__);
   }
   
   static Future<List<JANALYTICSLaunchConfig>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchJANALYTICSLaunchConfig', {'length': length, 'init': init});
-  
-    final List<JANALYTICSLaunchConfig> typedResult = resultBatch.map((result) => JANALYTICSLaunchConfig()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    return typedResult;
+    assert(true);
+    final __result_batch__ = await  kJanalyticsFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchJANALYTICSLaunchConfig',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => JanalyticsFluttifyIOSAs<JANALYTICSLaunchConfig>(it))
+        .toList();
   }
   
   //endregion
 
   //region getters
   Future<String> get_appKey() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSLaunchConfig::get_appKey", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSLaunchConfig::get_appKey", {'__this__': this});
+    return __result__;
   }
   
   Future<String> get_channel() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSLaunchConfig::get_channel", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSLaunchConfig::get_channel", {'__this__': this});
+    return __result__;
   }
   
   Future<String> get_advertisingId() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSLaunchConfig::get_advertisingId", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSLaunchConfig::get_advertisingId", {'__this__': this});
+    return __result__;
   }
   
   Future<bool> get_isProduction() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSLaunchConfig::get_isProduction", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSLaunchConfig::get_isProduction", {'__this__': this});
+    return __result__;
   }
   
   //endregion
 
   //region setters
   Future<void> set_appKey(String appKey) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSLaunchConfig::set_appKey', <String, dynamic>{'__this__': this, "appKey": appKey});
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSLaunchConfig::set_appKey', <String, dynamic>{'__this__': this, "appKey": appKey});
   
   
   }
   
   Future<void> set_channel(String channel) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSLaunchConfig::set_channel', <String, dynamic>{'__this__': this, "channel": channel});
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSLaunchConfig::set_channel', <String, dynamic>{'__this__': this, "channel": channel});
   
   
   }
   
   Future<void> set_advertisingId(String advertisingId) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSLaunchConfig::set_advertisingId', <String, dynamic>{'__this__': this, "advertisingId": advertisingId});
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSLaunchConfig::set_advertisingId', <String, dynamic>{'__this__': this, "advertisingId": advertisingId});
   
   
   }
   
   Future<void> set_isProduction(bool isProduction) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSLaunchConfig::set_isProduction', <String, dynamic>{'__this__': this, "isProduction": isProduction});
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSLaunchConfig::set_isProduction', <String, dynamic>{'__this__': this, "isProduction": isProduction});
   
   
   }
@@ -91,61 +97,58 @@ class JANALYTICSLaunchConfig extends NSObject  {
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'JANALYTICSLaunchConfig{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension JANALYTICSLaunchConfig_Batch on List<JANALYTICSLaunchConfig> {
   //region getters
   Future<List<String>> get_appKey_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSLaunchConfig::get_appKey_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    return typedResult;
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSLaunchConfig::get_appKey_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<String>> get_channel_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSLaunchConfig::get_channel_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    return typedResult;
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSLaunchConfig::get_channel_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<String>> get_advertisingId_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSLaunchConfig::get_advertisingId_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    return typedResult;
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSLaunchConfig::get_advertisingId_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<bool>> get_isProduction_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSLaunchConfig::get_isProduction_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    return typedResult;
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSLaunchConfig::get_isProduction_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<bool>()?.toList();
   }
   
   //endregion
 
   //region setters
   Future<void> set_appKey_batch(List<String> appKey) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSLaunchConfig::set_appKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "appKey": appKey[__i__]}]);
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSLaunchConfig::set_appKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "appKey": appKey[__i__]}]);
   
   
   }
   
   Future<void> set_channel_batch(List<String> channel) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSLaunchConfig::set_channel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "channel": channel[__i__]}]);
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSLaunchConfig::set_channel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "channel": channel[__i__]}]);
   
   
   }
   
   Future<void> set_advertisingId_batch(List<String> advertisingId) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSLaunchConfig::set_advertisingId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "advertisingId": advertisingId[__i__]}]);
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSLaunchConfig::set_advertisingId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "advertisingId": advertisingId[__i__]}]);
   
   
   }
   
   Future<void> set_isProduction_batch(List<bool> isProduction) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSLaunchConfig::set_isProduction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "isProduction": isProduction[__i__]}]);
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSLaunchConfig::set_isProduction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "isProduction": isProduction[__i__]}]);
   
   
   }

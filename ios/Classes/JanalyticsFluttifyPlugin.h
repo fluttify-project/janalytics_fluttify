@@ -3,8 +3,8 @@
 //////////////////////////////////////////////////////////
 
 #import <Flutter/Flutter.h>
-#import "JANALYTICSService.h"
 #import "JANALYTICSEventObject.h"
+#import "JANALYTICSService.h"
 
 typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, id, FlutterResult);
 

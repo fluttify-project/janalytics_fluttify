@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:janalytics_fluttify/janalytics_fluttify.dart';
 
 class PageAnalyzer extends NavigatorObserver {
+  static PageAnalyzer instance = PageAnalyzer._();
+
+  PageAnalyzer._();
+
   @override
   void didPush(Route<dynamic> route, Route<dynamic> previousRoute) {
     if (previousRoute?.settings?.name != null) {

@@ -16,24 +16,30 @@ class cn_jiguang_analytics_android_api_agent_JMMIDlgPupW extends java_lang_Objec
   //region constants
   static const String name__ = 'cn.jiguang.analytics.android.api.agent.JMMIDlgPupW';
 
+  @override
+  final String tag__ = 'janalytics_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<cn_jiguang_analytics_android_api_agent_JMMIDlgPupW> create__() async {
-    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_agent_JMMIDlgPupW__', );
-    final object = cn_jiguang_analytics_android_api_agent_JMMIDlgPupW()..refId = refId..tag__ = 'janalytics_fluttify';
-    return object;
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcn_jiguang_analytics_android_api_agent_JMMIDlgPupW__',
+    
+    );
+    return JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_agent_JMMIDlgPupW>(__result__);
   }
   
   static Future<List<cn_jiguang_analytics_android_api_agent_JMMIDlgPupW>> create_batch__(int length) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_agent_JMMIDlgPupW__', {'length': length});
-  
-    final List<cn_jiguang_analytics_android_api_agent_JMMIDlgPupW> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_agent_JMMIDlgPupW()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    return typedResult;
+    assert(true);
+    final __result_batch__ = await  kJanalyticsFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcn_jiguang_analytics_android_api_agent_JMMIDlgPupW__',
+      {'length': length}
+    );
+    return __result_batch__
+        .map((it) => JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_agent_JMMIDlgPupW>(it))
+        .toList();
   }
   
   //endregion
@@ -55,22 +61,21 @@ class cn_jiguang_analytics_android_api_agent_JMMIDlgPupW extends java_lang_Objec
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow', {"var0": var0});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow', {"var0": var0});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'cn_jiguang_analytics_android_api_agent_JMMIDlgPupW{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension cn_jiguang_analytics_android_api_agent_JMMIDlgPupW_Batch on List<cn_jiguang_analytics_android_api_agent_JMMIDlgPupW> {
@@ -85,21 +90,13 @@ extension cn_jiguang_analytics_android_api_agent_JMMIDlgPupW_Batch on List<cn_ji
   //region methods
   
   static Future<List<void>> onDismissPopupWindow_batch(List<Object> var0) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

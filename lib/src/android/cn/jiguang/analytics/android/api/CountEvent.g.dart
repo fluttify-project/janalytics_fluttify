@@ -16,40 +16,49 @@ class cn_jiguang_analytics_android_api_CountEvent extends cn_jiguang_analytics_a
   //region constants
   static const String name__ = 'cn.jiguang.analytics.android.api.CountEvent';
 
+  @override
+  final String tag__ = 'janalytics_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<cn_jiguang_analytics_android_api_CountEvent> create__String(String var1) async {
-    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_CountEvent__String', {"var1": var1});
-    final object = cn_jiguang_analytics_android_api_CountEvent()..refId = refId..tag__ = 'janalytics_fluttify';
-    return object;
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcn_jiguang_analytics_android_api_CountEvent__String',
+      {"var1": var1}
+    );
+    return JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_CountEvent>(__result__);
   }
   
   static Future<cn_jiguang_analytics_android_api_CountEvent> create__() async {
-    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_CountEvent__', );
-    final object = cn_jiguang_analytics_android_api_CountEvent()..refId = refId..tag__ = 'janalytics_fluttify';
-    return object;
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcn_jiguang_analytics_android_api_CountEvent__',
+    
+    );
+    return JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_CountEvent>(__result__);
   }
   
   static Future<List<cn_jiguang_analytics_android_api_CountEvent>> create_batch__String(List<String> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_CountEvent__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-  
-    final List<cn_jiguang_analytics_android_api_CountEvent> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_CountEvent()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    return typedResult;
+    assert(true);
+    final __result_batch__ = await  kJanalyticsFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcn_jiguang_analytics_android_api_CountEvent__String',
+      [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
+    );
+    return __result_batch__
+        .map((it) => JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_CountEvent>(it))
+        .toList();
   }
   
   static Future<List<cn_jiguang_analytics_android_api_CountEvent>> create_batch__(int length) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_CountEvent__', {'length': length});
-  
-    final List<cn_jiguang_analytics_android_api_CountEvent> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_CountEvent()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    return typedResult;
+    assert(true);
+    final __result_batch__ = await  kJanalyticsFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcn_jiguang_analytics_android_api_CountEvent__',
+      {'length': length}
+    );
+    return __result_batch__
+        .map((it) => JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_CountEvent>(it))
+        .toList();
   }
   
   //endregion
@@ -71,19 +80,13 @@ class cn_jiguang_analytics_android_api_CountEvent extends cn_jiguang_analytics_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.CountEvent::getEventId', {"__this__": this});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.CountEvent::getEventId', {"__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -94,22 +97,21 @@ class cn_jiguang_analytics_android_api_CountEvent extends cn_jiguang_analytics_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.CountEvent::setEventId', {"var1": var1, "__this__": this});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.CountEvent::setEventId', {"var1": var1, "__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = cn_jiguang_analytics_android_api_CountEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      return __return__;
-    }
+    return JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_CountEvent>(__result__);
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'cn_jiguang_analytics_android_api_CountEvent{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension cn_jiguang_analytics_android_api_CountEvent_Batch on List<cn_jiguang_analytics_android_api_CountEvent> {
@@ -124,40 +126,24 @@ extension cn_jiguang_analytics_android_api_CountEvent_Batch on List<cn_jiguang_a
   //region methods
   
   Future<List<String>> getEventId_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.CountEvent::getEventId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.CountEvent::getEventId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   
   Future<List<cn_jiguang_analytics_android_api_CountEvent>> setEventId_batch(List<String> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.CountEvent::setEventId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.CountEvent::setEventId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_CountEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_CountEvent>(__result__)).cast<cn_jiguang_analytics_android_api_CountEvent>().toList();
   }
   
   //endregion

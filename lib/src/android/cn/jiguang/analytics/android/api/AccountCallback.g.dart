@@ -19,11 +19,14 @@ mixin cn_jiguang_analytics_android_api_AccountCallback on java_lang_Object {
 
   
 
-  
+  @override
+  final String tag__ = 'janalytics_fluttify';
 
   
 
-  @mustCallSuper
+  
+
+  /* @mustCallSuper */
   Future<void> callback(int var1, String var2) {}
   
 }
