@@ -7,6 +7,8 @@
 #import "SubHandler/SubHandler0.h"
 #import "SubHandler/Custom/SubHandlerCustom.h"
 #import "FluttifyMessageCodec.h"
+#import <JAnalytics/JANALYTICSEventObject.h>
+#import <JAnalytics/JANALYTICSService.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -14,6 +16,8 @@ extern NSMutableDictionary<NSString*, NSObject*>* STACK;
 extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
 // 日志打印开关
 extern BOOL enableLog;
+
+@interface JanalyticsFluttifyPlugin (_Delegate)  @end
 
 @implementation JanalyticsFluttifyPlugin {
   NSMutableDictionary<NSString*, Handler>* _handlerMap;
