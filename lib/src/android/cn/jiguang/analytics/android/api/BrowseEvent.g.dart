@@ -16,40 +16,49 @@ class cn_jiguang_analytics_android_api_BrowseEvent extends cn_jiguang_analytics_
   //region constants
   static const String name__ = 'cn.jiguang.analytics.android.api.BrowseEvent';
 
+  @override
+  final String tag__ = 'janalytics_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<cn_jiguang_analytics_android_api_BrowseEvent> create__String__String__String__float(String var1, String var2, String var3, double var4) async {
-    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_BrowseEvent__String__String__String__float', {"var1": var1, "var2": var2, "var3": var3, "var4": var4});
-    final object = cn_jiguang_analytics_android_api_BrowseEvent()..refId = refId..tag__ = 'janalytics_fluttify';
-    return object;
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcn_jiguang_analytics_android_api_BrowseEvent__String__String__String__float',
+      {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
+    );
+    return JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_BrowseEvent>(__result__);
   }
   
   static Future<cn_jiguang_analytics_android_api_BrowseEvent> create__() async {
-    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_jiguang_analytics_android_api_BrowseEvent__', );
-    final object = cn_jiguang_analytics_android_api_BrowseEvent()..refId = refId..tag__ = 'janalytics_fluttify';
-    return object;
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcn_jiguang_analytics_android_api_BrowseEvent__',
+    
+    );
+    return JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_BrowseEvent>(__result__);
   }
   
   static Future<List<cn_jiguang_analytics_android_api_BrowseEvent>> create_batch__String__String__String__float(List<String> var1, List<String> var2, List<String> var3, List<double> var4) async {
-    if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_BrowseEvent__String__String__String__float', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
-  
-    final List<cn_jiguang_analytics_android_api_BrowseEvent> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_BrowseEvent()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    return typedResult;
+    assert(var1.length == var2.length && var2.length == var3.length && var3.length == var4.length);
+    final __result_batch__ = await  kJanalyticsFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcn_jiguang_analytics_android_api_BrowseEvent__String__String__String__float',
+      [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]
+    );
+    return __result_batch__
+        .map((it) => JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_BrowseEvent>(it))
+        .toList();
   }
   
   static Future<List<cn_jiguang_analytics_android_api_BrowseEvent>> create_batch__(int length) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_jiguang_analytics_android_api_BrowseEvent__', {'length': length});
-  
-    final List<cn_jiguang_analytics_android_api_BrowseEvent> typedResult = resultBatch.map((result) => cn_jiguang_analytics_android_api_BrowseEvent()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    return typedResult;
+    assert(true);
+    final __result_batch__ = await  kJanalyticsFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcn_jiguang_analytics_android_api_BrowseEvent__',
+      {'length': length}
+    );
+    return __result_batch__
+        .map((it) => JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_BrowseEvent>(it))
+        .toList();
   }
   
   //endregion
@@ -71,19 +80,13 @@ class cn_jiguang_analytics_android_api_BrowseEvent extends cn_jiguang_analytics_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseId', {"__this__": this});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseId', {"__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -94,19 +97,13 @@ class cn_jiguang_analytics_android_api_BrowseEvent extends cn_jiguang_analytics_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseId', {"var1": var1, "__this__": this});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseId', {"var1": var1, "__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = cn_jiguang_analytics_android_api_BrowseEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      return __return__;
-    }
+    return JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_BrowseEvent>(__result__);
   }
   
   
@@ -117,19 +114,13 @@ class cn_jiguang_analytics_android_api_BrowseEvent extends cn_jiguang_analytics_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseName', {"__this__": this});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseName', {"__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -140,19 +131,13 @@ class cn_jiguang_analytics_android_api_BrowseEvent extends cn_jiguang_analytics_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseName', {"var1": var1, "__this__": this});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseName', {"var1": var1, "__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = cn_jiguang_analytics_android_api_BrowseEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      return __return__;
-    }
+    return JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_BrowseEvent>(__result__);
   }
   
   
@@ -163,19 +148,13 @@ class cn_jiguang_analytics_android_api_BrowseEvent extends cn_jiguang_analytics_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseType', {"__this__": this});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseType', {"__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -186,19 +165,13 @@ class cn_jiguang_analytics_android_api_BrowseEvent extends cn_jiguang_analytics_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseType', {"var1": var1, "__this__": this});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseType', {"var1": var1, "__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = cn_jiguang_analytics_android_api_BrowseEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      return __return__;
-    }
+    return JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_BrowseEvent>(__result__);
   }
   
   
@@ -209,19 +182,13 @@ class cn_jiguang_analytics_android_api_BrowseEvent extends cn_jiguang_analytics_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseDuration', {"__this__": this});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseDuration', {"__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -232,22 +199,21 @@ class cn_jiguang_analytics_android_api_BrowseEvent extends cn_jiguang_analytics_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseDuration', {"var1": var1, "__this__": this});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseDuration', {"var1": var1, "__this__": this});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = cn_jiguang_analytics_android_api_BrowseEvent()..refId = __result__..tag__ = 'janalytics_fluttify';
-      return __return__;
-    }
+    return JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_BrowseEvent>(__result__);
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'cn_jiguang_analytics_android_api_BrowseEvent{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension cn_jiguang_analytics_android_api_BrowseEvent_Batch on List<cn_jiguang_analytics_android_api_BrowseEvent> {
@@ -262,154 +228,90 @@ extension cn_jiguang_analytics_android_api_BrowseEvent_Batch on List<cn_jiguang_
   //region methods
   
   Future<List<String>> getBrowseId_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   
   Future<List<cn_jiguang_analytics_android_api_BrowseEvent>> setBrowseId_batch(List<String> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_BrowseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_BrowseEvent>(__result__)).cast<cn_jiguang_analytics_android_api_BrowseEvent>().toList();
   }
   
   
   Future<List<String>> getBrowseName_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   
   Future<List<cn_jiguang_analytics_android_api_BrowseEvent>> setBrowseName_batch(List<String> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_BrowseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_BrowseEvent>(__result__)).cast<cn_jiguang_analytics_android_api_BrowseEvent>().toList();
   }
   
   
   Future<List<String>> getBrowseType_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   
   Future<List<cn_jiguang_analytics_android_api_BrowseEvent>> setBrowseType_batch(List<String> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_BrowseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_BrowseEvent>(__result__)).cast<cn_jiguang_analytics_android_api_BrowseEvent>().toList();
   }
   
   
   Future<List<double>> getBrowseDuration_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::getBrowseDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
   }
   
   
   Future<List<cn_jiguang_analytics_android_api_BrowseEvent>> setBrowseDuration_batch(List<double> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('cn.jiguang.analytics.android.api.BrowseEvent::setBrowseDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => cn_jiguang_analytics_android_api_BrowseEvent()..refId = __result__..tag__ = 'janalytics_fluttify').toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => JanalyticsFluttifyAndroidAs<cn_jiguang_analytics_android_api_BrowseEvent>(__result__)).cast<cn_jiguang_analytics_android_api_BrowseEvent>().toList();
   }
   
   //endregion

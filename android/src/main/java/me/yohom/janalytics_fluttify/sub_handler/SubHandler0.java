@@ -61,323 +61,6 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.android.view.BuryWebActivity::onBackPressed", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.view.BuryWebActivity __this__ = (cn.jiguang.analytics.android.view.BuryWebActivity) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.view.BuryWebActivity@" + __this__ + "::onBackPressed(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onBackPressed();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.CountEvent::getEventId", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.CountEvent __this__ = (cn.jiguang.analytics.android.api.CountEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CountEvent@" + __this__ + "::getEventId(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getEventId();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.CountEvent::setEventId", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.CountEvent __this__ = (cn.jiguang.analytics.android.api.CountEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CountEvent@" + __this__ + "::setEventId(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.CountEvent __result__ = null;
-                try {
-                    __result__ = __this__.setEventId(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.RegisterEvent::getRegisterMthod", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.RegisterEvent@" + __this__ + "::getRegisterMthod(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getRegisterMthod();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.RegisterEvent::setRegisterMethod", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.RegisterEvent@" + __this__ + "::setRegisterMethod(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.RegisterEvent __result__ = null;
-                try {
-                    __result__ = __this__.setRegisterMethod(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.RegisterEvent::getRegisterSuccess", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.RegisterEvent@" + __this__ + "::getRegisterSuccess(" + "" + ")");
-                }
-            
-                // invoke native method
-                Boolean __result__ = null;
-                try {
-                    __result__ = __this__.getRegisterSuccess();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.RegisterEvent::setRegisterSuccess", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.RegisterEvent@" + __this__ + "::setRegisterSuccess(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.RegisterEvent __result__ = null;
-                try {
-                    __result__ = __this__.setRegisterSuccess(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow(" + var0 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    cn.jiguang.analytics.android.api.agent.JMMIDlgPupW.onDismissPopupWindow(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.agent.JMMIClick::clickOn", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.view.View var0 = (android.view.View) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.agent.JMMIClick::clickOn(" + var0 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    cn.jiguang.analytics.android.api.agent.JMMIClick.clickOn(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.agent.JMMIClick::onClick__Object__android_view_View", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                android.view.View var1 = (android.view.View) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.agent.JMMIClick::onClick(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    cn.jiguang.analytics.android.api.agent.JMMIClick.onClick(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.agent.JMMIClick::performClickTabLayoutTabView", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.view.View var0 = (android.view.View) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.agent.JMMIClick::performClickTabLayoutTabView(" + var0 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    cn.jiguang.analytics.android.api.agent.JMMIClick.performClickTabLayoutTabView(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
             put("cn.jiguang.analytics.android.api.Account::getAccountId", (__args__, __methodResult__) -> {
                 // args
             
@@ -727,517 +410,7 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JAct::onContentChanged", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JAct __this__ = (cn.jiguang.analytics.android.api.aop.JAct) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JAct@" + __this__ + "::onContentChanged(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onContentChanged();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JFragAct::onContentChanged", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JFragAct __this__ = (cn.jiguang.analytics.android.api.aop.JFragAct) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JFragAct@" + __this__ + "::onContentChanged(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onContentChanged();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::onActivityCreated", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.os.Bundle var1 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFragV4@" + __this__ + "::onActivityCreated(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onActivityCreated(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::onStart", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFragV4@" + __this__ + "::onStart(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStart();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::onResume", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFragV4@" + __this__ + "::onResume(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onResume();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::onPause", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFragV4@" + __this__ + "::onPause(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onPause();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::onStop", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFragV4@" + __this__ + "::onStop(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStop();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::setUserVisibleHint", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFragV4@" + __this__ + "::setUserVisibleHint(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setUserVisibleHint(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::onHiddenChanged", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFragV4@" + __this__ + "::onHiddenChanged(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onHiddenChanged(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListAct::onContentChanged", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListAct __this__ = (cn.jiguang.analytics.android.api.aop.JListAct) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListAct@" + __this__ + "::onContentChanged(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onContentChanged();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JACAct::onContentChanged", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JACAct __this__ = (cn.jiguang.analytics.android.api.aop.JACAct) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JACAct@" + __this__ + "::onContentChanged(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onContentChanged();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::onActivityCreated", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.os.Bundle var1 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFrag@" + __this__ + "::onActivityCreated(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onActivityCreated(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::onStart", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFrag@" + __this__ + "::onStart(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStart();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::onResume", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFrag@" + __this__ + "::onResume(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onResume();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::onPause", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFrag@" + __this__ + "::onPause(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onPause();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::onStop", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFrag@" + __this__ + "::onStop(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStop();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::setUserVisibleHint", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFrag@" + __this__ + "::setUserVisibleHint(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setUserVisibleHint(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::onHiddenChanged", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JListFrag@" + __this__ + "::onHiddenChanged(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onHiddenChanged(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::clickOn", (__args__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.agent.JMMIClick::clickOn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
                 android.view.View var0 = (android.view.View) ((Map<String, Object>) __args__).get("var0");
@@ -1247,13 +420,13 @@ public class SubHandler0 {
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JMMIAgent::clickOn(" + var0 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.agent.JMMIClick::clickOn(" + var0 + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    cn.jiguang.analytics.android.api.aop.JMMIAgent.clickOn(var0);
+                    cn.jiguang.analytics.android.api.agent.JMMIClick.clickOn(var0);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1266,7 +439,7 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onClick__Object__android_view_View", (__args__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.agent.JMMIClick::onClick__Object__android_view_View", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
                 java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
@@ -1278,13 +451,13 @@ public class SubHandler0 {
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JMMIAgent::onClick(" + var0 + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.agent.JMMIClick::onClick(" + var0 + var1 + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    cn.jiguang.analytics.android.api.aop.JMMIAgent.onClick(var0, var1);
+                    cn.jiguang.analytics.android.api.agent.JMMIClick.onClick(var0, var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1297,7 +470,7 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onViewShow", (__args__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.agent.JMMIClick::performClickTabLayoutTabView", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
                 android.view.View var0 = (android.view.View) ((Map<String, Object>) __args__).get("var0");
@@ -1307,13 +480,13 @@ public class SubHandler0 {
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JMMIAgent::onViewShow(" + var0 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.agent.JMMIClick::performClickTabLayoutTabView(" + var0 + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    cn.jiguang.analytics.android.api.aop.JMMIAgent.onViewShow(var0);
+                    cn.jiguang.analytics.android.api.agent.JMMIClick.performClickTabLayoutTabView(var0);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1326,36 +499,7 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onViewHide", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.view.View var0 = (android.view.View) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JMMIAgent::onViewHide(" + var0 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    cn.jiguang.analytics.android.api.aop.JMMIAgent.onViewHide(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onResume", (__args__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
                 java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
@@ -1365,1904 +509,13 @@ public class SubHandler0 {
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JMMIAgent::onResume(" + var0 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow(" + var0 + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    cn.jiguang.analytics.android.api.aop.JMMIAgent.onResume(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onPause", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JMMIAgent::onPause(" + var0 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    cn.jiguang.analytics.android.api.aop.JMMIAgent.onPause(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::fragmentSetUserVisibleHint", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JMMIAgent::fragmentSetUserVisibleHint(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    cn.jiguang.analytics.android.api.aop.JMMIAgent.fragmentSetUserVisibleHint(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::fragmentOnHiddenChanged", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JMMIAgent::fragmentOnHiddenChanged(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    cn.jiguang.analytics.android.api.aop.JMMIAgent.fragmentOnHiddenChanged(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onCreateView", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                android.view.View var1 = (android.view.View) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JMMIAgent::onCreateView(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    cn.jiguang.analytics.android.api.aop.JMMIAgent.onCreateView(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onLocationChanged", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
-                // ref arg
-                android.location.Location var1 = (android.location.Location) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JMMIAgent::onLocationChanged(" + var0 + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    cn.jiguang.analytics.android.api.aop.JMMIAgent.onLocationChanged(var0, var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::handleClickResult", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JMMIAgent::handleClickResult(" + var0 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    cn.jiguang.analytics.android.api.aop.JMMIAgent.handleClickResult(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::performClickTabLayoutTabView", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.view.View var0 = (android.view.View) ((Map<String, Object>) __args__).get("var0");
-            
-                // ref
-            
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JMMIAgent::performClickTabLayoutTabView(" + var0 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    cn.jiguang.analytics.android.api.aop.JMMIAgent.performClickTabLayoutTabView(var0);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JACActAx::onContentChanged", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JACActAx __this__ = (cn.jiguang.analytics.android.api.aop.JACActAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JACActAx@" + __this__ + "::onContentChanged(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onContentChanged();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::onActivityCreated", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.os.Bundle var1 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JPrefFrag __this__ = (cn.jiguang.analytics.android.api.aop.JPrefFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JPrefFrag@" + __this__ + "::onActivityCreated(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onActivityCreated(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::onStart", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JPrefFrag __this__ = (cn.jiguang.analytics.android.api.aop.JPrefFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JPrefFrag@" + __this__ + "::onStart(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStart();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::onResume", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JPrefFrag __this__ = (cn.jiguang.analytics.android.api.aop.JPrefFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JPrefFrag@" + __this__ + "::onResume(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onResume();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::onPause", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JPrefFrag __this__ = (cn.jiguang.analytics.android.api.aop.JPrefFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JPrefFrag@" + __this__ + "::onPause(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onPause();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::onStop", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JPrefFrag __this__ = (cn.jiguang.analytics.android.api.aop.JPrefFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JPrefFrag@" + __this__ + "::onStop(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStop();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::setUserVisibleHint", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JPrefFrag __this__ = (cn.jiguang.analytics.android.api.aop.JPrefFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JPrefFrag@" + __this__ + "::setUserVisibleHint(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setUserVisibleHint(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JPrefFrag::onHiddenChanged", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JPrefFrag __this__ = (cn.jiguang.analytics.android.api.aop.JPrefFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JPrefFrag@" + __this__ + "::onHiddenChanged(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onHiddenChanged(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::onActivityCreated", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.os.Bundle var1 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFrag __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFrag@" + __this__ + "::onActivityCreated(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onActivityCreated(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::onStart", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFrag __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFrag@" + __this__ + "::onStart(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStart();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::onResume", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFrag __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFrag@" + __this__ + "::onResume(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onResume();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::onPause", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFrag __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFrag@" + __this__ + "::onPause(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onPause();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::onStop", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFrag __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFrag@" + __this__ + "::onStop(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStop();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::setUserVisibleHint", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFrag __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFrag@" + __this__ + "::setUserVisibleHint(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setUserVisibleHint(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFrag::onHiddenChanged", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFrag __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFrag@" + __this__ + "::onHiddenChanged(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onHiddenChanged(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JPrefAct::onContentChanged", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JPrefAct __this__ = (cn.jiguang.analytics.android.api.aop.JPrefAct) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JPrefAct@" + __this__ + "::onContentChanged(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onContentChanged();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::onActivityCreated", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.os.Bundle var1 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragV4@" + __this__ + "::onActivityCreated(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onActivityCreated(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::onStart", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragV4@" + __this__ + "::onStart(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStart();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::onResume", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragV4@" + __this__ + "::onResume(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onResume();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::onPause", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragV4@" + __this__ + "::onPause(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onPause();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::onStop", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragV4@" + __this__ + "::onStop(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStop();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::setUserVisibleHint", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragV4@" + __this__ + "::setUserVisibleHint(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setUserVisibleHint(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragV4::onHiddenChanged", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragV4@" + __this__ + "::onHiddenChanged(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onHiddenChanged(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JFragAx::onActivityCreated", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.os.Bundle var1 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JFragAx@" + __this__ + "::onActivityCreated(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onActivityCreated(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JFragAx::onStart", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JFragAx@" + __this__ + "::onStart(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStart();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JFragAx::onResume", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JFragAx@" + __this__ + "::onResume(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onResume();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JFragAx::onPause", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JFragAx@" + __this__ + "::onPause(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onPause();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JFragAx::onStop", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JFragAx@" + __this__ + "::onStop(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStop();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JFragAx::setUserVisibleHint", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JFragAx@" + __this__ + "::setUserVisibleHint(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setUserVisibleHint(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JFragAx::onHiddenChanged", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JFragAx@" + __this__ + "::onHiddenChanged(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onHiddenChanged(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JFragActAx::onContentChanged", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JFragActAx __this__ = (cn.jiguang.analytics.android.api.aop.JFragActAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JFragActAx@" + __this__ + "::onContentChanged(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onContentChanged();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::onActivityCreated", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                android.os.Bundle var1 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragAx@" + __this__ + "::onActivityCreated(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onActivityCreated(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::onStart", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragAx@" + __this__ + "::onStart(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStart();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::onResume", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragAx@" + __this__ + "::onResume(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onResume();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::onPause", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragAx@" + __this__ + "::onPause(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onPause();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::onStop", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragAx@" + __this__ + "::onStop(" + "" + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onStop();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::setUserVisibleHint", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragAx@" + __this__ + "::setUserVisibleHint(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setUserVisibleHint(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JDlgFragAx::onHiddenChanged", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.aop.JDlgFragAx __this__ = (cn.jiguang.analytics.android.api.aop.JDlgFragAx) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.aop.JDlgFragAx@" + __this__ + "::onHiddenChanged(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.onHiddenChanged(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.Event::setExtMap", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::setExtMap(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.Event __result__ = null;
-                try {
-                    __result__ = __this__.setExtMap(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.Event::addExtMap", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::addExtMap(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.Event __result__ = null;
-                try {
-                    __result__ = __this__.addExtMap(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.Event::getExtMap", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::getExtMap(" + "" + ")");
-                }
-            
-                // invoke native method
-                java.util.Map<String,String> __result__ = null;
-                try {
-                    __result__ = __this__.getExtMap();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.Event::getItime", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::getItime(" + "" + ")");
-                }
-            
-                // invoke native method
-                Long __result__ = null;
-                try {
-                    __result__ = __this__.getItime();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.Event::setItime", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::setItime(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.Event __result__ = null;
-                try {
-                    __result__ = __this__.setItime(var1.longValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.Event::addKeyValue", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // ref
-                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::addKeyValue(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.Event __result__ = null;
-                try {
-                    __result__ = __this__.addKeyValue(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.Event::checkEvent", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::checkEvent(" + "" + ")");
-                }
-            
-                // invoke native method
-                Boolean __result__ = null;
-                try {
-                    __result__ = __this__.checkEvent();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsid", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchaseGoodsid(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getPurchaseGoodsid();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsid", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchaseGoodsid(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
-                try {
-                    __result__ = __this__.setPurchaseGoodsid(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsname", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchaseGoodsname(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getPurchaseGoodsname();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsname", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchaseGoodsname(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
-                try {
-                    __result__ = __this__.setPurchaseGoodsname(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchasePrice", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchasePrice(" + "" + ")");
-                }
-            
-                // invoke native method
-                Double __result__ = null;
-                try {
-                    __result__ = __this__.getPurchasePrice();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchasePrice", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchasePrice(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
-                try {
-                    __result__ = __this__.setPurchasePrice(var1.doubleValue());
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseSuccess", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchaseSuccess(" + "" + ")");
-                }
-            
-                // invoke native method
-                Boolean __result__ = null;
-                try {
-                    __result__ = __this__.getPurchaseSuccess();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseSuccess", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchaseSuccess(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
-                try {
-                    __result__ = __this__.setPurchaseSuccess(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseCurrency", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchaseCurrency(" + "" + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.Currency __result__ = null;
-                try {
-                    __result__ = __this__.getPurchaseCurrency();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseCurrency", (__args__, __methodResult__) -> {
-                // args
-                // enum arg
-                cn.jiguang.analytics.android.api.Currency var1 = cn.jiguang.analytics.android.api.Currency.values()[(int) ((Map<String, Object>) __args__).get("var1")];
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchaseCurrency(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
-                try {
-                    __result__ = __this__.setPurchaseCurrency(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodstype", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchaseGoodstype(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getPurchaseGoodstype();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodstype", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchaseGoodstype(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
-                try {
-                    __result__ = __this__.setPurchaseGoodstype(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsCount", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchaseGoodsCount(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getPurchaseGoodsCount();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsCount", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchaseGoodsCount(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
-                try {
-                    __result__ = __this__.setPurchaseGoodsCount(var1.intValue());
+                    cn.jiguang.analytics.android.api.agent.JMMIDlgPupW.onDismissPopupWindow(var0);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3503,22 +756,22 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.LoginEvent::getLoginMethod", (__args__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.CalculateEvent::getEventId", (__args__, __methodResult__) -> {
                 // args
             
             
                 // ref
-                cn.jiguang.analytics.android.api.LoginEvent __this__ = (cn.jiguang.analytics.android.api.LoginEvent) ((Map<String, Object>) __args__).get("__this__");
+                cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.LoginEvent@" + __this__ + "::getLoginMethod(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + __this__ + "::getEventId(" + "" + ")");
                 }
             
                 // invoke native method
                 String __result__ = null;
                 try {
-                    __result__ = __this__.getLoginMethod();
+                    __result__ = __this__.getEventId();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3531,23 +784,23 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.LoginEvent::setLoginMethod", (__args__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.CalculateEvent::setEventId", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                cn.jiguang.analytics.android.api.LoginEvent __this__ = (cn.jiguang.analytics.android.api.LoginEvent) ((Map<String, Object>) __args__).get("__this__");
+                cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.LoginEvent@" + __this__ + "::setLoginMethod(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + __this__ + "::setEventId(" + var1 + ")");
                 }
             
                 // invoke native method
-                cn.jiguang.analytics.android.api.LoginEvent __result__ = null;
+                cn.jiguang.analytics.android.api.CalculateEvent __result__ = null;
                 try {
-                    __result__ = __this__.setLoginMethod(var1);
+                    __result__ = __this__.setEventId(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3560,51 +813,339 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.LoginEvent::getLoginSuccess", (__args__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.CalculateEvent::getEventValue", (__args__, __methodResult__) -> {
                 // args
             
             
                 // ref
-                cn.jiguang.analytics.android.api.LoginEvent __this__ = (cn.jiguang.analytics.android.api.LoginEvent) ((Map<String, Object>) __args__).get("__this__");
+                cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.LoginEvent@" + __this__ + "::getLoginSuccess(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + __this__ + "::getEventValue(" + "" + ")");
+                }
+            
+                // invoke native method
+                Double __result__ = null;
+                try {
+                    __result__ = __this__.getEventValue();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CalculateEvent::setEventValue", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + __this__ + "::setEventValue(" + var1 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.CalculateEvent __result__ = null;
+                try {
+                    __result__ = __this__.setEventValue(var1.doubleValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CalculateEvent::addEventValue", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + __this__ + "::addEventValue(" + var1 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.CalculateEvent __result__ = null;
+                try {
+                    __result__ = __this__.addEventValue(var1.doubleValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CountEvent::getEventId", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                cn.jiguang.analytics.android.api.CountEvent __this__ = (cn.jiguang.analytics.android.api.CountEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CountEvent@" + __this__ + "::getEventId(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getEventId();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CountEvent::setEventId", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                cn.jiguang.analytics.android.api.CountEvent __this__ = (cn.jiguang.analytics.android.api.CountEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CountEvent@" + __this__ + "::setEventId(" + var1 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.CountEvent __result__ = null;
+                try {
+                    __result__ = __this__.setEventId(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::setExtMap", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::setExtMap(" + var1 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.Event __result__ = null;
+                try {
+                    __result__ = __this__.setExtMap(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::addExtMap", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::addExtMap(" + var1 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.Event __result__ = null;
+                try {
+                    __result__ = __this__.addExtMap(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::getExtMap", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::getExtMap(" + "" + ")");
+                }
+            
+                // invoke native method
+                java.util.Map<String,String> __result__ = null;
+                try {
+                    __result__ = __this__.getExtMap();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::getItime", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::getItime(" + "" + ")");
+                }
+            
+                // invoke native method
+                Long __result__ = null;
+                try {
+                    __result__ = __this__.getItime();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::setItime", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::setItime(" + var1 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.Event __result__ = null;
+                try {
+                    __result__ = __this__.setItime(var1.longValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::addKeyValue", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::addKeyValue(" + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.Event __result__ = null;
+                try {
+                    __result__ = __this__.addKeyValue(var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::checkEvent", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.Event@" + __this__ + "::checkEvent(" + "" + ")");
                 }
             
                 // invoke native method
                 Boolean __result__ = null;
                 try {
-                    __result__ = __this__.getLoginSuccess();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.LoginEvent::setLoginSuccess", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                cn.jiguang.analytics.android.api.LoginEvent __this__ = (cn.jiguang.analytics.android.api.LoginEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.LoginEvent@" + __this__ + "::setLoginSuccess(" + var1 + ")");
-                }
-            
-                // invoke native method
-                cn.jiguang.analytics.android.api.LoginEvent __result__ = null;
-                try {
-                    __result__ = __this__.setLoginSuccess(var1);
+                    __result__ = __this__.checkEvent();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4187,22 +1728,22 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.CalculateEvent::getEventId", (__args__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.LoginEvent::getLoginMethod", (__args__, __methodResult__) -> {
                 // args
             
             
                 // ref
-                cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
+                cn.jiguang.analytics.android.api.LoginEvent __this__ = (cn.jiguang.analytics.android.api.LoginEvent) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + __this__ + "::getEventId(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.LoginEvent@" + __this__ + "::getLoginMethod(" + "" + ")");
                 }
             
                 // invoke native method
                 String __result__ = null;
                 try {
-                    __result__ = __this__.getEventId();
+                    __result__ = __this__.getLoginMethod();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4215,23 +1756,23 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.CalculateEvent::setEventId", (__args__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.LoginEvent::setLoginMethod", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
+                cn.jiguang.analytics.android.api.LoginEvent __this__ = (cn.jiguang.analytics.android.api.LoginEvent) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + __this__ + "::setEventId(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.LoginEvent@" + __this__ + "::setLoginMethod(" + var1 + ")");
                 }
             
                 // invoke native method
-                cn.jiguang.analytics.android.api.CalculateEvent __result__ = null;
+                cn.jiguang.analytics.android.api.LoginEvent __result__ = null;
                 try {
-                    __result__ = __this__.setEventId(var1);
+                    __result__ = __this__.setLoginMethod(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4244,22 +1785,193 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.CalculateEvent::getEventValue", (__args__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.LoginEvent::getLoginSuccess", (__args__, __methodResult__) -> {
                 // args
             
             
                 // ref
-                cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
+                cn.jiguang.analytics.android.api.LoginEvent __this__ = (cn.jiguang.analytics.android.api.LoginEvent) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + __this__ + "::getEventValue(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.LoginEvent@" + __this__ + "::getLoginSuccess(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.getLoginSuccess();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.LoginEvent::setLoginSuccess", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                cn.jiguang.analytics.android.api.LoginEvent __this__ = (cn.jiguang.analytics.android.api.LoginEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.LoginEvent@" + __this__ + "::setLoginSuccess(" + var1 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.LoginEvent __result__ = null;
+                try {
+                    __result__ = __this__.setLoginSuccess(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsid", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchaseGoodsid(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getPurchaseGoodsid();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsid", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchaseGoodsid(" + var1 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
+                try {
+                    __result__ = __this__.setPurchaseGoodsid(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsname", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchaseGoodsname(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getPurchaseGoodsname();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsname", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchaseGoodsname(" + var1 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
+                try {
+                    __result__ = __this__.setPurchaseGoodsname(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchasePrice", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchasePrice(" + "" + ")");
                 }
             
                 // invoke native method
                 Double __result__ = null;
                 try {
-                    __result__ = __this__.getEventValue();
+                    __result__ = __this__.getPurchasePrice();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4272,23 +1984,23 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.CalculateEvent::setEventValue", (__args__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchasePrice", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
                 Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + __this__ + "::setEventValue(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchasePrice(" + var1 + ")");
                 }
             
                 // invoke native method
-                cn.jiguang.analytics.android.api.CalculateEvent __result__ = null;
+                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
                 try {
-                    __result__ = __this__.setEventValue(var1.doubleValue());
+                    __result__ = __this__.setPurchasePrice(var1.doubleValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4301,23 +2013,222 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.CalculateEvent::addEventValue", (__args__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseSuccess", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchaseSuccess(" + "" + ")");
+                }
+            
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.getPurchaseSuccess();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseSuccess", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchaseSuccess(" + var1 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
+                try {
+                    __result__ = __this__.setPurchaseSuccess(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseCurrency", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchaseCurrency(" + "" + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.Currency __result__ = null;
+                try {
+                    __result__ = __this__.getPurchaseCurrency();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseCurrency", (__args__, __methodResult__) -> {
+                // args
+                // enum arg
+                cn.jiguang.analytics.android.api.Currency var1 = cn.jiguang.analytics.android.api.Currency.values()[(int) ((Map<String, Object>) __args__).get("var1")];
+            
+                // ref
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchaseCurrency(" + var1 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
+                try {
+                    __result__ = __this__.setPurchaseCurrency(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodstype", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchaseGoodstype(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getPurchaseGoodstype();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodstype", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchaseGoodstype(" + var1 + ")");
+                }
+            
+                // invoke native method
+                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
+                try {
+                    __result__ = __this__.setPurchaseGoodstype(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsCount", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::getPurchaseGoodsCount(" + "" + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.getPurchaseGoodsCount();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsCount", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
                 Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
+                cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.CalculateEvent@" + __this__ + "::addEventValue(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.PurchaseEvent@" + __this__ + "::setPurchaseGoodsCount(" + var1 + ")");
                 }
             
                 // invoke native method
-                cn.jiguang.analytics.android.api.CalculateEvent __result__ = null;
+                cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
                 try {
-                    __result__ = __this__.addEventValue(var1.doubleValue());
+                    __result__ = __this__.setPurchaseGoodsCount(var1.intValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4330,354 +2241,146 @@ public class SubHandler0 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.view.BuryWebActivity::onBackPressed_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
+            put("cn.jiguang.analytics.android.api.RegisterEvent::getRegisterMthod", (__args__, __methodResult__) -> {
+                // args
             
             
-                    // ref
-                    cn.jiguang.analytics.android.view.BuryWebActivity __this__ = (cn.jiguang.analytics.android.view.BuryWebActivity) ((Map<String, Object>) __args__).get("__this__");
+                // ref
+                cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
             
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onBackPressed();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.RegisterEvent@" + __this__ + "::getRegisterMthod(" + "" + ")");
                 }
             
-                __methodResult__.success(__resultList__);
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getRegisterMthod();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.CountEvent::getEventId_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.analytics.android.api.RegisterEvent::setRegisterMethod", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                // ref
+                cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
             
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.CountEvent __this__ = (cn.jiguang.analytics.android.api.CountEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getEventId();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.RegisterEvent@" + __this__ + "::setRegisterMethod(" + var1 + ")");
                 }
             
-                __methodResult__.success(__resultList__);
+                // invoke native method
+                cn.jiguang.analytics.android.api.RegisterEvent __result__ = null;
+                try {
+                    __result__ = __this__.setRegisterMethod(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.CountEvent::setEventId_batch", (__argsBatch__, __methodResult__) -> {
-                List<cn.jiguang.analytics.android.api.CountEvent> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.analytics.android.api.RegisterEvent::getRegisterSuccess", (__args__, __methodResult__) -> {
+                // args
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref
+                cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
             
-                    // ref
-                    cn.jiguang.analytics.android.api.CountEvent __this__ = (cn.jiguang.analytics.android.api.CountEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    cn.jiguang.analytics.android.api.CountEvent __result__ = null;
-                    try {
-                        __result__ = __this__.setEventId(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.RegisterEvent@" + __this__ + "::getRegisterSuccess(" + "" + ")");
                 }
             
-                __methodResult__.success(__resultList__);
+                // invoke native method
+                Boolean __result__ = null;
+                try {
+                    __result__ = __this__.getRegisterSuccess();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.RegisterEvent::getRegisterMthod_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.analytics.android.api.RegisterEvent::setRegisterSuccess", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                // ref
+                cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
             
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getRegisterMthod();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.api.RegisterEvent@" + __this__ + "::setRegisterSuccess(" + var1 + ")");
                 }
             
-                __methodResult__.success(__resultList__);
+                // invoke native method
+                cn.jiguang.analytics.android.api.RegisterEvent __result__ = null;
+                try {
+                    __result__ = __this__.setRegisterSuccess(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.RegisterEvent::setRegisterMethod_batch", (__argsBatch__, __methodResult__) -> {
-                List<cn.jiguang.analytics.android.api.RegisterEvent> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.analytics.android.view.BuryWebActivity::onBackPressed", (__args__, __methodResult__) -> {
+                // args
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref
+                cn.jiguang.analytics.android.view.BuryWebActivity __this__ = (cn.jiguang.analytics.android.view.BuryWebActivity) ((Map<String, Object>) __args__).get("__this__");
             
-                    // ref
-                    cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    cn.jiguang.analytics.android.api.RegisterEvent __result__ = null;
-                    try {
-                        __result__ = __this__.setRegisterMethod(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: cn.jiguang.analytics.android.view.BuryWebActivity@" + __this__ + "::onBackPressed(" + "" + ")");
                 }
             
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.RegisterEvent::getRegisterSuccess_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.getRegisterSuccess();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.onBackPressed();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
                     }
-            
-                    __resultList__.add(__result__);
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
                 }
             
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.RegisterEvent::setRegisterSuccess_batch", (__argsBatch__, __methodResult__) -> {
-                List<cn.jiguang.analytics.android.api.RegisterEvent> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    cn.jiguang.analytics.android.api.RegisterEvent __result__ = null;
-                    try {
-                        __result__ = __this__.setRegisterSuccess(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.analytics.android.api.agent.JMMIDlgPupW.onDismissPopupWindow(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.agent.JMMIClick::clickOn_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.view.View var0 = (android.view.View) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.analytics.android.api.agent.JMMIClick.clickOn(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.agent.JMMIClick::onClick__Object__android_view_View_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    android.view.View var1 = (android.view.View) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.analytics.android.api.agent.JMMIClick.onClick(var0, var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.agent.JMMIClick::performClickTabLayoutTabView_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.view.View var0 = (android.view.View) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.analytics.android.api.agent.JMMIClick.performClickTabLayoutTabView(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__result__);
             });
             // method
             put("cn.jiguang.analytics.android.api.Account::getAccountId_batch", (__argsBatch__, __methodResult__) -> {
@@ -5065,571 +2768,7 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JAct::onContentChanged_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JAct __this__ = (cn.jiguang.analytics.android.api.aop.JAct) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onContentChanged();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JFragAct::onContentChanged_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JFragAct __this__ = (cn.jiguang.analytics.android.api.aop.JFragAct) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onContentChanged();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::onActivityCreated_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.os.Bundle var1 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onActivityCreated(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::onStart_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onStart();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::onResume_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onResume();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::onPause_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onPause();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::onStop_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onStop();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::setUserVisibleHint_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.setUserVisibleHint(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFragV4::onHiddenChanged_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFragV4 __this__ = (cn.jiguang.analytics.android.api.aop.JListFragV4) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onHiddenChanged(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListAct::onContentChanged_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListAct __this__ = (cn.jiguang.analytics.android.api.aop.JListAct) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onContentChanged();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JACAct::onContentChanged_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JACAct __this__ = (cn.jiguang.analytics.android.api.aop.JACAct) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onContentChanged();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::onActivityCreated_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.os.Bundle var1 = (android.os.Bundle) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onActivityCreated(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::onStart_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onStart();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::onResume_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onResume();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::onPause_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onPause();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::onStop_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onStop();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::setUserVisibleHint_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.setUserVisibleHint(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JListFrag::onHiddenChanged_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    cn.jiguang.analytics.android.api.aop.JListFrag __this__ = (cn.jiguang.analytics.android.api.aop.JListFrag) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.onHiddenChanged(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::clickOn_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.agent.JMMIClick::clickOn_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -5645,7 +2784,7 @@ public class SubHandler0 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        cn.jiguang.analytics.android.api.aop.JMMIAgent.clickOn(var0);
+                        cn.jiguang.analytics.android.api.agent.JMMIClick.clickOn(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5661,7 +2800,7 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onClick__Object__android_view_View_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.agent.JMMIClick::onClick__Object__android_view_View_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -5679,7 +2818,7 @@ public class SubHandler0 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        cn.jiguang.analytics.android.api.aop.JMMIAgent.onClick(var0, var1);
+                        cn.jiguang.analytics.android.api.agent.JMMIClick.onClick(var0, var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5695,7 +2834,7 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onViewShow_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.agent.JMMIClick::performClickTabLayoutTabView_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -5711,7 +2850,7 @@ public class SubHandler0 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        cn.jiguang.analytics.android.api.aop.JMMIAgent.onViewShow(var0);
+                        cn.jiguang.analytics.android.api.agent.JMMIClick.performClickTabLayoutTabView(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5727,39 +2866,7 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onViewHide_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    android.view.View var0 = (android.view.View) ((Map<String, Object>) __args__).get("var0");
-            
-                    // ref
-            
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        cn.jiguang.analytics.android.api.aop.JMMIAgent.onViewHide(var0);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onResume_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.agent.JMMIDlgPupW::onDismissPopupWindow_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -5775,7 +2882,7 @@ public class SubHandler0 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        cn.jiguang.analytics.android.api.aop.JMMIAgent.onResume(var0);
+                        cn.jiguang.analytics.android.api.agent.JMMIDlgPupW.onDismissPopupWindow(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5791,7 +2898,703 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onPause_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.BrowseEvent::getBrowseId_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.BrowseEvent __this__ = (cn.jiguang.analytics.android.api.BrowseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getBrowseId();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::setBrowseId_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.BrowseEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.BrowseEvent __this__ = (cn.jiguang.analytics.android.api.BrowseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.BrowseEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setBrowseId(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::getBrowseName_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.BrowseEvent __this__ = (cn.jiguang.analytics.android.api.BrowseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getBrowseName();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::setBrowseName_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.BrowseEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.BrowseEvent __this__ = (cn.jiguang.analytics.android.api.BrowseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.BrowseEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setBrowseName(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::getBrowseType_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.BrowseEvent __this__ = (cn.jiguang.analytics.android.api.BrowseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getBrowseType();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::setBrowseType_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.BrowseEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.BrowseEvent __this__ = (cn.jiguang.analytics.android.api.BrowseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.BrowseEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setBrowseType(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::getBrowseDuration_batch", (__argsBatch__, __methodResult__) -> {
+                List<Float> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.BrowseEvent __this__ = (cn.jiguang.analytics.android.api.BrowseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Float __result__ = null;
+                    try {
+                        __result__ = __this__.getBrowseDuration();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.BrowseEvent::setBrowseDuration_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.BrowseEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.BrowseEvent __this__ = (cn.jiguang.analytics.android.api.BrowseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.BrowseEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setBrowseDuration(var1.floatValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CalculateEvent::getEventId_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getEventId();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CalculateEvent::setEventId_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.CalculateEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.CalculateEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setEventId(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CalculateEvent::getEventValue_batch", (__argsBatch__, __methodResult__) -> {
+                List<Double> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Double __result__ = null;
+                    try {
+                        __result__ = __this__.getEventValue();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CalculateEvent::setEventValue_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.CalculateEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.CalculateEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setEventValue(var1.doubleValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CalculateEvent::addEventValue_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.CalculateEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.CalculateEvent __this__ = (cn.jiguang.analytics.android.api.CalculateEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.CalculateEvent __result__ = null;
+                    try {
+                        __result__ = __this__.addEventValue(var1.doubleValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CountEvent::getEventId_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.CountEvent __this__ = (cn.jiguang.analytics.android.api.CountEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getEventId();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.CountEvent::setEventId_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.CountEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.CountEvent __this__ = (cn.jiguang.analytics.android.api.CountEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.CountEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setEventId(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::setExtMap_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.Event> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.Event __result__ = null;
+                    try {
+                        __result__ = __this__.setExtMap(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::addExtMap_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.Event> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    java.util.Map<String,String> var1 = (java.util.Map<String,String>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.Event __result__ = null;
+                    try {
+                        __result__ = __this__.addExtMap(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::getExtMap_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.Map<String,String>> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    java.util.Map<String,String> __result__ = null;
+                    try {
+                        __result__ = __this__.getExtMap();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::getItime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Long> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Long __result__ = null;
+                    try {
+                        __result__ = __this__.getItime();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::setItime_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.Event> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.Event __result__ = null;
+                    try {
+                        __result__ = __this__.setItime(var1.longValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::addKeyValue_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.Event> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.Event __result__ = null;
+                    try {
+                        __result__ = __this__.addKeyValue(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.Event::checkEvent_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.Event __this__ = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.checkEvent();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::setDebugMode_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -5799,7 +3602,7 @@ public class SubHandler0 {
             
                     // args
                     // ref arg
-                    java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
+                    boolean var0 = (boolean) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
@@ -5807,7 +3610,7 @@ public class SubHandler0 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        cn.jiguang.analytics.android.api.aop.JMMIAgent.onPause(var0);
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.setDebugMode(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5823,7 +3626,7 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::fragmentSetUserVisibleHint_batch", (__argsBatch__, __methodResult__) -> {
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::init_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -5831,17 +3634,439 @@ public class SubHandler0 {
             
                     // args
                     // ref arg
-                    java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.init(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageStart_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.onPageStart(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::onPageEnd_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.onPageEnd(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::onEvent_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    cn.jiguang.analytics.android.api.Event var1 = (cn.jiguang.analytics.android.api.Event) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.onEvent(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::requestPermission_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.app.Activity var0 = (android.app.Activity) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.requestPermission(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::initCrashHandler_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.initCrashHandler(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::stopCrashHandler_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.stopCrashHandler(var0);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__android_content_Context__int_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.setAnalyticsReportPeriod(var0, var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::setAnalyticsReportPeriod__int_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var0 = (Number) ((Map<String, Object>) __args__).get("var0");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.setAnalyticsReportPeriod(var0.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.JAnalyticsInterface::setChannel_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        cn.jiguang.analytics.android.api.JAnalyticsInterface.setChannel(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.LoginEvent::getLoginMethod_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.LoginEvent __this__ = (cn.jiguang.analytics.android.api.LoginEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getLoginMethod();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.LoginEvent::setLoginMethod_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.LoginEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.LoginEvent __this__ = (cn.jiguang.analytics.android.api.LoginEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.LoginEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setLoginMethod(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.LoginEvent::getLoginSuccess_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.LoginEvent __this__ = (cn.jiguang.analytics.android.api.LoginEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.getLoginSuccess();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.LoginEvent::setLoginSuccess_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.LoginEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
                     // ref arg
                     boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-            
+                    cn.jiguang.analytics.android.api.LoginEvent __this__ = (cn.jiguang.analytics.android.api.LoginEvent) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    Void __result__ = null;
+                    cn.jiguang.analytics.android.api.LoginEvent __result__ = null;
                     try {
-                        cn.jiguang.analytics.android.api.aop.JMMIAgent.fragmentSetUserVisibleHint(var0, var1);
+                        __result__ = __this__.setLoginSuccess(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5857,25 +4082,243 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::fragmentOnHiddenChanged_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsid_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getPurchaseGoodsid();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsid_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.PurchaseEvent> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setPurchaseGoodsid(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsname_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getPurchaseGoodsname();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsname_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.PurchaseEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setPurchaseGoodsname(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchasePrice_batch", (__argsBatch__, __methodResult__) -> {
+                List<Double> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Double __result__ = null;
+                    try {
+                        __result__ = __this__.getPurchasePrice();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchasePrice_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.PurchaseEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setPurchasePrice(var1.doubleValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseSuccess_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.getPurchaseSuccess();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseSuccess_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.PurchaseEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
                     // ref arg
                     boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-            
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    Void __result__ = null;
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
                     try {
-                        cn.jiguang.analytics.android.api.aop.JMMIAgent.fragmentOnHiddenChanged(var0, var1);
+                        __result__ = __this__.setPurchaseSuccess(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5891,25 +4334,22 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onCreateView_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseCurrency_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.Currency> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    android.view.View var1 = (android.view.View) ((Map<String, Object>) __args__).get("var1");
+            
             
                     // ref
-            
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    Void __result__ = null;
+                    cn.jiguang.analytics.android.api.Currency __result__ = null;
                     try {
-                        cn.jiguang.analytics.android.api.aop.JMMIAgent.onCreateView(var0, var1);
+                        __result__ = __this__.getPurchaseCurrency();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5925,25 +4365,23 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::onLocationChanged_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseCurrency_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.PurchaseEvent> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
-                    // ref arg
-                    android.location.Location var1 = (android.location.Location) ((Map<String, Object>) __args__).get("var1");
+                    // enum arg
+                    cn.jiguang.analytics.android.api.Currency var1 = cn.jiguang.analytics.android.api.Currency.values()[(int) ((Map<String, Object>) __args__).get("var1")];
             
                     // ref
-            
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    Void __result__ = null;
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
                     try {
-                        cn.jiguang.analytics.android.api.aop.JMMIAgent.onLocationChanged(var0, var1);
+                        __result__ = __this__.setPurchaseCurrency(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5959,23 +4397,22 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::handleClickResult_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodstype_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    java.lang.Object var0 = (java.lang.Object) ((Map<String, Object>) __args__).get("var0");
+            
             
                     // ref
-            
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    Void __result__ = null;
+                    String __result__ = null;
                     try {
-                        cn.jiguang.analytics.android.api.aop.JMMIAgent.handleClickResult(var0);
+                        __result__ = __this__.getPurchaseGoodstype();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5991,23 +4428,23 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JMMIAgent::performClickTabLayoutTabView_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodstype_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.PurchaseEvent> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    android.view.View var0 = (android.view.View) ((Map<String, Object>) __args__).get("var0");
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-            
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    Void __result__ = null;
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
                     try {
-                        cn.jiguang.analytics.android.api.aop.JMMIAgent.performClickTabLayoutTabView(var0);
+                        __result__ = __this__.setPurchaseGoodstype(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6023,8 +4460,8 @@ public class SubHandler0 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("cn.jiguang.analytics.android.api.aop.JACActAx::onContentChanged_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::getPurchaseGoodsCount_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -6033,12 +4470,12 @@ public class SubHandler0 {
             
             
                     // ref
-                    cn.jiguang.analytics.android.api.aop.JACActAx __this__ = (cn.jiguang.analytics.android.api.aop.JACActAx) ((Map<String, Object>) __args__).get("__this__");
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    Void __result__ = null;
+                    Integer __result__ = null;
                     try {
-                        __this__.onContentChanged();
+                        __result__ = __this__.getPurchaseGoodsCount();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6049,6 +4486,1134 @@ public class SubHandler0 {
                     }
             
                     __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.PurchaseEvent::setPurchaseGoodsCount_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.PurchaseEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.PurchaseEvent __this__ = (cn.jiguang.analytics.android.api.PurchaseEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.PurchaseEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setPurchaseGoodsCount(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.RegisterEvent::getRegisterMthod_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getRegisterMthod();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.RegisterEvent::setRegisterMethod_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.RegisterEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.RegisterEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setRegisterMethod(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.RegisterEvent::getRegisterSuccess_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.getRegisterSuccess();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.api.RegisterEvent::setRegisterSuccess_batch", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.RegisterEvent> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    cn.jiguang.analytics.android.api.RegisterEvent __this__ = (cn.jiguang.analytics.android.api.RegisterEvent) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    cn.jiguang.analytics.android.api.RegisterEvent __result__ = null;
+                    try {
+                        __result__ = __this__.setRegisterSuccess(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("cn.jiguang.analytics.android.view.BuryWebActivity::onBackPressed_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    cn.jiguang.analytics.android.view.BuryWebActivity __this__ = (cn.jiguang.analytics.android.view.BuryWebActivity) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.onBackPressed();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            put("RefClass::isKindOfcn_analytics_client_android_BuildConfig", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.analytics.client.android.BuildConfig);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_Account", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.android.api.Account);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_agent_JMMIClick", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.android.api.agent.JMMIClick);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_agent_JMMIDlgPupW", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.android.api.agent.JMMIDlgPupW);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_BrowseEvent", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.android.api.BrowseEvent);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_CalculateEvent", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.android.api.CalculateEvent);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_CountEvent", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.android.api.CountEvent);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_Event", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.android.api.Event);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_JAnalyticsInterface", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.android.api.JAnalyticsInterface);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_LoginEvent", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.android.api.LoginEvent);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_PurchaseEvent", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.android.api.PurchaseEvent);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_api_RegisterEvent", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.android.api.RegisterEvent);
+            });
+            put("RefClass::isKindOfcn_jiguang_analytics_android_view_BuryWebActivity", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof cn.jiguang.analytics.android.view.BuryWebActivity);
+            });
+            // factory
+            put("ObjectFactory::createcn_analytics_client_android_BuildConfig__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_analytics_client_android_BuildConfig__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.analytics.client.android.BuildConfig __obj__ = new cn.analytics.client.android.BuildConfig();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_Account__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_Account__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.Account __obj__ = new cn.jiguang.analytics.android.api.Account(var1);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_agent_JMMIClick__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_agent_JMMIClick__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.agent.JMMIClick __obj__ = new cn.jiguang.analytics.android.api.agent.JMMIClick();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_agent_JMMIDlgPupW__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_agent_JMMIDlgPupW__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.agent.JMMIDlgPupW __obj__ = new cn.jiguang.analytics.android.api.agent.JMMIDlgPupW();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_BrowseEvent__String__String__String__float", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_BrowseEvent__String__String__String__float");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.BrowseEvent __obj__ = new cn.jiguang.analytics.android.api.BrowseEvent(var1, var2, var3, var4.floatValue());
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_BrowseEvent__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_BrowseEvent__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.BrowseEvent __obj__ = new cn.jiguang.analytics.android.api.BrowseEvent();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_CalculateEvent__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_CalculateEvent__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.CalculateEvent __obj__ = new cn.jiguang.analytics.android.api.CalculateEvent();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_CalculateEvent__String__double", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_CalculateEvent__String__double");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.CalculateEvent __obj__ = new cn.jiguang.analytics.android.api.CalculateEvent(var1, var2.doubleValue());
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_CountEvent__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_CountEvent__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.CountEvent __obj__ = new cn.jiguang.analytics.android.api.CountEvent(var1);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_CountEvent__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_CountEvent__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.CountEvent __obj__ = new cn.jiguang.analytics.android.api.CountEvent();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_LoginEvent__String__boolean", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_LoginEvent__String__boolean");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.LoginEvent __obj__ = new cn.jiguang.analytics.android.api.LoginEvent(var1, var2);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_LoginEvent__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_LoginEvent__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.LoginEvent __obj__ = new cn.jiguang.analytics.android.api.LoginEvent();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_PurchaseEvent__String__String__double__boolean__cn_jiguang_analytics_android_api_Currency__String__int", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_PurchaseEvent__String__String__double__boolean__cn_jiguang_analytics_android_api_Currency__String__int");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                boolean var5 = (boolean) ((Map<String, Object>) __args__).get("var5");
+                // enum arg
+                cn.jiguang.analytics.android.api.Currency var6 = cn.jiguang.analytics.android.api.Currency.values()[(int) ((Map<String, Object>) __args__).get("var6")];
+                // ref arg
+                String var7 = (String) ((Map<String, Object>) __args__).get("var7");
+                // ref arg
+                Number var8 = (Number) ((Map<String, Object>) __args__).get("var8");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.PurchaseEvent __obj__ = new cn.jiguang.analytics.android.api.PurchaseEvent(var1, var2, var3.doubleValue(), var5, var6, var7, var8.intValue());
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_PurchaseEvent__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_PurchaseEvent__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.PurchaseEvent __obj__ = new cn.jiguang.analytics.android.api.PurchaseEvent();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_RegisterEvent__String__boolean", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_RegisterEvent__String__boolean");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                cn.jiguang.analytics.android.api.RegisterEvent __obj__ = new cn.jiguang.analytics.android.api.RegisterEvent(var1, var2);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_api_RegisterEvent__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_api_RegisterEvent__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.api.RegisterEvent __obj__ = new cn.jiguang.analytics.android.api.RegisterEvent();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcn_jiguang_analytics_android_view_BuryWebActivity__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: cn_jiguang_analytics_android_view_BuryWebActivity__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                cn.jiguang.analytics.android.view.BuryWebActivity __obj__ = new cn.jiguang.analytics.android.view.BuryWebActivity();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_analytics_client_android_BuildConfig__", (__argsBatch__, __methodResult__) -> {
+                List<cn.analytics.client.android.BuildConfig> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.analytics.client.android.BuildConfig __obj__ = new cn.analytics.client.android.BuildConfig();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_Account__String", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.Account> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.Account __obj__ = new cn.jiguang.analytics.android.api.Account(var1);
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_agent_JMMIClick__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.agent.JMMIClick> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.agent.JMMIClick __obj__ = new cn.jiguang.analytics.android.api.agent.JMMIClick();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_agent_JMMIDlgPupW__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.agent.JMMIDlgPupW> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.agent.JMMIDlgPupW __obj__ = new cn.jiguang.analytics.android.api.agent.JMMIDlgPupW();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_BrowseEvent__String__String__String__float", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.BrowseEvent> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                    // ref arg
+                    Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.BrowseEvent __obj__ = new cn.jiguang.analytics.android.api.BrowseEvent(var1, var2, var3, var4.floatValue());
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_BrowseEvent__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.BrowseEvent> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.BrowseEvent __obj__ = new cn.jiguang.analytics.android.api.BrowseEvent();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_CalculateEvent__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.CalculateEvent> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.CalculateEvent __obj__ = new cn.jiguang.analytics.android.api.CalculateEvent();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_CalculateEvent__String__double", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.CalculateEvent> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.CalculateEvent __obj__ = new cn.jiguang.analytics.android.api.CalculateEvent(var1, var2.doubleValue());
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_CountEvent__String", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.CountEvent> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.CountEvent __obj__ = new cn.jiguang.analytics.android.api.CountEvent(var1);
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_CountEvent__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.CountEvent> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.CountEvent __obj__ = new cn.jiguang.analytics.android.api.CountEvent();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_LoginEvent__String__boolean", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.LoginEvent> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.LoginEvent __obj__ = new cn.jiguang.analytics.android.api.LoginEvent(var1, var2);
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_LoginEvent__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.LoginEvent> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.LoginEvent __obj__ = new cn.jiguang.analytics.android.api.LoginEvent();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_PurchaseEvent__String__String__double__boolean__cn_jiguang_analytics_android_api_Currency__String__int", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.PurchaseEvent> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                    // ref arg
+                    boolean var5 = (boolean) ((Map<String, Object>) __args__).get("var5");
+                    // enum arg
+                    cn.jiguang.analytics.android.api.Currency var6 = cn.jiguang.analytics.android.api.Currency.values()[(int) ((Map<String, Object>) __args__).get("var6")];
+                    // ref arg
+                    String var7 = (String) ((Map<String, Object>) __args__).get("var7");
+                    // ref arg
+                    Number var8 = (Number) ((Map<String, Object>) __args__).get("var8");
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.PurchaseEvent __obj__ = new cn.jiguang.analytics.android.api.PurchaseEvent(var1, var2, var3.doubleValue(), var5, var6, var7, var8.intValue());
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_PurchaseEvent__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.PurchaseEvent> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.PurchaseEvent __obj__ = new cn.jiguang.analytics.android.api.PurchaseEvent();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_RegisterEvent__String__boolean", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.RegisterEvent> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.RegisterEvent __obj__ = new cn.jiguang.analytics.android.api.RegisterEvent(var1, var2);
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_api_RegisterEvent__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.api.RegisterEvent> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.api.RegisterEvent __obj__ = new cn.jiguang.analytics.android.api.RegisterEvent();
+            
+                    __resultList__.add(__obj__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // factory
+            put("ObjectFactory::create_batchcn_jiguang_analytics_android_view_BuryWebActivity__", (__argsBatch__, __methodResult__) -> {
+                List<cn.jiguang.analytics.android.view.BuryWebActivity> __resultList__ = new ArrayList<>();
+            
+                int __length__ = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (__argsBatch__ instanceof Map) {
+                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
+                }
+                // or directly put the arg batch
+                else if (__argsBatch__ instanceof List) {
+                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+                }
+            
+                for (int __i__ = 0; __i__ < __length__; __i__++) {
+                    Map<String, Object> __args__ = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (__argsBatch__ instanceof List) {
+                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    cn.jiguang.analytics.android.view.BuryWebActivity __obj__ = new cn.jiguang.analytics.android.view.BuryWebActivity();
+            
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);

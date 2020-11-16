@@ -16,39 +16,45 @@ class JANALYTICSEventObject extends NSObject  {
   //region constants
   static const String name__ = 'JANALYTICSEventObject';
 
+  @override
+  final String tag__ = 'janalytics_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<JANALYTICSEventObject> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createJANALYTICSEventObject', {'init': init});
-    final object = JANALYTICSEventObject()..refId = refId..tag__ = 'janalytics_fluttify';
-    return object;
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod(
+      'ObjectFactory::createJANALYTICSEventObject',
+      {'init': init}
+    );
+    return JanalyticsFluttifyIOSAs<JANALYTICSEventObject>(__result__);
   }
   
   static Future<List<JANALYTICSEventObject>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchJANALYTICSEventObject', {'length': length, 'init': init});
-  
-    final List<JANALYTICSEventObject> typedResult = resultBatch.map((result) => JANALYTICSEventObject()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    return typedResult;
+    assert(true);
+    final __result_batch__ = await  kJanalyticsFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchJANALYTICSEventObject',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => JanalyticsFluttifyIOSAs<JANALYTICSEventObject>(it))
+        .toList();
   }
   
   //endregion
 
   //region getters
   Future<Map<String,String>> get_extra() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSEventObject::get_extra", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSEventObject::get_extra", {'__this__': this});
+    return __result__;
   }
   
   //endregion
 
   //region setters
   Future<void> set_extra(Map<String,String> extra) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSEventObject::set_extra', <String, dynamic>{'__this__': this, "extra": extra});
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSEventObject::set_extra', <String, dynamic>{'__this__': this, "extra": extra});
   
   
   }
@@ -58,22 +64,25 @@ class JANALYTICSEventObject extends NSObject  {
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'JANALYTICSEventObject{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension JANALYTICSEventObject_Batch on List<JANALYTICSEventObject> {
   //region getters
   Future<List<Map<String,String>>> get_extra_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSEventObject::get_extra_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<Map<String,String>>().map((__result__) => __result__).toList();
-    return typedResult;
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSEventObject::get_extra_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<Map<String,String>>()?.toList();
   }
   
   //endregion
 
   //region setters
   Future<void> set_extra_batch(List<Map<String,String>> extra) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSEventObject::set_extra_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "extra": extra[__i__]}]);
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSEventObject::set_extra_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "extra": extra[__i__]}]);
   
   
   }

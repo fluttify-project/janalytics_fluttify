@@ -16,18 +16,55 @@ extern BOOL enableLog;
 - (NSDictionary<NSString*, Handler>*) getSubHandler0 {
     __weak __typeof(self)weakSelf = self;
     return @{
+        @"JANALYTICSUserInfo::setExtraObject_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSUserInfo::setExtraObject_forKey(%@)", args);
+            }
+        
+            // args
+            // id arg
+            id obj;
+            // jsonable
+            if ([args[@"obj"] isKindOfClass:[NSNumber class]]
+                    || [args[@"obj"] isKindOfClass:[NSString class]]
+                    || [args[@"obj"] isKindOfClass:[NSArray class]]
+                    || [args[@"obj"] isKindOfClass:[NSDictionary class]]) {
+                obj = args[@"obj"];
+            }
+            // non jsonable
+            else {
+                obj = args[@"obj"];
+            }
+            // jsonable arg
+            NSString* key = (NSString*) args[@"key"];
+        
+            // ref
+            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref setExtraObject : obj forKey: key];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
         @"JANALYTICSService::setupWithConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::setupWithConfig(%@)", args);
+            }
+        
             // args
             // ref arg
-            JANALYTICSLaunchConfig* config = (JANALYTICSLaunchConfig*) args[@"config"];
+            JANALYTICSLaunchConfig* config = (JANALYTICSLaunchConfig*) (args[@"config"] == [NSNull null] ? nil : args[@"config"]);
         
             // ref
         
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: JANALYTICSService::setupWithConfig(%@)", args[@"config"]);
-            }
         
             // invoke native method
             [JANALYTICSService setupWithConfig: config];
@@ -39,17 +76,16 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"JANALYTICSService::startLogPageView": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::startLogPageView(%@)", args);
+            }
+        
             // args
             // jsonable arg
             NSString* pageName = (NSString*) args[@"pageName"];
         
             // ref
         
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: JANALYTICSService::startLogPageView(%@)", args[@"pageName"]);
-            }
         
             // invoke native method
             [JANALYTICSService startLogPageView: pageName];
@@ -61,17 +97,16 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"JANALYTICSService::stopLogPageView": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::stopLogPageView(%@)", args);
+            }
+        
             // args
             // jsonable arg
             NSString* pageName = (NSString*) args[@"pageName"];
         
             // ref
         
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: JANALYTICSService::stopLogPageView(%@)", args[@"pageName"]);
-            }
         
             // invoke native method
             [JANALYTICSService stopLogPageView: pageName];
@@ -83,6 +118,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"JANALYTICSService::setLatitude_longitude": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::setLatitude_longitude(%@)", args);
+            }
+        
             // args
             // jsonable arg
             double latitude = [args[@"latitude"] doubleValue];
@@ -91,11 +130,6 @@ extern BOOL enableLog;
         
             // ref
         
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: JANALYTICSService::setLatitude(%@, %@)", args[@"latitude"], args[@"longitude"]);
-            }
         
             // invoke native method
             [JANALYTICSService setLatitude: latitude longitude: longitude];
@@ -107,17 +141,16 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"JANALYTICSService::setLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::setLocation(%@)", args);
+            }
+        
             // args
             // ref arg
-            CLLocation* location = (CLLocation*) args[@"location"];
+            CLLocation* location = (CLLocation*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
             // ref
         
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: JANALYTICSService::setLocation(%@)", args[@"location"]);
-            }
         
             // invoke native method
             [JANALYTICSService setLocation: location];
@@ -129,17 +162,16 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"JANALYTICSService::eventRecord": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::eventRecord(%@)", args);
+            }
+        
             // args
             // ref arg
-            JANALYTICSEventObject* event = (JANALYTICSEventObject*) args[@"event"];
+            JANALYTICSEventObject* event = (JANALYTICSEventObject*) (args[@"event"] == [NSNull null] ? nil : args[@"event"]);
         
             // ref
         
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: JANALYTICSService::eventRecord(%@)", args[@"event"]);
-            }
         
             // invoke native method
             [JANALYTICSService eventRecord: event];
@@ -151,18 +183,17 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"JANALYTICSService::identifyAccount_with": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::identifyAccount_with(%@)", args);
+            }
+        
             // args
             // ref arg
-            JANALYTICSUserInfo* userInfo = (JANALYTICSUserInfo*) args[@"userInfo"];
+            JANALYTICSUserInfo* userInfo = (JANALYTICSUserInfo*) (args[@"userInfo"] == [NSNull null] ? nil : args[@"userInfo"]);
         
         
             // ref
         
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: JANALYTICSService::identifyAccount(%@, %@)", args[@"userInfo"], args[@"completion"]);
-            }
         
             // invoke native method
             [JANALYTICSService identifyAccount: userInfo with: ^(NSInteger err, NSString* msg) {
@@ -195,16 +226,15 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"JANALYTICSService::detachAccount": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::detachAccount(%@)", args);
+            }
+        
             // args
         
         
             // ref
         
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: JANALYTICSService::detachAccount(%@)", args[@"completion"]);
-            }
         
             // invoke native method
             [JANALYTICSService detachAccount: ^(NSInteger err, NSString* msg) {
@@ -237,17 +267,16 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"JANALYTICSService::setFrequency": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::setFrequency(%@)", args);
+            }
+        
             // args
             // jsonable arg
             NSUInteger frequency = [args[@"frequency"] unsignedIntegerValue];
         
             // ref
         
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: JANALYTICSService::setFrequency(%@)", args[@"frequency"]);
-            }
         
             // invoke native method
             [JANALYTICSService setFrequency: frequency];
@@ -259,16 +288,15 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"JANALYTICSService::crashLogON": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::crashLogON(%@)", args);
+            }
+        
             // args
         
         
             // ref
         
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: JANALYTICSService::crashLogON()");
-            }
         
             // invoke native method
             [JANALYTICSService crashLogON];
@@ -280,17 +308,16 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"JANALYTICSService::setDebug": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::setDebug(%@)", args);
+            }
+        
             // args
             // jsonable arg
             BOOL enable = [args[@"enable"] boolValue];
         
             // ref
         
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: JANALYTICSService::setDebug(%@)", args[@"enable"]);
-            }
         
             // invoke native method
             [JANALYTICSService setDebug: enable];
@@ -301,50 +328,66 @@ extern BOOL enableLog;
         
             methodResult(__result__);
         },
-        @"JANALYTICSUserInfo::setExtraObject_forKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // id arg
-            id obj;
-            // jsonable
-            if ([args[@"obj"] isKindOfClass:[NSNumber class]]
-                    || [args[@"obj"] isKindOfClass:[NSString class]]
-                    || [args[@"obj"] isKindOfClass:[NSArray class]]
-                    || [args[@"obj"] isKindOfClass:[NSDictionary class]]) {
-                obj = args[@"obj"];
-            }
-            // non jsonable
-            else {
-                obj = HEAP[@([args[@"obj"] integerValue])];
-            }
-            // jsonable arg
-            NSString* key = (NSString*) args[@"key"];
-        
-            // ref
-            JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
-        
-            // print log
+        @"JANALYTICSUserInfo::setExtraObject_forKey_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             if (enableLog) {
-                NSLog(@"fluttify-objc: JANALYTICSUserInfo@%@::setExtraObject(%@, %@)", args[@"refId"], args[@"obj"], args[@"key"]);
+                NSLog(@"fluttify-objc: JANALYTICSUserInfo::setExtraObject_forKey(%@)", argsBatch);
             }
         
-            // invoke native method
-            [ref setExtraObject : obj forKey: key];
-        
-            // result
-            // 无返回值
-            NSString* __result__ = @"success";
-        
-            methodResult(__result__);
-        },
-        @"JANALYTICSService::setupWithConfig_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // id arg
+                id obj;
+                // jsonable
+                if ([args[@"obj"] isKindOfClass:[NSNumber class]]
+                        || [args[@"obj"] isKindOfClass:[NSString class]]
+                        || [args[@"obj"] isKindOfClass:[NSArray class]]
+                        || [args[@"obj"] isKindOfClass:[NSDictionary class]]) {
+                    obj = args[@"obj"];
+                }
+                // non jsonable
+                else {
+                    obj = args[@"obj"];
+                }
+                // jsonable arg
+                NSString* key = (NSString*) args[@"key"];
+        
+                // ref
+                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref setExtraObject : obj forKey: key];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"JANALYTICSService::setupWithConfig_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::setupWithConfig(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // ref arg
-                JANALYTICSLaunchConfig* config = (JANALYTICSLaunchConfig*) args[@"config"];
+                JANALYTICSLaunchConfig* config = (JANALYTICSLaunchConfig*) (args[@"config"] == [NSNull null] ? nil : args[@"config"]);
         
                 // ref
         
@@ -356,15 +399,19 @@ extern BOOL enableLog;
                 // 无返回值
                 NSString* __result__ = @"success";
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
         },
         @"JANALYTICSService::startLogPageView_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::startLogPageView(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -381,15 +428,19 @@ extern BOOL enableLog;
                 // 无返回值
                 NSString* __result__ = @"success";
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
         },
         @"JANALYTICSService::stopLogPageView_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::stopLogPageView(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -406,15 +457,19 @@ extern BOOL enableLog;
                 // 无返回值
                 NSString* __result__ = @"success";
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
         },
         @"JANALYTICSService::setLatitude_longitude_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::setLatitude_longitude(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -433,20 +488,24 @@ extern BOOL enableLog;
                 // 无返回值
                 NSString* __result__ = @"success";
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
         },
         @"JANALYTICSService::setLocation_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::setLocation(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // ref arg
-                CLLocation* location = (CLLocation*) args[@"location"];
+                CLLocation* location = (CLLocation*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
         
@@ -458,20 +517,24 @@ extern BOOL enableLog;
                 // 无返回值
                 NSString* __result__ = @"success";
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
         },
         @"JANALYTICSService::eventRecord_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::eventRecord(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // ref arg
-                JANALYTICSEventObject* event = (JANALYTICSEventObject*) args[@"event"];
+                JANALYTICSEventObject* event = (JANALYTICSEventObject*) (args[@"event"] == [NSNull null] ? nil : args[@"event"]);
         
                 // ref
         
@@ -483,15 +546,19 @@ extern BOOL enableLog;
                 // 无返回值
                 NSString* __result__ = @"success";
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
         },
         @"JANALYTICSService::setFrequency_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::setFrequency(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -508,15 +575,19 @@ extern BOOL enableLog;
                 // 无返回值
                 NSString* __result__ = @"success";
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
         },
         @"JANALYTICSService::crashLogON_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::crashLogON(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -532,15 +603,19 @@ extern BOOL enableLog;
                 // 无返回值
                 NSString* __result__ = @"success";
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
         },
         @"JANALYTICSService::setDebug_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: JANALYTICSService::setDebug(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -557,121 +632,11 @@ extern BOOL enableLog;
                 // 无返回值
                 NSString* __result__ = @"success";
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
         },
-        @"JANALYTICSUserInfo::setExtraObject_forKey_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // id arg
-                id obj;
-                // jsonable
-                if ([args[@"obj"] isKindOfClass:[NSNumber class]]
-                        || [args[@"obj"] isKindOfClass:[NSString class]]
-                        || [args[@"obj"] isKindOfClass:[NSArray class]]
-                        || [args[@"obj"] isKindOfClass:[NSDictionary class]]) {
-                    obj = args[@"obj"];
-                }
-                // non jsonable
-                else {
-                    obj = HEAP[@([args[@"obj"] integerValue])];
-                }
-                // jsonable arg
-                NSString* key = (NSString*) args[@"key"];
-        
-                // ref
-                JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
-        
-                // invoke native method
-                [ref setExtraObject : obj forKey: key];
-        
-                // result
-                // 无返回值
-                NSString* __result__ = @"success";
-        
-                [resultList addObject:__result__];
-            }
-        
-            methodResult(resultList);
-        },
-        @"JANALYTICSLaunchConfig::get_appKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"JANALYTICSLaunchConfig::get_appKey");
-            }
-        
-            // ref object
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-            // invoke native method
-            NSString* result = ref.appKey;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"JANALYTICSLaunchConfig::get_channel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"JANALYTICSLaunchConfig::get_channel");
-            }
-        
-            // ref object
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-            // invoke native method
-            NSString* result = ref.channel;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"JANALYTICSLaunchConfig::get_advertisingId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"JANALYTICSLaunchConfig::get_advertisingId");
-            }
-        
-            // ref object
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-            // invoke native method
-            NSString* result = ref.advertisingId;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"JANALYTICSLaunchConfig::get_isProduction": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"JANALYTICSLaunchConfig::get_isProduction");
-            }
-        
-            // ref object
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-            // invoke native method
-            BOOL result = ref.isProduction;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
         @"JANALYTICSEventObject::get_extra": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -680,6 +645,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSEventObject* ref = (JANALYTICSEventObject*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSDictionary<NSString*,NSString*>* result = ref.extra;
@@ -698,6 +667,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.method;
@@ -716,6 +689,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             BOOL result = ref.success;
@@ -734,6 +711,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.method;
@@ -752,6 +733,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             BOOL result = ref.success;
@@ -770,6 +755,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             CGFloat result = ref.price;
@@ -788,6 +777,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             BOOL result = ref.success;
@@ -806,6 +799,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.goodsID;
@@ -824,6 +821,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.goodsName;
@@ -842,6 +843,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.goodsType;
@@ -860,6 +865,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             JANALYTICSPurchaseCurrency result = ref.currency;
@@ -878,6 +887,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSInteger result = ref.quantity;
@@ -896,6 +909,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.name;
@@ -914,6 +931,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.contentID;
@@ -932,6 +953,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.type;
@@ -950,6 +975,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             CGFloat result = ref.duration;
@@ -968,6 +997,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.eventID;
@@ -986,6 +1019,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.eventID;
@@ -1004,6 +1041,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             CGFloat result = ref.value;
@@ -1022,6 +1063,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.accountID;
@@ -1040,6 +1085,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSTimeInterval result = ref.creationTime;
@@ -1058,6 +1107,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             JANALYTICSSex result = ref.sex;
@@ -1076,6 +1129,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.birthdate;
@@ -1094,6 +1151,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             JANALYTICSPaid result = ref.paid;
@@ -1112,6 +1173,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.phone;
@@ -1130,6 +1195,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.email;
@@ -1148,6 +1217,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.name;
@@ -1166,6 +1239,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.wechatID;
@@ -1184,6 +1261,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.qqID;
@@ -1202,6 +1283,10 @@ extern BOOL enableLog;
         
             // ref object
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             // invoke native method
             NSString* result = ref.weiboID;
@@ -1212,101 +1297,114 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         
-        @"JANALYTICSLaunchConfig::get_appKey_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-                NSString* result = ref.appKey;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__];
+        @"JANALYTICSLaunchConfig::get_appKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"JANALYTICSLaunchConfig::get_appKey");
             }
         
-            methodResult(resultList);
+            // ref object
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.appKey;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
         },
         
-        @"JANALYTICSLaunchConfig::get_channel_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-                NSString* result = ref.channel;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__];
+        @"JANALYTICSLaunchConfig::get_channel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"JANALYTICSLaunchConfig::get_channel");
             }
         
-            methodResult(resultList);
+            // ref object
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.channel;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
         },
         
-        @"JANALYTICSLaunchConfig::get_advertisingId_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-                NSString* result = ref.advertisingId;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__];
+        @"JANALYTICSLaunchConfig::get_advertisingId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"JANALYTICSLaunchConfig::get_advertisingId");
             }
         
-            methodResult(resultList);
+            // ref object
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.advertisingId;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
         },
         
-        @"JANALYTICSLaunchConfig::get_isProduction_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-                BOOL result = ref.isProduction;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__];
+        @"JANALYTICSLaunchConfig::get_isProduction": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"JANALYTICSLaunchConfig::get_isProduction");
             }
         
-            methodResult(resultList);
+            // ref object
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.isProduction;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
         },
         
         @"JANALYTICSEventObject::get_extra_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSEventObject* ref = (JANALYTICSEventObject*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSDictionary<NSString*,NSString*>* result = ref.extra;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1315,18 +1413,23 @@ extern BOOL enableLog;
         @"JANALYTICSLoginEvent::get_method_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.method;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1335,18 +1438,23 @@ extern BOOL enableLog;
         @"JANALYTICSLoginEvent::get_success_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 BOOL result = ref.success;
         
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1355,18 +1463,23 @@ extern BOOL enableLog;
         @"JANALYTICSRegisterEvent::get_method_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.method;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1375,18 +1488,23 @@ extern BOOL enableLog;
         @"JANALYTICSRegisterEvent::get_success_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 BOOL result = ref.success;
         
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1395,18 +1513,23 @@ extern BOOL enableLog;
         @"JANALYTICSPurchaseEvent::get_price_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 CGFloat result = ref.price;
         
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1415,18 +1538,23 @@ extern BOOL enableLog;
         @"JANALYTICSPurchaseEvent::get_success_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 BOOL result = ref.success;
         
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1435,18 +1563,23 @@ extern BOOL enableLog;
         @"JANALYTICSPurchaseEvent::get_goodsID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.goodsID;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1455,18 +1588,23 @@ extern BOOL enableLog;
         @"JANALYTICSPurchaseEvent::get_goodsName_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.goodsName;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1475,18 +1613,23 @@ extern BOOL enableLog;
         @"JANALYTICSPurchaseEvent::get_goodsType_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.goodsType;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1495,18 +1638,23 @@ extern BOOL enableLog;
         @"JANALYTICSPurchaseEvent::get_currency_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 JANALYTICSPurchaseCurrency result = ref.currency;
         
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1515,18 +1663,23 @@ extern BOOL enableLog;
         @"JANALYTICSPurchaseEvent::get_quantity_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSInteger result = ref.quantity;
         
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1535,18 +1688,23 @@ extern BOOL enableLog;
         @"JANALYTICSBrowseEvent::get_name_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.name;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1555,18 +1713,23 @@ extern BOOL enableLog;
         @"JANALYTICSBrowseEvent::get_contentID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.contentID;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1575,18 +1738,23 @@ extern BOOL enableLog;
         @"JANALYTICSBrowseEvent::get_type_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.type;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1595,18 +1763,23 @@ extern BOOL enableLog;
         @"JANALYTICSBrowseEvent::get_duration_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 CGFloat result = ref.duration;
         
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1615,18 +1788,23 @@ extern BOOL enableLog;
         @"JANALYTICSCountEvent::get_eventID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.eventID;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1635,18 +1813,23 @@ extern BOOL enableLog;
         @"JANALYTICSCalculateEvent::get_eventID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.eventID;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1655,18 +1838,23 @@ extern BOOL enableLog;
         @"JANALYTICSCalculateEvent::get_value_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 CGFloat result = ref.value;
         
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1675,18 +1863,23 @@ extern BOOL enableLog;
         @"JANALYTICSUserInfo::get_accountID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.accountID;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1695,18 +1888,23 @@ extern BOOL enableLog;
         @"JANALYTICSUserInfo::get_creationTime_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSTimeInterval result = ref.creationTime;
         
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1715,18 +1913,23 @@ extern BOOL enableLog;
         @"JANALYTICSUserInfo::get_sex_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 JANALYTICSSex result = ref.sex;
         
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1735,18 +1938,23 @@ extern BOOL enableLog;
         @"JANALYTICSUserInfo::get_birthdate_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.birthdate;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1755,18 +1963,23 @@ extern BOOL enableLog;
         @"JANALYTICSUserInfo::get_paid_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 JANALYTICSPaid result = ref.paid;
         
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1775,18 +1988,23 @@ extern BOOL enableLog;
         @"JANALYTICSUserInfo::get_phone_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.phone;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1795,18 +2013,23 @@ extern BOOL enableLog;
         @"JANALYTICSUserInfo::get_email_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.email;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1815,18 +2038,23 @@ extern BOOL enableLog;
         @"JANALYTICSUserInfo::get_name_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.name;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1835,18 +2063,23 @@ extern BOOL enableLog;
         @"JANALYTICSUserInfo::get_wechatID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.wechatID;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1855,18 +2088,23 @@ extern BOOL enableLog;
         @"JANALYTICSUserInfo::get_qqID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.qqID;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1875,89 +2113,126 @@ extern BOOL enableLog;
         @"JANALYTICSUserInfo::get_weiboID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
         
                 NSString* result = ref.weiboID;
         
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
         },
         
-        @"JANALYTICSLaunchConfig::set_appKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"JANALYTICSLaunchConfig::set_appKey");
+        @"JANALYTICSLaunchConfig::get_appKey_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.appKey;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
-            // args
-            // jsonable arg
-            NSString* appKey = (NSString*) args[@"appKey"];
-        
-            // ref
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-            ref.appKey = appKey;
-            methodResult(@"success");
+            methodResult(resultList);
         },
         
-        @"JANALYTICSLaunchConfig::set_channel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"JANALYTICSLaunchConfig::set_channel");
+        @"JANALYTICSLaunchConfig::get_channel_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.channel;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
-            // args
-            // jsonable arg
-            NSString* channel = (NSString*) args[@"channel"];
-        
-            // ref
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-            ref.channel = channel;
-            methodResult(@"success");
+            methodResult(resultList);
         },
         
-        @"JANALYTICSLaunchConfig::set_advertisingId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"JANALYTICSLaunchConfig::set_advertisingId");
+        @"JANALYTICSLaunchConfig::get_advertisingId_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.advertisingId;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
-            // args
-            // jsonable arg
-            NSString* advertisingId = (NSString*) args[@"advertisingId"];
-        
-            // ref
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-            ref.advertisingId = advertisingId;
-            methodResult(@"success");
+            methodResult(resultList);
         },
         
-        @"JANALYTICSLaunchConfig::set_isProduction": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"JANALYTICSLaunchConfig::set_isProduction");
+        @"JANALYTICSLaunchConfig::get_isProduction_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                BOOL result = ref.isProduction;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
-            // args
-            // jsonable arg
-            BOOL isProduction = [args[@"isProduction"] boolValue];
-        
-            // ref
-            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-            ref.isProduction = isProduction;
-            methodResult(@"success");
+            methodResult(resultList);
         },
         
         @"JANALYTICSEventObject::set_extra": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1972,6 +2247,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSEventObject* ref = (JANALYTICSEventObject*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.extra = extra;
             methodResult(@"success");
@@ -1989,6 +2268,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.method = method;
             methodResult(@"success");
@@ -2006,6 +2289,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.success = success;
             methodResult(@"success");
@@ -2023,6 +2310,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.method = method;
             methodResult(@"success");
@@ -2040,6 +2331,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.success = success;
             methodResult(@"success");
@@ -2057,6 +2352,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.price = price;
             methodResult(@"success");
@@ -2074,6 +2373,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.success = success;
             methodResult(@"success");
@@ -2091,6 +2394,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.goodsID = goodsID;
             methodResult(@"success");
@@ -2108,6 +2415,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.goodsName = goodsName;
             methodResult(@"success");
@@ -2125,6 +2436,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.goodsType = goodsType;
             methodResult(@"success");
@@ -2142,6 +2457,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.currency = currency;
             methodResult(@"success");
@@ -2159,6 +2478,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.quantity = quantity;
             methodResult(@"success");
@@ -2176,6 +2499,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.name = name;
             methodResult(@"success");
@@ -2193,6 +2520,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.contentID = contentID;
             methodResult(@"success");
@@ -2210,6 +2541,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.type = type;
             methodResult(@"success");
@@ -2227,6 +2562,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.duration = duration;
             methodResult(@"success");
@@ -2244,6 +2583,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.eventID = eventID;
             methodResult(@"success");
@@ -2261,6 +2604,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.eventID = eventID;
             methodResult(@"success");
@@ -2278,6 +2625,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.value = value;
             methodResult(@"success");
@@ -2295,6 +2646,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.accountID = accountID;
             methodResult(@"success");
@@ -2312,6 +2667,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.creationTime = creationTime;
             methodResult(@"success");
@@ -2329,6 +2688,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.sex = sex;
             methodResult(@"success");
@@ -2346,6 +2709,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.birthdate = birthdate;
             methodResult(@"success");
@@ -2363,6 +2730,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.paid = paid;
             methodResult(@"success");
@@ -2380,6 +2751,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.phone = phone;
             methodResult(@"success");
@@ -2397,6 +2772,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.email = email;
             methodResult(@"success");
@@ -2414,6 +2793,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.name = name;
             methodResult(@"success");
@@ -2431,6 +2814,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.wechatID = wechatID;
             methodResult(@"success");
@@ -2448,6 +2835,10 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.qqID = qqID;
             methodResult(@"success");
@@ -2465,85 +2856,101 @@ extern BOOL enableLog;
         
             // ref
             JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.weiboID = weiboID;
             methodResult(@"success");
         },
         
-        @"JANALYTICSLaunchConfig::set_appKey_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* appKey = (NSString*) args[@"appKey"];
-        
-                // ref
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-                ref.appKey = appKey;
-                methodResult(@"success");
+        @"JANALYTICSLaunchConfig::set_appKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"JANALYTICSLaunchConfig::set_appKey");
             }
         
+            // args
+            // jsonable arg
+            NSString* appKey = (NSString*) args[@"appKey"];
+        
+            // ref
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.appKey = appKey;
             methodResult(@"success");
         },
         
-        @"JANALYTICSLaunchConfig::set_channel_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* channel = (NSString*) args[@"channel"];
-        
-                // ref
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-                ref.channel = channel;
-                methodResult(@"success");
+        @"JANALYTICSLaunchConfig::set_channel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"JANALYTICSLaunchConfig::set_channel");
             }
         
+            // args
+            // jsonable arg
+            NSString* channel = (NSString*) args[@"channel"];
+        
+            // ref
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.channel = channel;
             methodResult(@"success");
         },
         
-        @"JANALYTICSLaunchConfig::set_advertisingId_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* advertisingId = (NSString*) args[@"advertisingId"];
-        
-                // ref
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-                ref.advertisingId = advertisingId;
-                methodResult(@"success");
+        @"JANALYTICSLaunchConfig::set_advertisingId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"JANALYTICSLaunchConfig::set_advertisingId");
             }
         
+            // args
+            // jsonable arg
+            NSString* advertisingId = (NSString*) args[@"advertisingId"];
+        
+            // ref
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.advertisingId = advertisingId;
             methodResult(@"success");
         },
         
-        @"JANALYTICSLaunchConfig::set_isProduction_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL isProduction = [args[@"isProduction"] boolValue];
-        
-                // ref
-                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
-        
-                ref.isProduction = isProduction;
-                methodResult(@"success");
+        @"JANALYTICSLaunchConfig::set_isProduction": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"JANALYTICSLaunchConfig::set_isProduction");
             }
         
+            // args
+            // jsonable arg
+            BOOL isProduction = [args[@"isProduction"] boolValue];
+        
+            // ref
+            JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.isProduction = isProduction;
             methodResult(@"success");
         },
         
         @"JANALYTICSEventObject::set_extra_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2552,8 +2959,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSEventObject* ref = (JANALYTICSEventObject*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.extra = extra;
+                ref.extra = extra;;
                 methodResult(@"success");
             }
         
@@ -2561,7 +2972,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSLoginEvent::set_method_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2570,8 +2981,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.method = method;
+                ref.method = method;;
                 methodResult(@"success");
             }
         
@@ -2579,7 +2994,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSLoginEvent::set_success_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2588,8 +3003,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSLoginEvent* ref = (JANALYTICSLoginEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.success = success;
+                ref.success = success;;
                 methodResult(@"success");
             }
         
@@ -2597,7 +3016,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSRegisterEvent::set_method_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2606,8 +3025,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.method = method;
+                ref.method = method;;
                 methodResult(@"success");
             }
         
@@ -2615,7 +3038,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSRegisterEvent::set_success_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2624,8 +3047,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSRegisterEvent* ref = (JANALYTICSRegisterEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.success = success;
+                ref.success = success;;
                 methodResult(@"success");
             }
         
@@ -2633,7 +3060,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSPurchaseEvent::set_price_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2642,8 +3069,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.price = price;
+                ref.price = price;;
                 methodResult(@"success");
             }
         
@@ -2651,7 +3082,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSPurchaseEvent::set_success_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2660,8 +3091,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.success = success;
+                ref.success = success;;
                 methodResult(@"success");
             }
         
@@ -2669,7 +3104,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSPurchaseEvent::set_goodsID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2678,8 +3113,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.goodsID = goodsID;
+                ref.goodsID = goodsID;;
                 methodResult(@"success");
             }
         
@@ -2687,7 +3126,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSPurchaseEvent::set_goodsName_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2696,8 +3135,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.goodsName = goodsName;
+                ref.goodsName = goodsName;;
                 methodResult(@"success");
             }
         
@@ -2705,7 +3148,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSPurchaseEvent::set_goodsType_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2714,8 +3157,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.goodsType = goodsType;
+                ref.goodsType = goodsType;;
                 methodResult(@"success");
             }
         
@@ -2723,7 +3170,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSPurchaseEvent::set_currency_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2732,8 +3179,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.currency = currency;
+                ref.currency = currency;;
                 methodResult(@"success");
             }
         
@@ -2741,7 +3192,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSPurchaseEvent::set_quantity_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2750,8 +3201,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSPurchaseEvent* ref = (JANALYTICSPurchaseEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.quantity = quantity;
+                ref.quantity = quantity;;
                 methodResult(@"success");
             }
         
@@ -2759,7 +3214,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSBrowseEvent::set_name_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2768,8 +3223,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.name = name;
+                ref.name = name;;
                 methodResult(@"success");
             }
         
@@ -2777,7 +3236,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSBrowseEvent::set_contentID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2786,8 +3245,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.contentID = contentID;
+                ref.contentID = contentID;;
                 methodResult(@"success");
             }
         
@@ -2795,7 +3258,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSBrowseEvent::set_type_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2804,8 +3267,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.type = type;
+                ref.type = type;;
                 methodResult(@"success");
             }
         
@@ -2813,7 +3280,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSBrowseEvent::set_duration_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2822,8 +3289,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSBrowseEvent* ref = (JANALYTICSBrowseEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.duration = duration;
+                ref.duration = duration;;
                 methodResult(@"success");
             }
         
@@ -2831,7 +3302,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSCountEvent::set_eventID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2840,8 +3311,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSCountEvent* ref = (JANALYTICSCountEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.eventID = eventID;
+                ref.eventID = eventID;;
                 methodResult(@"success");
             }
         
@@ -2849,7 +3324,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSCalculateEvent::set_eventID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2858,8 +3333,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.eventID = eventID;
+                ref.eventID = eventID;;
                 methodResult(@"success");
             }
         
@@ -2867,7 +3346,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSCalculateEvent::set_value_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2876,8 +3355,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSCalculateEvent* ref = (JANALYTICSCalculateEvent*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.value = value;
+                ref.value = value;;
                 methodResult(@"success");
             }
         
@@ -2885,7 +3368,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSUserInfo::set_accountID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2894,8 +3377,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.accountID = accountID;
+                ref.accountID = accountID;;
                 methodResult(@"success");
             }
         
@@ -2903,7 +3390,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSUserInfo::set_creationTime_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2912,8 +3399,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.creationTime = creationTime;
+                ref.creationTime = creationTime;;
                 methodResult(@"success");
             }
         
@@ -2921,7 +3412,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSUserInfo::set_sex_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2930,8 +3421,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.sex = sex;
+                ref.sex = sex;;
                 methodResult(@"success");
             }
         
@@ -2939,7 +3434,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSUserInfo::set_birthdate_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2948,8 +3443,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.birthdate = birthdate;
+                ref.birthdate = birthdate;;
                 methodResult(@"success");
             }
         
@@ -2957,7 +3456,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSUserInfo::set_paid_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2966,8 +3465,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.paid = paid;
+                ref.paid = paid;;
                 methodResult(@"success");
             }
         
@@ -2975,7 +3478,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSUserInfo::set_phone_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -2984,8 +3487,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.phone = phone;
+                ref.phone = phone;;
                 methodResult(@"success");
             }
         
@@ -2993,7 +3500,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSUserInfo::set_email_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -3002,8 +3509,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.email = email;
+                ref.email = email;;
                 methodResult(@"success");
             }
         
@@ -3011,7 +3522,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSUserInfo::set_name_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -3020,8 +3531,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.name = name;
+                ref.name = name;;
                 methodResult(@"success");
             }
         
@@ -3029,7 +3544,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSUserInfo::set_wechatID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -3038,8 +3553,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.wechatID = wechatID;
+                ref.wechatID = wechatID;;
                 methodResult(@"success");
             }
         
@@ -3047,7 +3566,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSUserInfo::set_qqID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -3056,8 +3575,12 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.qqID = qqID;
+                ref.qqID = qqID;;
                 methodResult(@"success");
             }
         
@@ -3065,7 +3588,7 @@ extern BOOL enableLog;
         },
         
         @"JANALYTICSUserInfo::set_weiboID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -3074,28 +3597,104 @@ extern BOOL enableLog;
         
                 // ref
                 JANALYTICSUserInfo* ref = (JANALYTICSUserInfo*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
-                ref.weiboID = weiboID;
+                ref.weiboID = weiboID;;
                 methodResult(@"success");
             }
         
             methodResult(@"success");
         },
         
-        @"RefClass::isKindOfJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        @"JANALYTICSLaunchConfig::set_appKey_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
-            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSLaunchConfig class]];
-            methodResult(@(isTargetType));
+                // args
+                // jsonable arg
+                NSString* appKey = (NSString*) args[@"appKey"];
+        
+                // ref
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
+        
+                ref.appKey = appKey;;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
         },
         
-        @"RefClass::isKindOfJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        @"JANALYTICSLaunchConfig::set_channel_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
-            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSService class]];
-            methodResult(@(isTargetType));
+                // args
+                // jsonable arg
+                NSString* channel = (NSString*) args[@"channel"];
+        
+                // ref
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
+        
+                ref.channel = channel;;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"JANALYTICSLaunchConfig::set_advertisingId_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* advertisingId = (NSString*) args[@"advertisingId"];
+        
+                // ref
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
+        
+                ref.advertisingId = advertisingId;;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"JANALYTICSLaunchConfig::set_isProduction_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                BOOL isProduction = [args[@"isProduction"] boolValue];
+        
+                // ref
+                JANALYTICSLaunchConfig* ref = (JANALYTICSLaunchConfig*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
+        
+                ref.isProduction = isProduction;;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
         },
         
         @"RefClass::isKindOfJANALYTICSEventObject": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -3162,40 +3761,20 @@ extern BOOL enableLog;
             methodResult(@(isTargetType));
         },
         
-        @"ObjectFactory::createJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createJANALYTICSLaunchConfig");
-            }
+        @"RefClass::isKindOfJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            JANALYTICSLaunchConfig* __this__;
-            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
-                __this__ = [[JANALYTICSLaunchConfig alloc] init];
-            } else {
-                __this__ = [JANALYTICSLaunchConfig alloc];
-            }
-        
-            methodResult(__this__);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSLaunchConfig class]];
+            methodResult(@(isTargetType));
         },
         
-        @"ObjectFactory::createJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createJANALYTICSService");
-            }
+        @"RefClass::isKindOfJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            JANALYTICSService* __this__;
-            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
-                __this__ = [[JANALYTICSService alloc] init];
-            } else {
-                __this__ = [JANALYTICSService alloc];
-            }
-        
-            methodResult(__this__);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+            BOOL isTargetType = [__this__ isKindOfClass:[JANALYTICSService class]];
+            methodResult(@(isTargetType));
         },
         
         @"ObjectFactory::createJANALYTICSEventObject": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -3342,42 +3921,38 @@ extern BOOL enableLog;
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
         
-        @"ObjectFactory::create_batchJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                JANALYTICSLaunchConfig* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[JANALYTICSLaunchConfig alloc] init];
-                } else {
-                    __this__ = [JANALYTICSLaunchConfig alloc];
-                }
-                [resultList addObject:__this__];
+        @"ObjectFactory::createJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createJANALYTICSLaunchConfig");
             }
         
-            methodResult(resultList);
+            JANALYTICSLaunchConfig* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[JANALYTICSLaunchConfig alloc] init];
+            } else {
+                __this__ = [JANALYTICSLaunchConfig alloc];
+            }
+        
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
         
-        @"ObjectFactory::create_batchJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                JANALYTICSService* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[JANALYTICSService alloc] init];
-                } else {
-                    __this__ = [JANALYTICSService alloc];
-                }
-                [resultList addObject:__this__];
+        @"ObjectFactory::createJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createJANALYTICSService");
             }
         
-            methodResult(resultList);
+            JANALYTICSService* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[JANALYTICSService alloc] init];
+            } else {
+                __this__ = [JANALYTICSService alloc];
+            }
+        
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -3387,7 +3962,7 @@ extern BOOL enableLog;
         
             NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
             NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
                 JANALYTICSEventObject* __this__;
                 if ([init boolValue]) {
                     __this__ = [[JANALYTICSEventObject alloc] init];
@@ -3407,7 +3982,7 @@ extern BOOL enableLog;
         
             NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
             NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
                 JANALYTICSLoginEvent* __this__;
                 if ([init boolValue]) {
                     __this__ = [[JANALYTICSLoginEvent alloc] init];
@@ -3427,7 +4002,7 @@ extern BOOL enableLog;
         
             NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
             NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
                 JANALYTICSRegisterEvent* __this__;
                 if ([init boolValue]) {
                     __this__ = [[JANALYTICSRegisterEvent alloc] init];
@@ -3447,7 +4022,7 @@ extern BOOL enableLog;
         
             NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
             NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
                 JANALYTICSPurchaseEvent* __this__;
                 if ([init boolValue]) {
                     __this__ = [[JANALYTICSPurchaseEvent alloc] init];
@@ -3467,7 +4042,7 @@ extern BOOL enableLog;
         
             NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
             NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
                 JANALYTICSBrowseEvent* __this__;
                 if ([init boolValue]) {
                     __this__ = [[JANALYTICSBrowseEvent alloc] init];
@@ -3487,7 +4062,7 @@ extern BOOL enableLog;
         
             NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
             NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
                 JANALYTICSCountEvent* __this__;
                 if ([init boolValue]) {
                     __this__ = [[JANALYTICSCountEvent alloc] init];
@@ -3507,7 +4082,7 @@ extern BOOL enableLog;
         
             NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
             NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
                 JANALYTICSCalculateEvent* __this__;
                 if ([init boolValue]) {
                     __this__ = [[JANALYTICSCalculateEvent alloc] init];
@@ -3527,12 +4102,52 @@ extern BOOL enableLog;
         
             NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
             NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
                 JANALYTICSUserInfo* __this__;
                 if ([init boolValue]) {
                     __this__ = [[JANALYTICSUserInfo alloc] init];
                 } else {
                     __this__ = [JANALYTICSUserInfo alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchJANALYTICSLaunchConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                JANALYTICSLaunchConfig* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[JANALYTICSLaunchConfig alloc] init];
+                } else {
+                    __this__ = [JANALYTICSLaunchConfig alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchJANALYTICSService": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                JANALYTICSService* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[JANALYTICSService alloc] init];
+                } else {
+                    __this__ = [JANALYTICSService alloc];
                 }
                 [resultList addObject:__this__];
             }

@@ -16,24 +16,30 @@ class JANALYTICSService extends NSObject  {
   //region constants
   static const String name__ = 'JANALYTICSService';
 
+  @override
+  final String tag__ = 'janalytics_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<JANALYTICSService> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createJANALYTICSService', {'init': init});
-    final object = JANALYTICSService()..refId = refId..tag__ = 'janalytics_fluttify';
-    return object;
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod(
+      'ObjectFactory::createJANALYTICSService',
+      {'init': init}
+    );
+    return JanalyticsFluttifyIOSAs<JANALYTICSService>(__result__);
   }
   
   static Future<List<JANALYTICSService>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchJANALYTICSService', {'length': length, 'init': init});
-  
-    final List<JANALYTICSService> typedResult = resultBatch.map((result) => JANALYTICSService()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    return typedResult;
+    assert(true);
+    final __result_batch__ = await  kJanalyticsFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchJANALYTICSService',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => JanalyticsFluttifyIOSAs<JANALYTICSService>(it))
+        .toList();
   }
   
   //endregion
@@ -55,19 +61,13 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setupWithConfig', {"config": config});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::setupWithConfig', {"config": config});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -78,19 +78,13 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::startLogPageView', {"pageName": pageName});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::startLogPageView', {"pageName": pageName});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -101,19 +95,13 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::stopLogPageView', {"pageName": pageName});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::stopLogPageView', {"pageName": pageName});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -124,19 +112,13 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setLatitude_longitude', {"latitude": latitude, "longitude": longitude});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::setLatitude_longitude', {"latitude": latitude, "longitude": longitude});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -147,19 +129,13 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setLocation', {"location": location});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::setLocation', {"location": location});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -170,34 +146,28 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::eventRecord', {"event": event});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::eventRecord', {"event": event});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
-  static Future<void> identifyAccount_with(JANALYTICSUserInfo userInfo, void completion(int err, String msg)) async {
+  static Future<void> identifyAccount_with(JANALYTICSUserInfo userInfo, void Function(int err, String msg) completion) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: JANALYTICSService::identifyAccount([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::identifyAccount_with', {"userInfo": userInfo});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::identifyAccount_with', {"userInfo": userInfo});
   
   
     // handle native call
-    MethodChannel('void|NSInteger#err,NSString*#msg::Callback', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify')))
+    MethodChannel('void|NSInteger#err,NSString*#msg::Callback', kJanalyticsFluttifyMethodCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -209,39 +179,34 @@ class JANALYTICSService extends NSObject  {
                 }
           
                 // handle the native call
-                if (completion != null) completion(args['err'], args['msg']);
+                if (completion != null) await completion(args['err'], args['msg']);
                 break;
               default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
                 break;
             }
           } catch (e) {
             debugPrint(e);
-            throw e;
+            rethrow;
           }
         });
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
-  static Future<void> detachAccount(void completion(int err, String msg)) async {
+  static Future<void> detachAccount(void Function(int err, String msg) completion) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: JANALYTICSService::detachAccount([])');
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::detachAccount', );
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::detachAccount', );
   
   
     // handle native call
-    MethodChannel('void|NSInteger#err,NSString*#msg::Callback', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify')))
+    MethodChannel('void|NSInteger#err,NSString*#msg::Callback', kJanalyticsFluttifyMethodCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -253,24 +218,19 @@ class JANALYTICSService extends NSObject  {
                 }
           
                 // handle the native call
-                if (completion != null) completion(args['err'], args['msg']);
+                if (completion != null) await completion(args['err'], args['msg']);
                 break;
               default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
                 break;
             }
           } catch (e) {
             debugPrint(e);
-            throw e;
+            rethrow;
           }
         });
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -281,19 +241,13 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setFrequency', {"frequency": frequency});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::setFrequency', {"frequency": frequency});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -304,19 +258,13 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::crashLogON', );
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::crashLogON', );
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -327,22 +275,21 @@ class JANALYTICSService extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setDebug', {"enable": enable});
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::setDebug', {"enable": enable});
   
   
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'JANALYTICSService{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension JANALYTICSService_Batch on List<JANALYTICSService> {
@@ -357,173 +304,101 @@ extension JANALYTICSService_Batch on List<JANALYTICSService> {
   //region methods
   
   static Future<List<void>> setupWithConfig_batch(List<JANALYTICSLaunchConfig> config) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setupWithConfig_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::setupWithConfig_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   static Future<List<void>> startLogPageView_batch(List<String> pageName) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::startLogPageView_batch', [for (int __i__ = 0; __i__ < pageName.length; __i__++) {"pageName": pageName[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::startLogPageView_batch', [for (int __i__ = 0; __i__ < pageName.length; __i__++) {"pageName": pageName[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   static Future<List<void>> stopLogPageView_batch(List<String> pageName) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::stopLogPageView_batch', [for (int __i__ = 0; __i__ < pageName.length; __i__++) {"pageName": pageName[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::stopLogPageView_batch', [for (int __i__ = 0; __i__ < pageName.length; __i__++) {"pageName": pageName[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   static Future<List<void>> setLatitude_longitude_batch(List<double> latitude, List<double> longitude) async {
-    if (latitude.length != longitude.length) {
-      return Future.error('all args must have same length!');
-    }
+    assert(latitude.length == longitude.length);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setLatitude_longitude_batch', [for (int __i__ = 0; __i__ < latitude.length; __i__++) {"latitude": latitude[__i__], "longitude": longitude[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::setLatitude_longitude_batch', [for (int __i__ = 0; __i__ < latitude.length; __i__++) {"latitude": latitude[__i__], "longitude": longitude[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   static Future<List<void>> setLocation_batch(List<CLLocation> location) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setLocation_batch', [for (int __i__ = 0; __i__ < location.length; __i__++) {"location": location[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::setLocation_batch', [for (int __i__ = 0; __i__ < location.length; __i__++) {"location": location[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   static Future<List<void>> eventRecord_batch(List<JANALYTICSEventObject> event) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::eventRecord_batch', [for (int __i__ = 0; __i__ < event.length; __i__++) {"event": event[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::eventRecord_batch', [for (int __i__ = 0; __i__ < event.length; __i__++) {"event": event[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   static Future<List<void>> setFrequency_batch(List<int> frequency) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setFrequency_batch', [for (int __i__ = 0; __i__ < frequency.length; __i__++) {"frequency": frequency[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::setFrequency_batch', [for (int __i__ = 0; __i__ < frequency.length; __i__++) {"frequency": frequency[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   static Future<List<void>> crashLogON_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::crashLogON_batch', );
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::crashLogON_batch', );
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   static Future<List<void>> setDebug_batch(List<bool> enable) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSService::setDebug_batch', [for (int __i__ = 0; __i__ < enable.length; __i__++) {"enable": enable[__i__]}]);
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSService::setDebug_batch', [for (int __i__ = 0; __i__ < enable.length; __i__++) {"enable": enable[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

@@ -71,5 +71,5 @@ dependencies {
     // flutter plugin dependency
     compileOnly rootProject.findProject(":jcore_fluttify")
     // sdk dependency
-    api 'cn.jiguang.sdk:janalytics:2.1.0'
+    api 'cn.jiguang.sdk:janalytics:2.1.2'
 }

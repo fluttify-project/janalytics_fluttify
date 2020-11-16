@@ -16,50 +16,56 @@ class JANALYTICSRegisterEvent extends JANALYTICSEventObject  {
   //region constants
   static const String name__ = 'JANALYTICSRegisterEvent';
 
+  @override
+  final String tag__ = 'janalytics_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<JANALYTICSRegisterEvent> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createJANALYTICSRegisterEvent', {'init': init});
-    final object = JANALYTICSRegisterEvent()..refId = refId..tag__ = 'janalytics_fluttify';
-    return object;
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod(
+      'ObjectFactory::createJANALYTICSRegisterEvent',
+      {'init': init}
+    );
+    return JanalyticsFluttifyIOSAs<JANALYTICSRegisterEvent>(__result__);
   }
   
   static Future<List<JANALYTICSRegisterEvent>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchJANALYTICSRegisterEvent', {'length': length, 'init': init});
-  
-    final List<JANALYTICSRegisterEvent> typedResult = resultBatch.map((result) => JANALYTICSRegisterEvent()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    return typedResult;
+    assert(true);
+    final __result_batch__ = await  kJanalyticsFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchJANALYTICSRegisterEvent',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => JanalyticsFluttifyIOSAs<JANALYTICSRegisterEvent>(it))
+        .toList();
   }
   
   //endregion
 
   //region getters
   Future<String> get_method() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSRegisterEvent::get_method", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSRegisterEvent::get_method", {'__this__': this});
+    return __result__;
   }
   
   Future<bool> get_success() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSRegisterEvent::get_success", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSRegisterEvent::get_success", {'__this__': this});
+    return __result__;
   }
   
   //endregion
 
   //region setters
   Future<void> set_method(String method) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSRegisterEvent::set_method', <String, dynamic>{'__this__': this, "method": method});
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSRegisterEvent::set_method', <String, dynamic>{'__this__': this, "method": method});
   
   
   }
   
   Future<void> set_success(bool success) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('JANALYTICSRegisterEvent::set_success', <String, dynamic>{'__this__': this, "success": success});
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSRegisterEvent::set_success', <String, dynamic>{'__this__': this, "success": success});
   
   
   }
@@ -69,35 +75,36 @@ class JANALYTICSRegisterEvent extends JANALYTICSEventObject  {
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'JANALYTICSRegisterEvent{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension JANALYTICSRegisterEvent_Batch on List<JANALYTICSRegisterEvent> {
   //region getters
   Future<List<String>> get_method_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSRegisterEvent::get_method_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    return typedResult;
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSRegisterEvent::get_method_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<bool>> get_success_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("JANALYTICSRegisterEvent::get_success_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    return typedResult;
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod("JANALYTICSRegisterEvent::get_success_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<bool>()?.toList();
   }
   
   //endregion
 
   //region setters
   Future<void> set_method_batch(List<String> method) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSRegisterEvent::set_method_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "method": method[__i__]}]);
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSRegisterEvent::set_method_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "method": method[__i__]}]);
   
   
   }
   
   Future<void> set_success_batch(List<bool> success) async {
-    await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('JANALYTICSRegisterEvent::set_success_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "success": success[__i__]}]);
+    await kJanalyticsFluttifyChannel.invokeMethod('JANALYTICSRegisterEvent::set_success_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "success": success[__i__]}]);
   
   
   }

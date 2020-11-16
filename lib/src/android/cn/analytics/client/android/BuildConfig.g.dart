@@ -16,36 +16,42 @@ class cn_analytics_client_android_BuildConfig extends java_lang_Object  {
   //region constants
   static const String name__ = 'cn.analytics.client.android.BuildConfig';
 
+  @override
+  final String tag__ = 'janalytics_fluttify';
+
   static final String APPLICATION_ID = "cn.analytics.client.android";
   static final String BUILD_TYPE = "release";
   static final String FLAVOR = "";
   static final int VERSION_CODE = 1;
-  static final String VERSION_NAME = "2.1.0";
+  static final String VERSION_NAME = "2.1.2";
   //endregion
 
   //region creators
   static Future<cn_analytics_client_android_BuildConfig> create__() async {
-    final refId = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::createcn_analytics_client_android_BuildConfig__', );
-    final object = cn_analytics_client_android_BuildConfig()..refId = refId..tag__ = 'janalytics_fluttify';
-    return object;
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcn_analytics_client_android_BuildConfig__',
+    
+    );
+    return JanalyticsFluttifyAndroidAs<cn_analytics_client_android_BuildConfig>(__result__);
   }
   
   static Future<List<cn_analytics_client_android_BuildConfig>> create_batch__(int length) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod('ObjectFactory::create_batchcn_analytics_client_android_BuildConfig__', {'length': length});
-  
-    final List<cn_analytics_client_android_BuildConfig> typedResult = resultBatch.map((result) => cn_analytics_client_android_BuildConfig()..refId = result..tag__ = 'janalytics_fluttify').toList();
-    return typedResult;
+    assert(true);
+    final __result_batch__ = await  kJanalyticsFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcn_analytics_client_android_BuildConfig__',
+      {'length': length}
+    );
+    return __result_batch__
+        .map((it) => JanalyticsFluttifyAndroidAs<cn_analytics_client_android_BuildConfig>(it))
+        .toList();
   }
   
   //endregion
 
   //region getters
   static Future<bool> get_static_DEBUG() async {
-    final __result__ = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("cn.analytics.client.android.BuildConfig::get_DEBUG", );
-    return __result__ == null ? null : (__result__);
+    final __result__ = await kJanalyticsFluttifyChannel.invokeMethod("cn.analytics.client.android.BuildConfig::get_DEBUG", );
+    return __result__;
   }
   
   //endregion
@@ -57,15 +63,18 @@ class cn_analytics_client_android_BuildConfig extends java_lang_Object  {
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'cn_analytics_client_android_BuildConfig{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension cn_analytics_client_android_BuildConfig_Batch on List<cn_analytics_client_android_BuildConfig> {
   //region getters
   Future<List<bool>> get_static_DEBUG_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/janalytics_fluttify', StandardMethodCodec(FluttifyMessageCodec('janalytics_fluttify'))).invokeMethod("cn.analytics.client.android.BuildConfig::get_DEBUG_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    return typedResult;
+    final resultBatch = await kJanalyticsFluttifyChannel.invokeMethod("cn.analytics.client.android.BuildConfig::get_DEBUG_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<bool>()?.toList();
   }
   
   //endregion
